@@ -1,0 +1,29 @@
+\AtBeginDocument{
+
+\@ifpackageloaded{polyglossia}{
+    \PackageWarningNoLine{lwarp}
+    {%
+        Polyglossia has been loaded.  Lwarp also uses cleveref.\MessageBreak
+        See the cleveref documentation regarding\MessageBreak
+        polyglossia support.  Some languages are not supported%
+    }
+    \typeout{---}
+    \typeout{Package lwarp:}
+    \typeout{If the error}
+    \typeout{\space\space``! Undefined control sequence.
+        \space ... \space \protect\__hook begindocument''}
+    \typeout{occurs here, use the polyglossia macro:}
+    \typeout{\space\space\protect\setmainlanguage\protect{...\protect}}
+    \typeout{---}
+}{
+    \@ifpackageloaded{babel}{
+        \PackageWarningNoLine{lwarp}
+        {%
+            Babel has been loaded.  Lwarp also uses cleveref.\MessageBreak
+            See the cleveref documentation regarding\MessageBreak
+            babel support.  Some languages are not supported%
+        }
+    }{}
+}
+
+}

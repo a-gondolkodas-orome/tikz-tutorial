@@ -1,1 +1,6 @@
-# tikz-tutorial
+- Van egy elkészült tuotrial, ami egy belsős google site-on van, és azt kellen áttenni publikussá.
+- Kétgithub projekt
+ - egyik forkolja a másikat
+ - Egyik az maga tex kód
+ - A másik a tex -> html konverzió
+ - a-gondolkas-orome

@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="hu-HU">
+<head>
+<meta charset="UTF-8" />
+<meta name="generator" content="LaTeX Lwarp package" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<title>Latex és társai tutorial — Hogyan működik ez?</title>
+<link rel="stylesheet" type="text/css" href="lwarp.css" />
+</head>
+<body>
+
+
+<a id="mainpage-autopage-36"></a>
+<nav class="topnavigation" ><a href="index.html" class="linkhome" >
+Home</a></nav>
+
+<header>
+
+<p>
+<span
+    class="fbox"
+    style="display:inline-block ; border:1pt solid #000000; padding:3pt ; color:#000000"
+>LOGO</span>
+</p>
+
+</header>
+
+
+<div class="bodyandsidetoc" >
+<div class="sidetoccontainer" >
+
+
+<nav class="sidetoc" >
+
+
+<div class="sidetoctitle" >
+
+<p>
+<span class="sidetocthetitle" >Latex és társai tutorial</span>
+</p>
+
+<p>
+Contents
+</p>
+</div>
+
+
+<div class="sidetoccontents" >
+
+<p>
+<a href="index.html" class="linkhome" >
+Home</a>
+</p>
+
+<p>
+<a href="node-TikZ-gyorstalpaló.html#autosec-7" class="tocchapter" >
+1. TikZ gyorstalpaló</a>
+</p>
+
+
+<p>
+<a href="node-TikZ-gyorstalpaló.html#autosec-8" class="tocsection" >
+1.1.Alapok</a>
+</p>
+
+
+<p>
+<a href="node-TikZ-gyorstalpaló.html#autosec-28" class="tocsection" >
+1.2.Sokszögek rajzolása, for ciklusok</a>
+</p>
+
+
+<p>
+<a href="node-TikZ-gyorstalpaló.html#autosec-34" class="tocsection" >
+1.3.Rácsok, szöveg beillesztése</a>
+</p>
+
+
+<p>
+<a href="node-Hogyan-működik-ez.html#autosec-37" class="tocchapter" >
+A.Hogyan működik ez?</a>
+</p>
+
+
+</div>
+
+</nav>
+
+</div>
+
+
+<div class="bodycontainer" >
+
+
+<section class="textbody" >
+
+<h1>Latex és társai tutorial</h1>
+
+<h3 id="autosec-37">fejezet&nbsp;<span class="sectionnumber" >A&#x2003;</span>Hogyan működik ez?</h3>
+<a id="mainpage-autopage-37"></a>
+<a id="mainpage-autofile-2"></a>
+
+<p>
+CÍMEKBEN EGYES ÉKEZET HELYETT<br />
+’<karakter> KELL.
+</p>
+
+<p>
+Van egy ”mainpage.tex” fájl. Ha kell a preambulumba rakni valamit, akkor a ”PREAMBULUM IDE” alá kell rakni. (Lehet máshol is jó lenne.)
+</p>
+
+<p>
+Egy weboldal = egy <span class="texttt">\chapter</span> a mostani beállítás (FileDepth) szerint. Egy új fájl esetén rakjunk egy <span class="texttt">\chapter{weboldal címe}</span> a fájl tetejére, majd <span class="texttt">\include</span> a ”mainpage.tex”
+belsejében. A címbe ne legyen egyes ékezet!
+</p>
+
+<p>
+Fordításnál van eggyel följebb egy ”../build_html.py”. Ez többször meghívja a fordító programot, hogy mindent biztosan le tudjon generálni.
+</p>
+<a id="mainpage-autofile-last"></a> </section>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+Contact Information and Copyright
+</p>
+
+</footer>
+
+
+<nav class="botnavigation" ><a href="index.html" class="linkhome" >
+Home</a></nav>
+
+</body>
+</html>

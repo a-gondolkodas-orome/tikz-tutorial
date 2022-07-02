@@ -1,0 +1,21 @@
+xindex v.0.28 (c) Herbert Voß
+Open outputfile mainpage_html.ind ... done
+Using input file: mainpage_html.idx
+Label prefix: L
+Loading local config file xindex-cfg.lua ... done
+Open outputfile mainpage_html.ind... done
+Read Data from file mainpage_html.idx ... 
+0 lines of data read
+Change escape chars with macros ... 
+... done
+Sorting entries: for LARGE idx files it can take some minutes ... 
+GenerateSortKeys begin
+GenerateSortKeys end
+Sort begin
+Sort end
+
+
+check for |(...|) 
+
+done
+Replace @-operator ...

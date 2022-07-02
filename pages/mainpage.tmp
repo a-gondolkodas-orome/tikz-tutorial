@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=3]
+    %a köröknek a kp.-át és sugarát kell megadni
+    \draw (0,0) circle (0.4 cm) [color = blue!90];
+    \filldraw (1,0) circle (0.4 cm) [color = red!90];
+
+    %a téglalapoknak a balalsó és jobbfelső csúcsait kell megadni
+    \draw (2-0.4, -.4) rectangle (2+0.4, .4) [ultra thick, fill=black!20];
+
+    %a törött vonalakat csúcsról csúcsra kell megadni
+    \draw  (3-0.3, -0.3) -- (3-0.3, 0.4) -- (3+0.4, -0.4) -- (3+0.4, 0.4);
+
+    %ami sokkal menőbb, például egy rácsbejáráshoz az íveltvonalak
+    \draw[thick,rounded corners=8pt, color=pink!200] (4-0.3, -0.3) -- (4-0.3, 0.4)
+    -- (4+0.4, -0.4) -- (4+0.4, 0.4);
+
+    %Ha a törött vonalat lezárnád érdemes a --cycle befejezést írni a kezdő csúcs
+    %megismétlése helyett.
+\end{tikzpicture}

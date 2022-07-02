@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<html lang="hu-HU">
+<head>
+<meta charset="UTF-8" />
+<meta name="generator" content="LaTeX Lwarp package" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<title>Latex és társai tutorial — TikZ gyorstalpaló</title>
+<link rel="stylesheet" type="text/css" href="lwarp.css" />
+</head>
+<body>
+
+
+<a id="mainpage-autopage-6"></a>
+<nav class="topnavigation" ><a href="index.html" class="linkhome" >
+Home</a></nav>
+
+<header>
+
+<p>
+<span
+    class="fbox"
+    style="display:inline-block ; border:1pt solid #000000; padding:3pt ; color:#000000"
+>LOGO</span>
+</p>
+
+</header>
+
+
+<div class="bodyandsidetoc" >
+<div class="sidetoccontainer" >
+
+
+<nav class="sidetoc" >
+
+
+<div class="sidetoctitle" >
+
+<p>
+<span class="sidetocthetitle" >Latex és társai tutorial</span>
+</p>
+
+<p>
+Contents
+</p>
+</div>
+
+
+<div class="sidetoccontents" >
+
+<p>
+<a href="index.html" class="linkhome" >
+Home</a>
+</p>
+
+<p>
+<a href="node-TikZ-gyorstalpaló.html#autosec-7" class="tocchapter" >
+1. TikZ gyorstalpaló</a>
+</p>
+
+
+<p>
+<a href="node-TikZ-gyorstalpaló.html#autosec-8" class="tocsection" >
+1.1.Alapok</a>
+</p>
+
+
+<p>
+<a href="node-TikZ-gyorstalpaló.html#autosec-28" class="tocsection" >
+1.2.Sokszögek rajzolása, for ciklusok</a>
+</p>
+
+
+<p>
+<a href="node-TikZ-gyorstalpaló.html#autosec-34" class="tocsection" >
+1.3.Rácsok, szöveg beillesztése</a>
+</p>
+
+
+<p>
+<a href="node-Hogyan-működik-ez.html#autosec-37" class="tocchapter" >
+A.Hogyan működik ez?</a>
+</p>
+
+
+</div>
+
+</nav>
+
+</div>
+
+
+<div class="bodycontainer" >
+
+
+<section class="textbody" >
+
+<h1>Latex és társai tutorial</h1>
+
+<h3 id="autosec-7">fejezet&nbsp;<span class="sectionnumber" >1&#x2003;</span>TikZ gyorstalpaló</h3>
+<a id="mainpage-autopage-7"></a>
+<a id="mainpage-autofile-1"></a>
+<h4 id="autosec-8"><span class="sectionnumber" >1.1.&#x2002;</span>Alapok</h4>
+<a id="mainpage-autopage-8"></a>
+
+
+<p>
+A <span class="texttt">\usepackage{tikzpicture}</span> kell a library implementálásához A <span class="texttt">\begin{tikzpicture}</span> és <span class="texttt">\end{tikzpicture}</span> parancsok közé kell helyezni a rajzolandó ábrát. A TikZ úgy
+működik, mint egy rajztábla. Egyesével kell az objektumokat rárajzolni, esetenként egy ciklusban többet is lehet egyszerre (lásd lejjebb). <b>Minden parancsot egy ;-vel kell lezárni.</b>
+</p>
+
+<p>
+A <span class="texttt">\begin{tikzpicture}["paraméterek"]</span> ebben a szögletes zárójelben kell megadni a rajztábla paramétereit. Ilyenek:
+</p>
+<ul style="list-style-type:none">
+
+<li>
+<p>
+• ”<span class="texttt">scale = 3</span>” – a képet nyújtja, kivéve a betű méretet
+</p>
+
+
+</li>
+<li>
+<p>
+• ”<span class="texttt">xscale = 4, yscale = 5</span>” – ugyanez, csak merőlegesen affin képet ad
+</p>
+</li>
+</ul>
+
+<p>
+A rajzolásra két különböző, de általában mindenre elég parancs a <span class="texttt">\draw</span> és <span class="texttt">\filldraw</span> . A sima rajzolás csak körvonalat rajzol, a másik pedig automatikusan ugyanazzal a színnel kitölti az alakzatot.
+Mindkettő parancsnak meg kell mondani, hogy:
+</p>
+
+<ul style="list-style-type:none">
+
+<li>
+<p>
+• Hova: <span class="texttt">(x, y)</span>, <span class="texttt">(fok:hossz)</span>
+</p>
+
+
+</li>
+<li>
+<p>
+• Mit: <span class="texttt">node</span>, <span class="texttt">--</span> (edge), <span class="texttt">circle</span>, <span class="texttt">rectangle</span>, <span class="texttt">arc</span>
+</p>
+
+
+</li>
+<li>
+<p>
+• Stílusban: <span class="texttt">[color, ultra thin, fill]</span> – ez lehet üres, ilyenkor a rajztábla stílusát használja
+</p>
+</li>
+</ul>
+
+<p>
+A node-ok kicsit trükkösebbek, róluk a gráfok részben lehet részletesebben olvasni.
+</p>
+<h6 id="autosec-9">Kód</h6>
+<a id="mainpage-autopage-9"></a>
+<div class="minipage" style="vertical-align:middle ; justify-content:flex-start ; width:9.77364pt ; ">
+
+<p>
+<span
+    id="lateximage-mainpage-1"
+    class="lateximagesource"
+><!--
+--><img
+    src="mainpage-images/image-1.svg"
+    alt="(-tikz-&nbsp;diagram)"
+    style=""
+    class="lateximage"
+></span>
+</p>
+
+
+</div>
+<div class="minipage" style="vertical-align:middle ; justify-content:flex-start ; width:1050pt ; ">
+
+
+
+
+<div
+    class="fancyvrb"
+    style=""
+>
+<pre class="verbatim">
+\begin{tikzpicture}[scale=3]
+    %a köröknek a kp.-át és sugarát kell megadni
+    \draw (0,0) circle (0.4 cm) [color = blue!90];
+    \filldraw (1,0) circle (0.4 cm) [color = red!90];
+
+    %a téglalapoknak a balalsó és jobbfelső csúcsait kell megadni
+    \draw (2-0.4, -.4) rectangle (2+0.4, .4) [ultra thick, fill=black!20];
+
+    %a törött vonalakat csúcsról csúcsra kell megadni
+    \draw (3-0.3, -0.3) -- (3-0.3, 0.4) -- (3+0.4, -0.4) -- (3+0.4, 0.4);
+
+    %ami sokkal menőbb, például egy rácsbejáráshoz az íveltvonalak
+    \draw[thick,rounded corners=8pt, color=pink!200] (4-0.3, -0.3) -- (4-0.3, 0.4)
+    -- (4+0.4, -0.4) -- (4+0.4, 0.4);
+
+    %Ha a törött vonalat lezárnád érdemes a --cycle befejezést írni a kezdő csúcs
+    %megismétlése helyett.
+\end{tikzpicture}
+</pre>
+</div>
+
+</div>
+<h6 id="autosec-14">Példa</h6>
+<a id="mainpage-autopage-14"></a>
+
+
+<p>
+<span
+    id="lateximage-mainpage-2"
+    class="lateximagesource"
+><!--
+--><img
+    src="mainpage-images/image-2.svg"
+    alt="(-tikz-&nbsp;diagram)"
+    style=""
+    class="lateximage"
+></span>
+</p>
+<h5 id="autosec-17"><span class="sectionnumber" >1.1.1.&#x2002;</span>Illesztés</h5>
+<a id="mainpage-autopage-17"></a>
+
+
+<p>
+Az első fejezetben leírtakat érdemes alkalmazni. A <span class="texttt">\clip</span> parancsot érdemes használni. Nem csak arra jó, hogy kivágjuk a kép egy részét, de beállítja a kép keretét, ha azzal kezdjük. Erre persze lehet használni a <span
+class="texttt">\useasboundingbox</span> parancsot amivel megadhatunk például egy téglalappal határolt fix keretét a képnek. Amit ezen kívül rajzoltál nem fogja megjeleníteni.
+</p>
+<h6 id="autosec-18">Kód</h6>
+<a id="mainpage-autopage-18"></a>
+<div
+    class="fancyvrb"
+    style=""
+>
+<pre class="verbatim">
+\begin{tikzpicture}[scale=3]
+    \draw (0,0) circle (0.4 cm) [color = blue!90];
+    %Itt vágunk ami azt okozza, hogy az előző kör nem sérült
+    \clip (-0.3, -0.3) rectangle (5, 0.3);
+    \filldraw (1,0) circle (0.4 cm) [color = red!90];
+    \draw (2-0.4, -.4) rectangle (2+0.4, .4) [ultra thick, fill=black!20];
+    %Lehet relatív megadni a távolságokat, hogy ne kelljen mindent papíron kiszámolni
+    %Ha csak sima +-t használsz, akkor a kezdő csúcstól viszonyít
+    \draw (3-0.3, -0.3) -- ++(0, 0.7) -- ++(0.7, -0.8) -- ++(0, 0.8);
+    \draw[thick,rounded corners=8pt, color=pink!200]     (4-0.3, -0.3) -- (4-0.3, 0.4) -- (4+0.4, -0.4) -- (4+0.4, 0.4);
+\end{tikzpicture}
+</pre>
+</div>
+<h6 id="autosec-20">Példa</h6>
+<a id="mainpage-autopage-20"></a>
+
+
+<p>
+<span
+    id="lateximage-mainpage-3"
+    class="lateximagesource"
+><!--
+--><img
+    src="mainpage-images/image-3.svg"
+    alt="(-tikz-&nbsp;diagram)"
+    style=""
+    class="lateximage"
+></span>
+</p>
+<h5 id="autosec-23"><span class="sectionnumber" >1.1.2.&#x2002;</span>Színek, egyebek</h5>
+<a id="mainpage-autopage-23"></a>
+
+
+<p>
+Be lehet állítani vonalvastagságot, színt és még színátmenetes ábrát is egyszerű csinálni.
+</p>
+<ul style="list-style-type:none">
+
+<li>
+<p>
+• Vastagságok: {<span class="texttt">ultra</span>, <span class="texttt">very</span>, } + {<span class="texttt">thin</span>, <span class="texttt">thick</span>}
+</p>
+
+
+</li>
+<li>
+<p>
+• Színek: { <span class="texttt">red</span>, <span class="texttt">green</span>, <span class="texttt">blue</span>, <span class="texttt">cyan</span>, <span class="texttt">magenta</span>, <span class="texttt">yellow</span>, <span
+class="texttt">black</span>, <span class="texttt">gray</span>, <span class="texttt">darkgray</span>, <span class="texttt">lightgray</span>, <span class="texttt">brown</span>, <span class="texttt">lime</span>, <span class="texttt">olive</span>,
+<span class="texttt">orange</span>, <span class="texttt">pink</span>, <span class="texttt">purple</span>, <span class="texttt">teal</span>, <span class="texttt">violet</span>, <span class="texttt">white</span> }
+</p>
+
+
+</li>
+<li>
+<p>
+• Vonal típusok: {<span class="texttt">dashed</span>, <span class="texttt">dotted</span>}
+</p>
+
+
+</li>
+<li>
+<p>
+• Vonal összekötési lehetőségek (advanced):
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+– <span class="texttt">line cap = {round, rect, butt}</span>
+</p>
+
+
+</li>
+<li>
+<p>
+– <span class="texttt">rounded corners = 5mm</span>
+</p>
+
+
+</li>
+<li>
+<p>
+– <span class="texttt">line join = {round, bevel, mitern}</span>
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h6 id="autosec-24">Kód</h6>
+<a id="mainpage-autopage-24"></a>
+<div
+    class="fancyvrb"
+    style=""
+>
+<pre class="verbatim">
+\begin{tikzpicture}[scale=3]
+    \draw (0,0) circle (0.4) [color = green!70, fill = green!15,   ultra thick];
+    \draw (1,0) circle (0.4)     [color = green!70!black, fill =   green!15, thick, dashed];
+    \shade (2,0) circle (0.4) [top color = green];
+    \shade (3,0) circle (0.4) [top color = green, bottom color =   yellow];
+    \shade (4,0) circle (0.4) [left color = green, right color =   yellow];
+\end{tikzpicture}
+</pre>
+</div>
+
+<p>
+<span
+    id="lateximage-mainpage-4"
+    class="lateximagesource"
+><!--
+--><img
+    src="mainpage-images/image-4.svg"
+    alt="(-tikz-&nbsp;diagram)"
+    style=""
+    class="lateximage"
+></span>
+
+<p>
+
+</p>
+<h4 id="autosec-28"><span class="sectionnumber" >1.2.&#x2002;</span>Sokszögek rajzolása, for ciklusok</h4>
+<a id="mainpage-autopage-28"></a>
+
+
+<p>
+Az, hogy lehet for ciklusokat írni, nagyban segít a valamilyen szempontból szimmetrikus ábrák elkészítésében. A for ciklusok hasonlóan más nyelvekhez bevezetnek egy változót, ami végig fut adott értékeken és végrehajtja a megadott parancsokat egyesével (jobb ha nem
+számít a sorrend). Lehet egymásba ágyazott ciklusokat írni, de lehet párhuzamosan két vagy több változót egyszerre változtatni. Például <span class="texttt">\foreach \x in {1,2,3,4}{<commands>}</span> Ennél lehet komolyabb dolgokat is csinálni, lásd a példákat.
+</p>
+
+<p>
+Eddig nem volt róla szó, de a hagyományos koordinátázás helyett lehet polárkoordinátákat is használni. <span class="texttt">(90:1cm)</span> – 90 fok, 1 cm messze
+</p>
+
+<p>
+A képet lehet transzformálni erre pár példa: <span class="texttt">xshift</span>, <span class="texttt">yshift</span>, <span class="texttt">rotate</span>
+</p>
+<h6 id="autosec-29">Kód</h6>
+<a id="mainpage-autopage-29"></a>
+<div
+    class="fancyvrb"
+    style=""
+>
+<pre class="verbatim">
+\begin{tikzpicture}[scale = 2, ultra thick]
+    \foreach \n in {3, ..., 8}{    \draw (\n-3,0) \foreach \d in {1, ..., \n}{ %MAGIC DANGER
+            +(\d*360/\n:0.3cm) -- +(\d*360/\n + 360/\n:0.3cm)    };
+            %Az, hogy ilyet lehet csinálni szerintem egyszerre undorító és hasznos
+            %Ez kell ahhoz, hogy a szín mögé lehessen írni változót (nem igazán lehet képletet)
+            \pgfmathsetmacro\i{\n*15-30}
+            \filldraw [xshift = \n-3, color = green!\i] (\n-3,-1) circle (0.3cm);
+    }
+\end{tikzpicture}
+</pre>
+</div>
+<h6 id="autosec-31">Példa</h6>
+<a id="mainpage-autopage-31"></a>
+
+
+<p>
+<span
+    id="lateximage-mainpage-5"
+    class="lateximagesource"
+><!--
+--><img
+    src="mainpage-images/image-5.svg"
+    alt="(-tikz-&nbsp;diagram)"
+    style=""
+    class="lateximage"
+></span>
+</p>
+<h4 id="autosec-34"><span class="sectionnumber" >1.3.&#x2002;</span>Rácsok, szöveg beillesztése</h4>
+<a id="mainpage-autopage-34"></a>
+
+
+<p>
+A <span class="texttt">\draw grid</span> parancsot lehet négyzetrács készítésre használni a <span class="texttt">\foreach</span> helyett. Meg kell adni a lépésközt és egy téglalapot ami határolja.
+</p>
+
+<p>
+Szöveget beilleszteni úgy kell, hogy egy Node-ot töltünk fel szöveggel. Paraméterként meg lehet adni, hogy az adott pozícióhoz képest, hol helyezkedjen el a csúcs és így a szöveg, ezt az <span class="texttt">anchor=<direction></span> paraméterrel lehet megadni. A
+<span class="texttt">fill=white</span> paraméter megadásával az is elérhető, hogy a szöveg/szám alatt megszakadjanak a vonalak, így egy sokkal esztétikusabb végeredményt kapunk.
+</p>
+</section>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+Contact Information and Copyright
+</p>
+
+</footer>
+
+
+<nav class="botnavigation" ><a href="index.html" class="linkhome" >
+Home</a></nav>
+
+</body>
+</html>

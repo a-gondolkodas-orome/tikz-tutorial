@@ -1,0 +1,9 @@
+\chapter{Hogyan működik ez?}
+
+{\LARGE CÍMEKBEN EGYES ÉKEZET HELYETT \\'<karakter> KELL.}
+
+Van egy "mainpage.tex" fájl. Ha kell a preambulumba rakni valamit, akkor a "PREAMBULUM IDE" alá kell rakni. (Lehet máshol is jó lenne.)
+
+Egy weboldal = egy \verb*|\chapter| a mostani beállítás (FileDepth) szerint. Egy új fájl esetén rakjunk egy \verb|\chapter{weboldal címe}|  a fájl tetejére, majd \verb|\include| a "mainpage.tex" belsejében. A címbe ne legyen egyes ékezet!
+
+Fordításnál van eggyel följebb egy "../build\_html.py". Ez többször meghívja a fordító programot, hogy mindent biztosan le tudjon generálni.
