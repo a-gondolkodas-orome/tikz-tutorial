@@ -24,11 +24,11 @@ def compile_very(pn):
 
 def copy_files(pn):
     time.sleep(3)
-    sh("rm -rf output")
-    sh("mkdir output")
-    sh("cp -rvt output pages/*.html")
-    sh("cp -rvt output pages/*.css")
-    sh("cp -rvt output pages/" + pn + "-images")
+    sh("rm -rf docs")
+    sh("mkdir docs")
+    sh("cp -rvt docs pages/*.html")
+    sh("cp -rvt docs pages/*.css")
+    sh("cp -rvt docs pages/" + pn + "-images")
 
 def main():
     pn = "mainpage"
