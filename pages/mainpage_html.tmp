@@ -1,18 +1,53 @@
-\begin{tikzpicture}[scale=3]
-    %a köröknek a kp.-át és sugarát kell megadni
-    \draw (0,0) circle (0.4 cm) [color = blue!90];
-    \filldraw (1,0) circle (0.4 cm) [color = red!90];
-
-    %a téglalapoknak a balalsó és jobbfelső csúcsait kell megadni
-    \draw (2-0.4, -.4) rectangle (2+0.4, .4) [ultra thick, fill=black!20];
-
-    %a törött vonalakat csúcsról csúcsra kell megadni
-    \draw  (3-0.3, -0.3) -- (3-0.3, 0.4) -- (3+0.4, -0.4) -- (3+0.4, 0.4);
-
-    %ami sokkal menőbb, például egy rácsbejáráshoz az íveltvonalak
-    \draw[thick,rounded corners=8pt, color=pink!200] (4-0.3, -0.3) -- (4-0.3, 0.4)
-    -- (4+0.4, -0.4) -- (4+0.4, 0.4);
-
-    %Ha a törött vonalat lezárnád érdemes a --cycle befejezést írni a kezdő csúcs
-    %megismétlése helyett.
+\usetikzlibrary{positioning,backgrounds}
+\begin{tikzpicture}[auto, node distance = 1cm and 2cm]
+        \tikzstyle{StartEnd}=[rectangle,draw=blue!50, fill=blue!20,thick,                         inner sep=0pt,minimum size=6mm]
+        \tikzstyle{alayer}=[circle,draw=red!80,fill=red!20,thick, inner sep=0pt,minimum size=6mm]
+        \tikzstyle{blayer}=[circle,draw=red!80,fill=red!40,thick, inner sep=0pt,minimum size=6mm]
+        \tikzstyle{se-edge}=[->,very thick, color=blue!30]
+        \tikzstyle{in-edge}=[->,very thick, color=red!30]
+        
+        %Nodes
+        \node[StartEnd] (Start) [label = 135:\color{blue}\Large$S$] {};
+        
+        \node[alayer] (a3) [right = of Start, label=above:$a3$] {};
+        \node[alayer] (a2) [above = of a3, label=above:$a2$] {};
+        \node[alayer] (a1) [above = of a2, label=above:$a1$] {};
+        \node[alayer] (a4) [below = of a3, label=above:$a4$] {};
+        \node[alayer] (a5) [below = of a4, label=above:$a5$] {};
+        
+        \node[blayer] (b3) [right = of a3, label=above:$b3$] {};
+        \node[blayer] (b2) [above = of b3, label=above:$b2$] {};
+        \node[blayer] (b1) [above = of b2, label=above:$b1$] {};
+        \node[blayer] (b4) [below = of b3, label=above:$b4$] {};
+        \node[blayer] (b5) [below = of b4, label=above:$b5$] {};
+        
+        \node[StartEnd] (End)[right = of b3,label=45:\color{blue}\Large$C$] {};
+        
+        %Edges
+        \draw[se-edge] (Start) to [out=45, in=180] (a1);
+        \draw[se-edge] (Start) to [out=22.5, in=180] (a2);
+        \draw[se-edge] (Start) to [out=0, in=180] (a3);
+        \draw[se-edge] (Start) to [out=360-22.5, in=180] (a4);
+        \draw[se-edge] (Start) to [out=360-45, in=180] (a5);
+        
+        \draw[se-edge] (b1) to [out=0, in=180-45] (End);
+        \draw[se-edge] (b2) to [out=0, in=180-22.5] (End);
+        \draw[se-edge] (b3) to [out=0, in=180] (End);
+        \draw[se-edge] (b4) to [out=0, in=180+22.5] (End);
+        \draw[se-edge] (b5) to [out=0, in=180+45] (End);
+        
+        \draw[in-edge] (a1) to (b2);
+        \draw[in-edge] (a2) to (b1);
+        \draw[in-edge] (a2) to (b5);
+        \draw[in-edge] (a3) to (b5);
+        \draw[in-edge] (a4) to (b1);
+        \draw[in-edge] (a5) to (b3);
+        \draw[in-edge] (a5) to (b5);
+        
+        %Layers
+        \begin{pgfonlayer}{background}
+                \filldraw [fill=black!20, draw=black] (a5.south -| a5.west) rectangle (a1.north -| a1.east);
+                \filldraw [fill=black!20, draw=black] (b5.south -| b5.west) rectangle (b1.north -| b1.east);
+        \end{pgfonlayer}
+        
 \end{tikzpicture}

@@ -1,6 +1,7 @@
-- Van egy elkészült tuotrial, ami egy belsős google site-on van, és azt kellen áttenni publikussá.
-- Kétgithub projekt
- - egyik forkolja a másikat
- - Egyik az maga tex kód
- - A másik a tex -> html konverzió
- - a-gondolkas-orome
+# Latex tutorial
+
+Latexben van írva 
+
+Új oldal hozzáadásához nézd meg a <pages/hogyan_mukodik.tex> fájlt.
+
+Fordításhoz a gyökérmappában futtasd le a <build_html.py> fájlt.
