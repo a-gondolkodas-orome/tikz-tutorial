@@ -1,7 +1,8 @@
+\begin{center}
+\chapter*{TikZ gyorstalpaló}
+\end{center}
 
-\chapter{TikZ gyorstalpaló}
-
-\section{Alapok}
+\section*{Alapok}
 
 A \verb|\usepackage{tikzpicture}| kell a library implementálásához A \verb|\begin{tikzpicture}| és \verb|\end{tikzpicture}| parancsok közé kell helyezni a rajzolandó ábrát. A TikZ úgy működik, mint egy rajztábla. Egyesével kell az objektumokat rárajzolni, esetenként egy ciklusban többet is lehet egyszerre (lásd lejjebb). \textbf{Minden parancsot egy  ;-vel kell lezárni.}
 
@@ -43,7 +44,7 @@ A node-ok kicsit trükkösebbek, róluk a gráfok részben lehet részletesebben
 \end{Example}
 
 
-\subsection{Illesztés}
+\subsection*{Illesztés}
 
 Az első fejezetben leírtakat érdemes alkalmazni. A \verb|\clip| parancsot érdemes használni. Nem csak arra jó, hogy kivágjuk a kép egy részét, de beállítja a kép keretét, ha azzal kezdjük. Erre persze lehet használni a \verb|\useasboundingbox| parancsot amivel megadhatunk például egy téglalappal határolt fix keretét a képnek. Amit ezen kívül rajzoltál nem fogja megjeleníteni.
 
@@ -61,7 +62,7 @@ Az első fejezetben leírtakat érdemes alkalmazni. A \verb|\clip| parancsot ér
 \end{tikzpicture}
 \end{Example}
 
-\subsection{Színek, egyebek}
+\subsection*{Színek, egyebek}
 
 Be lehet állítani vonalvastagságot, színt és még színátmenetes ábrát is egyszerű csinálni.
 \begin{itemize}
@@ -85,7 +86,7 @@ Be lehet állítani vonalvastagságot, színt és még színátmenetes ábrát i
 \end{tikzpicture}
 \end{Example}
 
-\section{Sokszögek rajzolása, for ciklusok}
+\section*{Sokszögek rajzolása, for ciklusok}
 
 Az, hogy lehet for ciklusokat írni, nagyban segít a valamilyen szempontból szimmetrikus ábrák elkészítésében. A for ciklusok hasonlóan más nyelvekhez bevezetnek egy változót, ami végig fut adott értékeken és végrehajtja a megadott parancsokat egyesével (jobb ha nem számít a sorrend).  Lehet egymásba ágyazott ciklusokat írni, de lehet párhuzamosan két vagy több változót egyszerre változtatni. Például \verb|\foreach \x in {1,2,3,4}{<commands>}| Ennél lehet komolyabb dolgokat is csinálni, lásd a példákat.
 
@@ -105,7 +106,7 @@ A képet lehet transzformálni erre pár példa: \verb|xshift|, \verb|yshift|, \
 \end{tikzpicture}
 \end{Example}
 
-\section{Rácsok, szöveg beillesztése}
+\section*{Rácsok, szöveg beillesztése}
 
 A \verb|\draw grid| parancsot lehet négyzetrács készítésre használni a \verb|\foreach| helyett. Meg kell adni a lépésközt és egy téglalapot ami határolja.
 
@@ -151,7 +152,7 @@ Itt különösen kiemelném a \verb|\clip| parancs fontosságát. Ha egy ábrát
 \end{tikzpicture}
 \end{Example}
 
-\section{Gráfok}
+\section*{Gráfok}
 
 Lehet gráfokat úgy definiálni, hogy a csúcsokat megadjuk és utána az élek már a meglévő objektumainkat (csúcsok) kössék össze. Ez azért hasznos, mert rugalmasabb lesz az ábra. Ha esetleg változtatnánk a gráfon egy új csúcs behozásával nem kell az egész ábrát koordinátánként átírni. Elég csak a csúcsokat áthelyezni, a többit a TikZ megcsinálja nekünk. Ami még különösen hasznos, hogy tudunk a programban a csúcsoknak nevet adni és utána ezt a nevet használni referenciaként, hogy egy sokkal átláthatóbb kódot kapjunk végeredményül. Ez nem összekeverendő a csúcshoz tartozó szöveggel.
 
