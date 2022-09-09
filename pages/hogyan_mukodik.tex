@@ -1,9 +1,14 @@
-\chapter{Hogyan működik ez?}
+\chapter{Forr\'as}
 
-{\LARGE CÍMEKBEN EGYES ÉKEZET HELYETT \\'<karakter> KELL.}
+\begin{enumerate}
+    \item[] Forrás: \href{https://github.com/a-gondolkodas-orome/latex-tutorial}{github} 
+    \item[] Honlap: \texttt{./pages/mainpage.tex}
+    \item[] Fordítás: \texttt{python ./build\_html.py} 
+    \item[] Generált oldal: \texttt{./docs/index.html} (\href{https://a-gondolkodas-orome.github.io/latex-tutorial/index.html}{online})
+\end{enumerate}
+        
+A címekben egyes ékezet helyett a  '<karakter>-t kell használni. 
 
-Van egy "mainpage.tex" fájl. Ha kell a preambulumba rakni valamit, akkor a "PREAMBULUM IDE" alá kell rakni. (Lehet máshol is jó lenne.)
+Egy weboldal megfelel egy \texttt{\bs chapter}-nek a mostani beállítás (\texttt{FileDepth}) szerint. 
+Új fájl esetén \texttt{\bs chapter\{title\_of\_chapter\}} paranccsal kezdődjön a fájl. A \texttt{mainpage.tex} fájlban szükséges az \texttt{\bs include\{name\_of\_file\}}.
 
-Egy weboldal = egy \verb*|\chapter| a mostani beállítás (FileDepth) szerint. Egy új fájl esetén rakjunk egy \verb|\chapter{weboldal címe}|  a fájl tetejére, majd \verb|\include| a "mainpage.tex" belsejében. A címbe ne legyen egyes ékezet!
-
-Fordításnál van eggyel följebb egy "../build\_html.py". Ez többször meghívja a fordító programot, hogy mindent biztosan le tudjon generálni.

@@ -1,6 +1,6 @@
 /*
   CSS stylesheet for the LaTeX Lwarp package
-  Copyright 2016-2021 Brian Dunn — BD Tech Concepts LLC
+  Copyright 2016-2020 Brian Dunn — BD Tech Concepts LLC
 */
 
 /* a fix for older browsers: */
@@ -56,11 +56,10 @@ span.sectionnumber { margin-right: 0em }
 span.indexitem {margin-left: 0em}
 span.indexsubitem {margin-left: 2em}
 span.indexsubsubitem {margin-left: 4em}
-div.indexheading {margin-top: 2ex ; font-weight: bold}
 
 div.hidden, span.hidden { display: none ; }
 
-kbd, span.texttt, p span.texttt {
+kbd, span.texttt {
     font-family: "DejaVu Mono", "Bitstream Vera Mono", "Lucida Console",
         "Nimbus Mono L", "Liberation Mono", "FreeMono", "Andale Mono",
         "Courier New", monospace;
@@ -74,6 +73,10 @@ span.strong, span.textbf, div.strong, div.textbf { font-weight: bold; }
 span.textit, div.textit { font-style: italic; }
 
 span.textmd, div.textmd { font-weight: normal; }
+
+span.texteb { font-weight: bolder; }
+
+span.textlg { font-weight: lighter; }
 
 span.textup, div.textup {
     font-style: normal;
@@ -103,50 +106,6 @@ span.textsf, div.textsf {
         Geneva, Verdana, sans-serif ;
 }
 
-/* nfssext-cfr lining figures */
-span.textln, div.textln {
-    font-variant-numeric: lining-nums ;
-}
-
-/* nfssext-cfr proportional figures */
-span.textp, div.textp {
-    font-variant-numeric: proportional-nums ;
-}
-
-/* nfssext-cfr tabular figures */
-span.textt, div.textt {
-    font-variant-numeric: tabular-nums ;
-}
-
-/* nfssext-cfr font weights */
-span.textdb, div.textdb {
-    font-weight: 500 ;
-}
-
-span.textsb, div.textsb {
-    font-weight: 600 ;
-}
-
-span.texteb, div.texteb {
-    font-weight: 800 ;
-}
-
-span.textub, div.textub {
-    font-weight: 900 ;
-}
-
-span.textlg, div.textlg {
-    font-weight: 300 ;
-}
-
-span.textel, div.textel {
-    font-weight: 200 ;
-}
-
-span.textul, div.textul {
-    font-weight: 100 ;
-}
-
 span.textcircled { border: 1px solid black ; border-radius: 1ex ; }
 
 span.underline {
@@ -158,8 +117,6 @@ span.overline {
     text-decoration: overline ;
     text-decoration-skip: auto ;
 }
-
-div.hrule { border-top: 1px solid silver }
 
 /* for vertical text: */
 div.verticalrl { writing-mode: vertical-rl }
@@ -189,16 +146,16 @@ div.diagboxW {
 .supsubscript sub {
     position: relative;
     display: block;
-    font-size: .7em;
+    font-size: .5em;
     line-height: 1;
 }
 
 .supsubscript sup {
-    top: .3em;
+    top: .5em;
 }
 
 .supsubscript sub {
-    top: .3em;
+    top: .5em;
 }
 
 div.attribution p {
@@ -276,7 +233,7 @@ div.epigraph p, div.dictum p { padding: .5ex ; margin: 0ex ;}
 div.epigraphsource p, div.dictumauthor p { padding: .5ex 0ex 0ex 0ex ; margin: 0ex ;}
 div.dictumauthor { font-style:italic }
 
-/* copyrightbox package: */
+/* copyrightbox package */
 div.copyrightbox { margin: .5ex .5em }
 div.copyrightbox p {margin: 0px .5em ; padding: 0px}
 div.copyrightboxnote {text-align: left ; font-size: 60%}
@@ -336,12 +293,6 @@ span.capsspacing {
 }
 
 span.highlight { background: #F8E800 ; }
-
-/* keystroke package: */
-span.keystroke {
-    border-style: outset ;
-    padding: 0pt .5em 0pt .5em ;
-}
 
 html body {
   margin: 0 ;
@@ -486,7 +437,7 @@ div.bodywithoutsidetoc div.bodycontainer {
 }
 
 section.textbody div.footnotes{
-    margin: 3ex 2em .5ex 2em ;
+    margin: 3ex 2em 0ex 2em ;
     border-bottom: 2px solid silver ;
 }
 
@@ -666,7 +617,6 @@ div.wpminipage { border: 1px solid green ; margin: .5ex ; padding: .5ex ;}
 .minipage, .fminipage, .fcolorminipage {
     /* display: inline-block ; */
         /* Mini pages which follow each other will be tiled. */
-    text-align:left;
     margin: .25em .25em .25em .25em;
     padding: .25em .25em .25em .25em;
     display: inline-flex;
@@ -728,33 +678,20 @@ div.wpminipage { border: 1px solid green ; margin: .5ex ; padding: .5ex ;}
   display: inline-block ;
 }
 
-/* mdframed, tcolorbox, shadebox packages */
-.mdframed, .tcolorbox, .shadebox {
+.mdframed {
     padding: 0ex ;
     margin: 2ex 0em 2ex 0em ;
-    border: 1px solid black ;
 }
 
-.tcolorbox {
-    border-radius: 10pt ;
-    margin: 2ex 1em 2ex 1em ;
-}
+.mdframed p { padding: 0ex .5em 0ex .5em ; }
 
-.mdframed p, .tcolorbox p { padding: 0ex .5em 0ex .5em ; }
+.mdframed dl { padding: 1ex .5em 0ex .5em ; }
 
-.mdframed dl, .tcolorbox dl { padding: 1ex .5em 0ex .5em ; }
-
-.mdframedtitle, .tcolorboxtitle {
+.mdframedtitle {
     padding: .5ex 0pt 0pt 0pt ;
     border-radius: 10pt 10pt 0pt 0pt ;
     display: block ;
     margin-bottom: 1ex ;
-    border-bottom: 1px solid silver ;
-}
-
-.tcolorboxsubtitle .tcolorbox {
-    margin: 2ex 0em 2ex 0em ;
-    border-radius: 0pt ;
 }
 
 .mdframedsubtitle {
@@ -854,10 +791,7 @@ dl dd:after { content: "" ; display: block ; clear: both }
 
 dl dd p { margin-top: 0em; }
 
-dd ul, dd ol, dd dl {
-    clear: both ;
-/*    padding-top: 1ex ; */
-}
+dd ul, dd ol, dd dl { clear: both ; padding-top: 1ex }
 
 nav {
     font-family: "URW Classico", Optima, "Linux Biolinum O",
@@ -1154,26 +1088,6 @@ span.verbatim {
         "Courier New", monospace;
 }
 
-div.titlehead
-{
-    text-align: left ;
-    font-style: normal ;
-    font-weight: normal ;
-    font-style: normal ;
-    font-size: .8em ;
-    margin: 1ex 0em 1ex 0em ;
-}
-
-div.subject
-{
-    text-align: center ;
-    font-style: normal ;
-    font-weight: bold ;
-    font-style: normal ;
-    font-size: .8em ;
-    margin: 1ex 0em 1ex 0em ;
-}
-
 div.published
 {
     text-align: center ;
@@ -1264,7 +1178,6 @@ footer {
     text-align:left ;
 }
 
-/* for \LinkHome, \LinkPrevious, and \LinkNext: */
 a.linkhome { font-weight:bold ; font-size: 1em ;}
 
 div.lateximagesource { padding: 0px ; margin: 0px ; display: none; }
@@ -1376,13 +1289,8 @@ nav .authorartist{ display:inline; }
 
 /* Native LaTeX theorems: */
 
-.theoremcontents {
-    font-style: italic; margin-top: 3ex ; margin-bottom: 3ex ;
-}
-
-.theoremlabel {
-    font-style: normal; font-weight: bold ; margin-right: .5em ;
-}
+.theoremcontents { font-style: italic; margin-top: 3ex ; margin-bottom: 3ex ; }
+.theoremlabel { font-style: normal; font-weight: bold ; margin-right: .5em ; }
 
 /* theorem, amsthm, and ntheorem packages */
 
@@ -1451,33 +1359,6 @@ div.amsthmproof
 
 span.amsthmnoteremark {}
 
-/* thmbox */
-
-.thmbox {
-    font-style: italic; margin-top: 3ex ; margin-bottom: 3ex ;
-    border: 1px solid gray ;
-    padding: 1ex ;
-}
-
-.thmboxtitle {
-    font-style: normal; font-weight: bold ; margin-right: .5em ;
-    border-bottom: 1px solid gray ;
-}
-
-span.thmboxproofname, span.thmboxexamplename {
-    font-weight: bold ;
-}
-
-div.thmboxproof, div.thmboxexample {
-    font-size: 0.85em ;
-    margin: 2ex ;
-}
-
-div.thmboxleftbar {
-    border-left: 2px solid black ;
-    padding-left: 1em ;
-}
-
 /* For the backnaur package: */
 div.backnaur {
     display: block ;
@@ -1516,15 +1397,9 @@ div.notesicon {
 
 div.notescontents { font-style: italic }
 
-/* nolbreaks package: */
-span.nolbreaks { white-space: nowrap ; }
-
 /*
 For CSS LaTeX and related logos:
 Based on spacing demonstrated by the metafont package.
-
-The subscripts are shrunk instead of lowered below the baseline,
-to avoid browser rendering errors with the line height in lists, etc.
 */
 
 .latexlogofont {
@@ -1536,6 +1411,7 @@ to avoid browser rendering errors with the line height in lists, etc.
 .latexlogo {
     font-family: "Linux Libertine O", "Nimbus Roman No 9 L",
         "FreeSerif", "Hoefler Text", Times, "Times New Roman", serif;
+    font-size: 1.1em;
 }
 
 .latexlogosup {
@@ -1549,11 +1425,10 @@ to avoid browser rendering errors with the line height in lists, etc.
 
 .latexlogosub {
   text-transform: uppercase;
-/*  vertical-align: -0.27ex; */
+  vertical-align: -0.27ex;
   margin-left: -0.08em;
   margin-right: -0.07em;
-/*  font-size: 1em; */
-    font-size: .7em ;
+  font-size: 1em;
 }
 
 .latexlogotwoe {
@@ -1563,25 +1438,24 @@ to avoid browser rendering errors with the line height in lists, etc.
 
 .latexlogotwoesub {
   font-style:italic ;
-/*  vertical-align: -0.27ex; */
+  vertical-align: -0.27ex;
   margin-left: -0.11em;
   margin-right: -0.1em;
-/*  font-size: 1em; */
-    font-size: .7em ;
+  font-size: 1em;
 }
 
 .xelatexlogo {
     font-family: "Linux Libertine O", "Nimbus Roman No 9 L",
         "FreeSerif", "Hoefler Text", Times, "Times New Roman", serif;
     letter-spacing: .03em ;
+    font-size: 1.1em;
 }
 
 .xelatexlogosub {
-/*  vertical-align: -0.27ex; */
+  vertical-align: -0.27ex;
   margin-left: -0.0667em;
   margin-right: -.05em;
-/*  font-size: 1em; */
-    font-size: .7em ;
+  font-size: 1em;
   letter-spacing: .03em ;
 }
 
@@ -1618,7 +1492,6 @@ span.sidetocthetitle { display: none }
         box-shadow: none ;
     }
     span.sidetocthetitle { display: inline }
-    nav.topnavigation { display:block }
     nav.botnavigation { display:block }
     div.bodycontainer { width: 100% }
     .marginpar {
