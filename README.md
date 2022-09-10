@@ -1,4 +1,4 @@
-# Latex tutorial
+# TikZ tutorial
 
 Latexben van írva 
 
