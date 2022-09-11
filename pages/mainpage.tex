@@ -10,7 +10,6 @@
 \ifPDFTeX
 \usepackage{lmodern}            % pdflatex or dvi latex
 \usepackage[utf8]{inputenc}
-%\usepackage[T1]{fontenc}
 \else
 \usepackage{fontspec}           % XeLaTeX or LuaLaTeX
 \fi
@@ -25,7 +24,6 @@
 %   REMARK (szgabbor): After commenting, I was able to compile
 %   xindex,
 %   xindy,
-%   xindex,
    %latexmk,                    % Use latexmk to compile.
 %   OSWindows,                  % Force Windows. (Usually automatic.)
 %   mathjax,                    % Use MathJax to display math.
@@ -44,15 +42,11 @@
 
 % --- OTHER PACKAGES ARE LOADED AFTER LWARP ---
 %\usepackage{makeidx} \makeindex
-%\usepackage{makeidx} \makeindex
 \usepackage{xindex} \makeindex
 %\usepackage{xindex} %\makeindex
-%\usepackage{xindy}
 %\usepackage[abbreviations,symbols,xindy]{glossaries-extra} 
 \makeindex
 \usepackage{xcolor}             % (Demonstration purposes only.)
-
-\usepackage{alltt}
 
 \usepackage{mdframed} 
 \definecolor{bgInline}{rgb}{0.9, 0.9, 0.9}
@@ -81,8 +75,6 @@
  {\endVerbatimOut
   \mintedframe[tabsize=4,breaklines,breaksymbolleft={}]{latex}{\jobname.tmp}
   \input{\jobname.tmp}}
-
-\newcommand{\bs}{\textbackslash}
 
 \newcommand{\code}[1]{\mintinline[bgcolor=bgInline]{latex}{#1}}
 
