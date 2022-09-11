@@ -13,6 +13,11 @@ body {
     background: #fffcf5;
 }
 
+section.textbody {
+    width: 900px;
+}
+
+
 span.textrm {
     font-family: "Linux Libertine O", "Hoefler Text", "Garamond",
         "Bembo", "Janson", "TeX Gyre Pagella", "Palatino",

@@ -51,11 +51,38 @@
 %\usepackage[abbreviations,symbols,xindy]{glossaries-extra} 
 \makeindex
 \usepackage{xcolor}             % (Demonstration purposes only.)
-\usepackage{hyperref,cleveref}  % LOAD THESE LAST!
 
 \usepackage{alltt}
+
+\usepackage{mdframed} 
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\mdfdefinestyle{code}{
+    linecolor=lightgray!50,
+	backgroundcolor=lightgray!50,
+	hidealllines=true,
+	roundcorner=10pt,
+}
+
+\usepackage{minted} % http://tug.ctan.org/macros/latex/contrib/minted/minted.pdf
+
+% https://tex.stackexchange.com/questions/504036/using-mdframed-with-inputminted
+\let\inputmintedorg\inputminted
+\newcommand{\mintedframe}[3][]{%
+\begin{mdframed}[style=code]
+\inputminted[#1]{#2}{#3}
+\end{mdframed}
+}
+
+% https://tex.stackexchange.com/questions/89873/repeating-environment-contents-twice
+\newenvironment{tikzExample}
+ {\VerbatimOut{\jobname.tmp}}
+ {\endVerbatimOut
+  \mintedframe[tabsize=4,breaklines,breaksymbolleft={}]{latex}{\jobname.tmp}
+  \input{\jobname.tmp}}
+
 \newcommand{\bs}{\textbackslash}
 
+\usepackage{hyperref,cleveref}  % LOAD THESE LAST!
 
 % --- LATEX AND HTML CUSTOMIZATION ---
 \title{TikZ gyorstalpaló, példák}

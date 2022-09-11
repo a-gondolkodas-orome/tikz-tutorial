@@ -20,8 +20,7 @@ A rajzolásra két különböző, de általában mindenre elég parancs a \verb|
 
 A node-ok kicsit trükkösebbek, róluk a gráfok részben lehet részletesebben olvasni.
 
-%\begin{minted}{tex}
-\begin{Example}
+\begin{tikzExample}
 \begin{tikzpicture}[scale=3]
     %a köröknek a kp.-át és sugarát kell megadni
     \draw (0,0) circle (0.4 cm) [color = blue!90];
@@ -40,15 +39,14 @@ A node-ok kicsit trükkösebbek, róluk a gráfok részben lehet részletesebben
     %Ha a törött vonalat lezárnád érdemes a --cycle befejezést írni a kezdő csúcs 
     %megismétlése helyett.
 \end{tikzpicture}
-\end{Example}
-%\end{minted}
+\end{tikzExample}
 
 
 \subsection{Illesztés}
 
 Az első fejezetben leírtakat érdemes alkalmazni. A \texttt{\bs clip} parancsot érdemes használni. Nem csak arra jó, hogy kivágjuk a kép egy részét, de beállítja a kép keretét, ha azzal kezdjük. Erre persze lehet használni a \verb|\useasboundingbox| parancsot amivel megadhatunk például egy téglalappal határolt fix keretét a képnek. Amit ezen kívül rajzoltál nem fogja megjeleníteni.
 
-\begin{Example}
+\begin{tikzExample}
 \begin{tikzpicture}[scale=3]        
     \draw (0,0) circle (0.4 cm) [color = blue!90];
     %Itt vágunk ami azt okozza, hogy az előző kör nem sérült
@@ -60,7 +58,7 @@ Az első fejezetben leírtakat érdemes alkalmazni. A \texttt{\bs clip} parancso
     \draw  (3-0.3, -0.3) -- ++(0, 0.7) -- ++(0.7, -0.8) -- ++(0, 0.8);
     \draw[thick,rounded corners=8pt, color=pink!200]     (4-0.3, -0.3) -- (4-0.3, 0.4) -- (4+0.4, -0.4) -- (4+0.4, 0.4);
 \end{tikzpicture}
-\end{Example}
+\end{tikzExample}
 
 \subsection{Színek, egyebek}
 
@@ -76,7 +74,7 @@ Be lehet állítani vonalvastagságot, színt és még színátmenetes ábrát i
         \end{itemize}
 \end{itemize}
 
-\begin{Example}
+\begin{tikzExample}
 \begin{tikzpicture}[scale=3]
     \draw (0,0) circle (0.4) [color = green!70, fill = green!15, ultra thick];
     \draw (1,0) circle (0.4)     [color = green!70!black, fill = green!15, thick, dashed];
@@ -84,7 +82,7 @@ Be lehet állítani vonalvastagságot, színt és még színátmenetes ábrát i
     \shade (3,0) circle (0.4) [top color = green, bottom color = yellow];
     \shade (4,0) circle (0.4) [left color = green, right color = yellow];
 \end{tikzpicture}
-\end{Example}
+\end{tikzExample}
 
 \section{Sokszögek rajzolása, for ciklusok}
 
@@ -94,7 +92,7 @@ Eddig nem volt róla szó, de a hagyományos koordinátázás helyett lehet pol�
 
 A képet lehet transzformálni erre pár példa: \verb|xshift|, \verb|yshift|, \verb|rotate|
 
-\begin{Example}
+\begin{tikzExample}
 \begin{tikzpicture}[scale = 2, ultra thick]
     \foreach \n in {3, ..., 8}{    \draw (\n-3,0) \foreach \d in {1, ..., \n}{ %MAGIC DANGER        
             +(\d*360/\n:0.3cm) -- +(\d*360/\n + 360/\n:0.3cm)    }; 
@@ -104,7 +102,7 @@ A képet lehet transzformálni erre pár példa: \verb|xshift|, \verb|yshift|, \
             \filldraw [xshift = \n-3, color = green!\i] (\n-3,-1) circle (0.3cm);
     }
 \end{tikzpicture}
-\end{Example}
+\end{tikzExample}
 
 \section{Rácsok, szöveg beillesztése}
 
@@ -114,7 +112,7 @@ Szöveget beilleszteni úgy kell, hogy egy Node-ot töltünk fel szöveggel. Par
 
 Itt különösen kiemelném a \verb|\clip| parancs fontosságát. Ha egy ábrát szeretnék nagyban és kicsiben is használni elég megismételni a kódot és megadunk egy keretet, ahol kíváncsiak vagyunk az ábra részleteire. 
 
-\begin{Example}
+\begin{tikzExample}
 \begin{tikzpicture}[scale = 3]
 	\clip (-1.2, -0.8) rectangle (4.2,2.2); %Ez csak azért, hogy jobban ráférjen a honlapra
 	%grid
@@ -150,7 +148,7 @@ Itt különösen kiemelném a \verb|\clip| parancs fontosságát. Ha egy ábrát
 	\draw[xshift=2.1cm, yshift=1cm] node[right,text width=5cm]
 	{Az ábrán látható {\color{red} $A$} pontból megy a {\color{blue} $B$} pontba egy {\color{green} vektor}.};
 \end{tikzpicture}
-\end{Example}
+\end{tikzExample}
 
 \section{Gráfok}
 
@@ -162,7 +160,7 @@ A csúcsok és élek szövegezésére is sok lehetőséget ad a TikZ. A \verb|la
 
 Lehet az éleket hajlítani, kígyósítani és egyéb stilisztikai trükköket alkalmazni. Erre azt ajánlom, hogy a dokumentációt érdemes olvasgatni. A következő részben írok a görbe vonalakról, ott érdemes erről olvasni.
 
-\begin{Example}
+\begin{tikzExample}
 \usetikzlibrary{positioning,backgrounds}
 \begin{tikzpicture}[auto, node distance = 1cm and 2cm]
 	\tikzstyle{StartEnd}=[rectangle,draw=blue!50, fill=blue!20,thick, 			inner sep=0pt,minimum size=6mm]
@@ -216,5 +214,5 @@ Lehet az éleket hajlítani, kígyósítani és egyéb stilisztikai trükköket 
 	\end{pgfonlayer}
 	
 \end{tikzpicture}
-\end{Example}
+\end{tikzExample}
 

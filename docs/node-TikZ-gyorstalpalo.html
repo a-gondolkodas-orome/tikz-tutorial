@@ -70,28 +70,28 @@ Home</a>
 
 
 <p>
-<a href="node-TikZ-gyorstalpalo.html#autosec-16" class="tocsection" >
+<a href="node-TikZ-gyorstalpalo.html#autosec-19" class="tocsection" >
 1.2.
  Sokszögek rajzolása, for ciklusok</a>
 </p>
 
 
 <p>
-<a href="node-TikZ-gyorstalpalo.html#autosec-19" class="tocsection" >
+<a href="node-TikZ-gyorstalpalo.html#autosec-23" class="tocsection" >
 1.3.
  Rácsok, szöveg beillesztése</a>
 </p>
 
 
 <p>
-<a href="node-TikZ-gyorstalpalo.html#autosec-22" class="tocsection" >
+<a href="node-TikZ-gyorstalpalo.html#autosec-27" class="tocsection" >
 1.4.
  Gráfok</a>
 </p>
 
 
 <p>
-<a href="node-Forras.html#autosec-27" class="tocchapter" >
+<a href="node-Forras.html#autosec-33" class="tocchapter" >
 2.Forrás</a>
 </p>
 
@@ -182,37 +182,97 @@ ugyanazzal a színnel kitölti az alakzatot. Mindkettő parancsnak meg kell mond
 A node-ok kicsit trükkösebbek, róluk a gráfok részben lehet részletesebben olvasni.
 </p>
 
-
-
-
+<div class="mdframed"
+style="
+background: #DFDFDF ;
+border: 1pt solid #DFDFDF ;
+border-radius: 10pt ;
+box-shadow: none ;
+">
 <div
-      class="fancyvrb"
-      style=""
+    class="fancyvrb"
+    style=""
 >
 <pre class="verbatim">
-\begin{tikzpicture}[scale=3]
-      %a köröknek a kp.-át és sugarát kell megadni
-      \draw (0,0) circle (0.4 cm) [color = blue!90];
-      \filldraw (1,0) circle (0.4 cm) [color = red!90];
+<span
+    class="textcolor"
+    style="color:#008000"
+><b>\begin</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>[scale=3]
+    <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%a köröknek a kp.-át és sugarát kell megadni</i></span>
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (0,0) circle (0.4 cm) [color = blue!90];
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\filldraw</b></span> (1,0) circle (0.4 cm) [color = red!90];
 
 
-      %a téglalapoknak a balalsó és jobbfelső csúcsait kell megadni
-      \draw (2-0.4, -.4) rectangle (2+0.4, .4) [ultra thick, fill=black!20];
+    <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%a téglalapoknak a balalsó és jobbfelső csúcsait kell megadni</i></span>
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (2-0.4, -.4) rectangle (2+0.4, .4) [ultra thick, fill=black!20];
 
 
-      %a törött vonalakat csúcsról csúcsra kell megadni
-      \draw   (3-0.3, -0.3) -- (3-0.3, 0.4) -- (3+0.4, -0.4) -- (3+0.4, 0.4);
+    <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%a törött vonalakat csúcsról csúcsra kell megadni</i></span>
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span>    (3-0.3, -0.3) -- (3-0.3, 0.4) -- (3+0.4, -0.4) -- (3+0.4, 0.4);
 
 
-      %ami sokkal menőbb, például egy rácsbejáráshoz az íveltvonalak
-      \draw[thick,rounded corners=8pt, color=pink!200] (4-0.3, -0.3) -- (4-0.3, 0.4)
-      -- (4+0.4, -0.4) -- (4+0.4, 0.4);
+    <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%ami sokkal menőbb, például egy rácsbejáráshoz az íveltvonalak</i></span>
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[thick,rounded corners=8pt, color=pink!200]</span> (4-0.3, -0.3) -- (4-0.3, 0.4)
+    -- (4+0.4, -0.4) -- (4+0.4, 0.4);
 
 
-      %Ha a törött vonalat lezárnád érdemes a --cycle befejezést írni a kezdő csúcs
-      %megismétlése helyett.
-\end{tikzpicture}
+    <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%Ha a törött vonalat lezárnád érdemes a --cycle befejezést írni a kezdő csúcs</i></span>
+    <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%megismétlése helyett.</i></span>
+<span
+    class="textcolor"
+    style="color:#008000"
+><b>\end</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
 </pre>
+</div>
+
 </div>
 
 <p>
@@ -228,8 +288,8 @@ A node-ok kicsit trükkösebbek, róluk a gráfok részben lehet részletesebben
 ></span>
 </p>
 <!--................................-->
-<h5 id="autosec-10"><span class="sectionnumber">1.1.1.&#x2002;</span>Illesztés</h5>
-<a id="mainpage-autopage-10"></a>
+<h5 id="autosec-11"><span class="sectionnumber">1.1.1.&#x2002;</span>Illesztés</h5>
+<a id="mainpage-autopage-11"></a>
 
 
 <p>
@@ -237,26 +297,80 @@ Az első fejezetben leírtakat érdemes alkalmazni. A <kbd>\clip</kbd> parancsot
 class="texttt">\useasboundingbox</span> parancsot amivel megadhatunk például egy téglalappal határolt fix keretét a képnek. Amit ezen kívül rajzoltál nem fogja megjeleníteni.
 </p>
 
-
-
-
+<div class="mdframed"
+style="
+background: #DFDFDF ;
+border: 1pt solid #DFDFDF ;
+border-radius: 10pt ;
+box-shadow: none ;
+">
 <div
     class="fancyvrb"
     style=""
 >
 <pre class="verbatim">
-\begin{tikzpicture}[scale=3]
-    \draw (0,0) circle (0.4 cm) [color = blue!90];
-    %Itt vágunk ami azt okozza, hogy az előző kör nem sérült
-    \clip (-0.3, -0.3) rectangle (5, 0.3);
-    \filldraw (1,0) circle (0.4 cm) [color = red!90];
-    \draw (2-0.4, -.4) rectangle (2+0.4, .4) [ultra thick, fill=black!20];
-    %Lehet relatív megadni a távolságokat, hogy ne kelljen mindent papíron kiszámolni
-    %Ha csak sima +-t használsz, akkor a kezdő csúcstól viszonyít
-    \draw   (3-0.3, -0.3) -- ++(0, 0.7) -- ++(0.7, -0.8) -- ++(0, 0.8);
-    \draw[thick,rounded corners=8pt, color=pink!200]      (4-0.3, -0.3) -- (4-0.3, 0.4) -- (4+0.4, -0.4) -- (4+0.4, 0.4);
-\end{tikzpicture}
+<span
+    class="textcolor"
+    style="color:#008000"
+><b>\begin</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>[scale=3]
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (0,0) circle (0.4 cm) [color = blue!90];
+    <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%Itt vágunk ami azt okozza, hogy az előző kör nem sérült</i></span>
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\clip</b></span> (-0.3, -0.3) rectangle (5, 0.3);
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\filldraw</b></span> (1,0) circle (0.4 cm) [color = red!90];
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (2-0.4, -.4) rectangle (2+0.4, .4) [ultra thick, fill=black!20];
+    <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%Lehet relatív megadni a távolságokat, hogy ne kelljen mindent papíron kiszámolni</i></span>
+    <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%Ha csak sima +-t használsz, akkor a kezdő csúcstól viszonyít</i></span>
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span>    (3-0.3, -0.3) -- ++(0, 0.7) -- ++(0.7, -0.8) -- ++(0, 0.8);
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[thick,rounded corners=8pt, color=pink!200]</span>       (4-0.3, -0.3) -- (4-0.3, 0.4) -- (4+0.4, -0.4) -- (4+0.4, 0.4);
+<span
+    class="textcolor"
+    style="color:#008000"
+><b>\end</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
 </pre>
+</div>
+
 </div>
 
 <p>
@@ -272,8 +386,8 @@ class="texttt">\useasboundingbox</span> parancsot amivel megadhatunk például e
 ></span>
 </p>
 <!--................................-->
-<h5 id="autosec-13"><span class="sectionnumber">1.1.2.&#x2002;</span>Színek, egyebek</h5>
-<a id="mainpage-autopage-13"></a>
+<h5 id="autosec-15"><span class="sectionnumber">1.1.2.&#x2002;</span>Színek, egyebek</h5>
+<a id="mainpage-autopage-15"></a>
 
 
 <p>
@@ -345,22 +459,61 @@ class="texttt">purple</span>, <span class="texttt">teal</span>, <span class="tex
 </li>
 </ul>
 
-
-
-
+<div class="mdframed"
+style="
+background: #DFDFDF ;
+border: 1pt solid #DFDFDF ;
+border-radius: 10pt ;
+box-shadow: none ;
+">
 <div
-      class="fancyvrb"
-      style=""
+    class="fancyvrb"
+    style=""
 >
 <pre class="verbatim">
-\begin{tikzpicture}[scale=3]
-      \draw (0,0) circle (0.4) [color = green!70, fill = green!15, ultra thick];
-      \draw (1,0) circle (0.4)    [color = green!70!black, fill = green!15, thick, dashed];
-      \shade (2,0) circle (0.4) [top color = green];
-      \shade (3,0) circle (0.4) [top color = green, bottom color = yellow];
-      \shade (4,0) circle (0.4) [left color = green, right color = yellow];
-\end{tikzpicture}
+<span
+    class="textcolor"
+    style="color:#008000"
+><b>\begin</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>[scale=3]
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (0,0) circle (0.4) [color = green!70, fill = green!15, ultra thick];
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (1,0) circle (0.4)    [color = green!70!black, fill = green!15, thick, dashed];
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\shade</b></span> (2,0) circle (0.4) [top color = green];
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\shade</b></span> (3,0) circle (0.4) [top color = green, bottom color = yellow];
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\shade</b></span> (4,0) circle (0.4) [left color = green, right color = yellow];
+<span
+    class="textcolor"
+    style="color:#008000"
+><b>\end</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
 </pre>
+</div>
+
 </div>
 
 <p>
@@ -376,8 +529,8 @@ class="texttt">purple</span>, <span class="texttt">teal</span>, <span class="tex
 ></span>
 </p>
 <!--................................-->
-<h4 id="autosec-16"><span class="sectionnumber">1.2.&#x2002;</span>Sokszögek rajzolása, for ciklusok</h4>
-<a id="mainpage-autopage-16"></a>
+<h4 id="autosec-19"><span class="sectionnumber">1.2.&#x2002;</span>Sokszögek rajzolása, for ciklusok</h4>
+<a id="mainpage-autopage-19"></a>
 
 
 <p>
@@ -394,24 +547,135 @@ Eddig nem volt róla szó, de a hagyományos koordinátázás helyett lehet pol�
 A képet lehet transzformálni erre pár példa: <span class="texttt">xshift</span>, <span class="texttt">yshift</span>, <span class="texttt">rotate</span>
 </p>
 
-
-
-
+<div class="mdframed"
+style="
+background: #DFDFDF ;
+border: 1pt solid #DFDFDF ;
+border-radius: 10pt ;
+box-shadow: none ;
+">
 <div
     class="fancyvrb"
     style=""
 >
 <pre class="verbatim">
-\begin{tikzpicture}[scale = 2, ultra thick]
-    \foreach \n in {3, ..., 8}{   \draw (\n-3,0) \foreach \d in {1, ..., \n}{ %MAGIC DANGER
-            +(\d*360/\n:0.3cm) -- +(\d*360/\n + 360/\n:0.3cm)    };
-            %Az, hogy ilyet lehet csinálni szerintem egyszerre undorító és hasznos
-            %Ez kell ahhoz, hogy a szín mögé lehessen írni változót (nem igazán lehet képletet)
-            \pgfmathsetmacro\i{\n*15-30}
-            \filldraw [xshift = \n-3, color = green!\i] (\n-3,-1) circle (0.3cm);
-    }
-\end{tikzpicture}
+<span
+    class="textcolor"
+    style="color:#008000"
+><b>\begin</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>[scale = 2, ultra thick]
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\foreach</b></span> <span
+    class="textcolor"
+    style="color:#008000"
+><b>\n</b></span> in <span
+    class="textcolor"
+    style="color:#008000"
+>{</span>3, ..., 8<span
+    class="textcolor"
+    style="color:#008000"
+>}{</span>       <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\n</b></span>-3,0) <span
+    class="textcolor"
+    style="color:#008000"
+><b>\foreach</b></span> <span
+    class="textcolor"
+    style="color:#008000"
+><b>\d</b></span> in <span
+    class="textcolor"
+    style="color:#008000"
+>{</span>1, ..., <span
+    class="textcolor"
+    style="color:#008000"
+><b>\n</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>}{</span> <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%MAGIC DANGER</i></span>
+             +(<span
+    class="textcolor"
+    style="color:#008000"
+><b>\d*</b></span>360/<span
+    class="textcolor"
+    style="color:#008000"
+><b>\n</b></span>:0.3cm) -- +(<span
+    class="textcolor"
+    style="color:#008000"
+><b>\d*</b></span>360/<span
+    class="textcolor"
+    style="color:#008000"
+><b>\n</b></span> + 360/<span
+    class="textcolor"
+    style="color:#008000"
+><b>\n</b></span>:0.3cm)       <span
+    class="textcolor"
+    style="color:#008000"
+>}</span>;
+             <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%Az, hogy ilyet lehet csinálni szerintem egyszerre undorító és hasznos</i></span>
+             <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%Ez kell ahhoz, hogy a szín mögé lehessen írni változót (nem igazán lehet képletet)</i></span>
+             <span
+    class="textcolor"
+    style="color:#008000"
+><b>\pgfmathsetmacro\i</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span><span
+    class="textcolor"
+    style="color:#008000"
+><b>\n*</b></span>15-30<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
+             <span
+    class="textcolor"
+    style="color:#008000"
+><b>\filldraw</b></span> [xshift = <span
+    class="textcolor"
+    style="color:#008000"
+><b>\n</b></span>-3, color = green!<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>] (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\n</b></span>-3,-1) circle (0.3cm);
+    <span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
+<span
+    class="textcolor"
+    style="color:#008000"
+><b>\end</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
 </pre>
+</div>
+
 </div>
 
 <p>
@@ -427,8 +691,8 @@ A képet lehet transzformálni erre pár példa: <span class="texttt">xshift</sp
 ></span>
 </p>
 <!--................................-->
-<h4 id="autosec-19"><span class="sectionnumber">1.3.&#x2002;</span>Rácsok, szöveg beillesztése</h4>
-<a id="mainpage-autopage-19"></a>
+<h4 id="autosec-23"><span class="sectionnumber">1.3.&#x2002;</span>Rácsok, szöveg beillesztése</h4>
+<a id="mainpage-autopage-23"></a>
 
 
 <p>
@@ -446,53 +710,458 @@ Itt különösen kiemelném a <span class="texttt">\clip</span> parancs fontoss�
 részleteire.
 </p>
 
-
-
-
+<div class="mdframed"
+style="
+background: #DFDFDF ;
+border: 1pt solid #DFDFDF ;
+border-radius: 10pt ;
+box-shadow: none ;
+">
 <div
     class="fancyvrb"
     style=""
 >
 <pre class="verbatim">
-\begin{tikzpicture}[scale = 3]
-         \clip (-1.2, -0.8) rectangle (4.2,2.2); %Ez csak azért, hogy jobban ráférjen a honlapra
-         %grid
-         \draw[step = 0.5, color=gray] (-2.1,-2.1) grid (2.1,2.1);
-         %axes
-         \draw[->, ultra thick] (0,-2.2) -- (0,2.2);
-         \draw[->, ultra thick] (-2.2,0) -- (2.2,0);
-         %texts
-         \draw (0,0) [fill = white, anchor = north east] node {\large $O$};
+<span
+    class="textcolor"
+    style="color:#008000"
+><b>\begin</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>[scale = 3]
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\clip</b></span> (-1.2, -0.8) rectangle (4.2,2.2); <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%Ez csak azért, hogy jobban ráférjen a honlapra</i></span>
+         <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%grid</i></span>
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[step = 0.5, color=gray]</span> (-2.1,-2.1) grid (2.1,2.1);
+         <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%axes</i></span>
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[->, ultra thick]</span> (0,-2.2) -- (0,2.2);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[->, ultra thick]</span> (-2.2,0) -- (2.2,0);
+         <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%texts</i></span>
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (0,0) [fill = white, anchor = north east] node <span
+    class="textcolor"
+    style="color:#008000"
+>{</span><span
+    class="textcolor"
+    style="color:#008000"
+><b>\large</b></span> <span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>O</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>}</span>;
 
 
-         %y-tengely
-         \foreach \label in {1, 2, 3, 4}
-         \pgfmathsetmacro\pos{\label/2}
-         \draw [ultra thick](-1pt,\pos) -- (1pt, \pos) node [fill = white, left, xshift = -7pt] {$\label$};
-         \foreach \label in {-1, -2, -3, -4}
-         \pgfmathsetmacro\pos{\label/2}
-         \draw [ultra thick](-1pt,\pos) -- (1pt, \pos) node [fill = white, left, xshift = -7pt] {$\label$};
+         <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%y-tengely</i></span>
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\foreach</b></span> <span
+    class="textcolor"
+    style="color:#008000"
+><b>\label</b></span> in <span
+    class="textcolor"
+    style="color:#008000"
+>{</span>1, 2, 3, 4<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\pgfmathsetmacro\pos</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span><span
+    class="textcolor"
+    style="color:#008000"
+><b>\label</b></span>/2<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> [ultra thick](-1pt,<span
+    class="textcolor"
+    style="color:#008000"
+><b>\pos</b></span>) -- (1pt, <span
+    class="textcolor"
+    style="color:#008000"
+><b>\pos</b></span>) node [fill = white, left, xshift = -7pt] <span
+    class="textcolor"
+    style="color:#008000"
+>{</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#1A177D"
+>\label</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>}</span>;
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\foreach</b></span> <span
+    class="textcolor"
+    style="color:#008000"
+><b>\label</b></span> in <span
+    class="textcolor"
+    style="color:#008000"
+>{</span>-1, -2, -3, -4<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\pgfmathsetmacro\pos</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span><span
+    class="textcolor"
+    style="color:#008000"
+><b>\label</b></span>/2<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> [ultra thick](-1pt,<span
+    class="textcolor"
+    style="color:#008000"
+><b>\pos</b></span>) -- (1pt, <span
+    class="textcolor"
+    style="color:#008000"
+><b>\pos</b></span>) node [fill = white, left, xshift = -7pt] <span
+    class="textcolor"
+    style="color:#008000"
+>{</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#1A177D"
+>\label</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>}</span>;
 
 
-         %x-tengely
-         \foreach \label in {1, 2, 3, 4}
-         \pgfmathsetmacro\pos{\label/2}
-         \draw [ultra thick](\pos, 1pt) -- (\pos, -1pt) node [fill = white, below, yshift = -2pt] {$\label$};
-         \foreach \label in {-1, -2, -3, -4}
-         \pgfmathsetmacro\pos{\label/2}
-         \draw [ultra thick](\pos, 1pt) -- (\pos, -1pt) node [fill = white, below, yshift = -2pt, xshift = -3pt] {$\label$};
+         <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%x-tengely                  </i></span>
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\foreach</b></span> <span
+    class="textcolor"
+    style="color:#008000"
+><b>\label</b></span> in <span
+    class="textcolor"
+    style="color:#008000"
+>{</span>1, 2, 3, 4<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\pgfmathsetmacro\pos</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span><span
+    class="textcolor"
+    style="color:#008000"
+><b>\label</b></span>/2<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> [ultra thick](<span
+    class="textcolor"
+    style="color:#008000"
+><b>\pos</b></span>, 1pt) -- (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\pos</b></span>, -1pt) node [fill = white, below, yshift = -2pt] <span
+    class="textcolor"
+    style="color:#008000"
+>{</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#1A177D"
+>\label</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>}</span>;
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\foreach</b></span> <span
+    class="textcolor"
+    style="color:#008000"
+><b>\label</b></span> in <span
+    class="textcolor"
+    style="color:#008000"
+>{</span>-1, -2, -3, -4<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\pgfmathsetmacro\pos</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span><span
+    class="textcolor"
+    style="color:#008000"
+><b>\label</b></span>/2<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> [ultra thick](<span
+    class="textcolor"
+    style="color:#008000"
+><b>\pos</b></span>, 1pt) -- (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\pos</b></span>, -1pt) node [fill = white, below, yshift = -2pt, xshift = -3pt] <span
+    class="textcolor"
+    style="color:#008000"
+>{</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#1A177D"
+>\label</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>}</span>;
 
 
-         %ábra
-         \draw (1, 0.5) node [color=red, anchor = south west] {$A$};
-         \draw (0.5, 1.5) node [color=blue, anchor = south west] {$B$};
-         \draw (0.5,1.5) node [color=blue, circle, fill=blue, scale =0.7] {};
-         \draw [->, green, dashed, ultra thick, opacity=0.5] (1, 0.5) -- (0.5, 1.5);
-         \draw (1, 0.5) node [color=red, circle, fill=red, scale =0.7] {};
-         \draw[xshift=2.1cm, yshift=1cm] node[right,text width=5cm]
-         {Az ábrán látható {\color{red} $A$} pontból megy a {\color{blue} $B$} pontba egy {\color{green} vektor}.};
-\end{tikzpicture}
+         <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%ábra</i></span>
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (1, 0.5) node [color=red, anchor = south west] <span
+    class="textcolor"
+    style="color:#008000"
+>{</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>A</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>}</span>;
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (0.5, 1.5) node [color=blue, anchor = south west] <span
+    class="textcolor"
+    style="color:#008000"
+>{</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>B</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>}</span>;
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (0.5,1.5) node [color=blue, circle, fill=blue, scale =0.7] <span
+    class="textcolor"
+    style="color:#008000"
+>{}</span>;
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> [->, green, dashed, ultra thick, opacity=0.5] (1, 0.5) -- (0.5, 1.5);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (1, 0.5) node [color=red, circle, fill=red, scale =0.7] <span
+    class="textcolor"
+    style="color:#008000"
+>{}</span>;
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[xshift=2.1cm, yshift=1cm]</span> node[right,text width=5cm]
+         <span
+    class="textcolor"
+    style="color:#008000"
+>{</span>Az ábrán látható <span
+    class="textcolor"
+    style="color:#008000"
+>{</span><span
+    class="textcolor"
+    style="color:#008000"
+><b>\color</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>red<span
+    class="textcolor"
+    style="color:#008000"
+>}</span> <span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>A</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>}</span> pontból megy a <span
+    class="textcolor"
+    style="color:#008000"
+>{</span><span
+    class="textcolor"
+    style="color:#008000"
+><b>\color</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>blue<span
+    class="textcolor"
+    style="color:#008000"
+>}</span> <span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>B</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>}</span> pontba egy <span
+    class="textcolor"
+    style="color:#008000"
+>{</span><span
+    class="textcolor"
+    style="color:#008000"
+><b>\color</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>green<span
+    class="textcolor"
+    style="color:#008000"
+>}</span> vektor<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>.<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>;
+<span
+    class="textcolor"
+    style="color:#008000"
+><b>\end</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
 </pre>
+</div>
+
 </div>
 
 <p>
@@ -533,8 +1202,8 @@ részleteire.
 ></span>
 </p>
 <!--................................-->
-<h4 id="autosec-22"><span class="sectionnumber">1.4.&#x2002;</span>Gráfok</h4>
-<a id="mainpage-autopage-22"></a>
+<h4 id="autosec-27"><span class="sectionnumber">1.4.&#x2002;</span>Gráfok</h4>
+<a id="mainpage-autopage-27"></a>
 
 
 <p>
@@ -556,77 +1225,563 @@ A csúcsok és élek szövegezésére is sok lehetőséget ad a TikZ. A <span cl
 Lehet az éleket hajlítani, kígyósítani és egyéb stilisztikai trükköket alkalmazni. Erre azt ajánlom, hogy a dokumentációt érdemes olvasgatni. A következő részben írok a görbe vonalakról, ott érdemes erről olvasni.
 </p>
 
-
-
-
+<div class="mdframed"
+style="
+background: #DFDFDF ;
+border: 1pt solid #DFDFDF ;
+border-radius: 10pt ;
+box-shadow: none ;
+">
 <div
     class="fancyvrb"
     style=""
 >
 <pre class="verbatim">
-\usetikzlibrary{positioning,backgrounds}
-\begin{tikzpicture}[auto, node distance = 1cm and 2cm]
-         \tikzstyle{StartEnd}=[rectangle,draw=blue!50, fill=blue!20,thick,                           inner sep=0pt,minimum size=6mm]
-         \tikzstyle{alayer}=[circle,draw=red!80,fill=red!20,thick, inner sep=0pt,minimum size=6mm]
-         \tikzstyle{blayer}=[circle,draw=red!80,fill=red!40,thick, inner sep=0pt,minimum size=6mm]
-         \tikzstyle{se-edge}=[->,very thick, color=blue!30]
-         \tikzstyle{in-edge}=[->,very thick, color=red!30]
+<span
+    class="textcolor"
+    style="color:#008000"
+><b>\usetikzlibrary</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>positioning,backgrounds<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
+<span
+    class="textcolor"
+    style="color:#008000"
+><b>\begin</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>[auto, node distance = 1cm and 2cm]
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\tikzstyle</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>StartEnd<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>=[rectangle,draw=blue!50, fill=blue!20,thick,                         inner sep=0pt,minimum size=6mm]
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\tikzstyle</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>alayer<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>=[circle,draw=red!80,fill=red!20,thick, inner sep=0pt,minimum size=6mm]
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\tikzstyle</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>blayer<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>=[circle,draw=red!80,fill=red!40,thick, inner sep=0pt,minimum size=6mm]
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\tikzstyle</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>se-edge<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>=[->,very thick, color=blue!30]
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\tikzstyle</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>in-edge<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>=[->,very thick, color=red!30]
 
 
-         %Nodes
-         \node[StartEnd] (Start) [label = 135:\color{blue}\Large$S$] {};
+         <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%Nodes</i></span>
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\node</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[StartEnd]</span> (Start) [label = 135:<span
+    class="textcolor"
+    style="color:#008000"
+><b>\color</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>blue<span
+    class="textcolor"
+    style="color:#008000"
+>}</span><span
+    class="textcolor"
+    style="color:#008000"
+><b>\Large</b></span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>S</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span>] <span
+    class="textcolor"
+    style="color:#008000"
+>{}</span>;
 
 
-         \node[alayer] (a3) [right = of Start, label=above:$a3$] {};
-         \node[alayer] (a2) [above = of a3, label=above:$a2$] {};
-         \node[alayer] (a1) [above = of a2, label=above:$a1$] {};
-         \node[alayer] (a4) [below = of a3, label=above:$a4$] {};
-         \node[alayer] (a5) [below = of a4, label=above:$a5$] {};
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\node</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[alayer]</span> (a3) [right = of Start, label=above:<span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>a</span><span
+    class="textcolor"
+    style="color:#666666"
+>3</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span>] <span
+    class="textcolor"
+    style="color:#008000"
+>{}</span>;
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\node</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[alayer]</span> (a2) [above = of a3, label=above:<span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>a</span><span
+    class="textcolor"
+    style="color:#666666"
+>2</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span>] <span
+    class="textcolor"
+    style="color:#008000"
+>{}</span>;
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\node</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[alayer]</span> (a1) [above = of a2, label=above:<span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>a</span><span
+    class="textcolor"
+    style="color:#666666"
+>1</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span>] <span
+    class="textcolor"
+    style="color:#008000"
+>{}</span>;
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\node</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[alayer]</span> (a4) [below = of a3, label=above:<span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>a</span><span
+    class="textcolor"
+    style="color:#666666"
+>4</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span>] <span
+    class="textcolor"
+    style="color:#008000"
+>{}</span>;
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\node</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[alayer]</span> (a5) [below = of a4, label=above:<span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>a</span><span
+    class="textcolor"
+    style="color:#666666"
+>5</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span>] <span
+    class="textcolor"
+    style="color:#008000"
+>{}</span>;
 
 
-         \node[blayer] (b3) [right = of a3, label=above:$b3$] {};
-         \node[blayer] (b2) [above = of b3, label=above:$b2$] {};
-         \node[blayer] (b1) [above = of b2, label=above:$b1$] {};
-         \node[blayer] (b4) [below = of b3, label=above:$b4$] {};
-         \node[blayer] (b5) [below = of b4, label=above:$b5$] {};
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\node</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[blayer]</span> (b3) [right = of a3, label=above:<span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>b</span><span
+    class="textcolor"
+    style="color:#666666"
+>3</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span>] <span
+    class="textcolor"
+    style="color:#008000"
+>{}</span>;
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\node</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[blayer]</span> (b2) [above = of b3, label=above:<span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>b</span><span
+    class="textcolor"
+    style="color:#666666"
+>2</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span>] <span
+    class="textcolor"
+    style="color:#008000"
+>{}</span>;
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\node</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[blayer]</span> (b1) [above = of b2, label=above:<span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>b</span><span
+    class="textcolor"
+    style="color:#666666"
+>1</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span>] <span
+    class="textcolor"
+    style="color:#008000"
+>{}</span>;
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\node</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[blayer]</span> (b4) [below = of b3, label=above:<span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>b</span><span
+    class="textcolor"
+    style="color:#666666"
+>4</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span>] <span
+    class="textcolor"
+    style="color:#008000"
+>{}</span>;
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\node</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[blayer]</span> (b5) [below = of b4, label=above:<span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>b</span><span
+    class="textcolor"
+    style="color:#666666"
+>5</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span>] <span
+    class="textcolor"
+    style="color:#008000"
+>{}</span>;
 
 
-         \node[StartEnd] (End)[right = of b3,label=45:\color{blue}\Large$C$] {};
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\node</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[StartEnd]</span> (End)[right = of b3,label=45:<span
+    class="textcolor"
+    style="color:#008000"
+><b>\color</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>blue<span
+    class="textcolor"
+    style="color:#008000"
+>}</span><span
+    class="textcolor"
+    style="color:#008000"
+><b>\Large</b></span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span><span
+    class="textcolor"
+    style="color:#008000"
+>C</span><span
+    class="textcolor"
+    style="color:#BA2121"
+>$</span>] <span
+    class="textcolor"
+    style="color:#008000"
+>{}</span>;
 
 
-         %Edges
-         \draw[se-edge] (Start) to [out=45, in=180] (a1);
-         \draw[se-edge] (Start) to [out=22.5, in=180] (a2);
-         \draw[se-edge] (Start) to [out=0, in=180] (a3);
-         \draw[se-edge] (Start) to [out=360-22.5, in=180] (a4);
-         \draw[se-edge] (Start) to [out=360-45, in=180] (a5);
+         <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%Edges</i></span>
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[se-edge]</span> (Start) to [out=45, in=180] (a1);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[se-edge]</span> (Start) to [out=22.5, in=180] (a2);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[se-edge]</span> (Start) to [out=0, in=180] (a3);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[se-edge]</span> (Start) to [out=360-22.5, in=180] (a4);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[se-edge]</span> (Start) to [out=360-45, in=180] (a5);
 
 
-         \draw[se-edge] (b1) to [out=0, in=180-45] (End);
-         \draw[se-edge] (b2) to [out=0, in=180-22.5] (End);
-         \draw[se-edge] (b3) to [out=0, in=180] (End);
-         \draw[se-edge] (b4) to [out=0, in=180+22.5] (End);
-         \draw[se-edge] (b5) to [out=0, in=180+45] (End);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[se-edge]</span> (b1) to [out=0, in=180-45] (End);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[se-edge]</span> (b2) to [out=0, in=180-22.5] (End);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[se-edge]</span> (b3) to [out=0, in=180] (End);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[se-edge]</span> (b4) to [out=0, in=180+22.5] (End);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[se-edge]</span> (b5) to [out=0, in=180+45] (End);
 
 
-         \draw[in-edge] (a1) to (b2);
-         \draw[in-edge] (a2) to (b1);
-         \draw[in-edge] (a2) to (b5);
-         \draw[in-edge] (a3) to (b5);
-         \draw[in-edge] (a4) to (b1);
-         \draw[in-edge] (a5) to (b3);
-         \draw[in-edge] (a5) to (b5);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[in-edge]</span> (a1) to (b2);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[in-edge]</span> (a2) to (b1);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[in-edge]</span> (a2) to (b5);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[in-edge]</span> (a3) to (b5);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[in-edge]</span> (a4) to (b1);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[in-edge]</span> (a5) to (b3);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span><span
+    class="textcolor"
+    style="color:#697821"
+>[in-edge]</span> (a5) to (b5);
 
 
-         %Layers
-         \begin{pgfonlayer}{background}
-                   \filldraw [fill=black!20, draw=black] (a5.south -| a5.west) rectangle (a1.north -| a1.east);
-                   \filldraw [fill=black!20, draw=black] (b5.south -| b5.west) rectangle (b1.north -| b1.east);
-         \end{pgfonlayer}
+         <span
+    class="textcolor"
+    style="color:#3D7A7A"
+><i>%Layers</i></span>
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\begin</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>pgfonlayer<span
+    class="textcolor"
+    style="color:#008000"
+>}{</span>background<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
+                   <span
+    class="textcolor"
+    style="color:#008000"
+><b>\filldraw</b></span> [fill=black!20, draw=black] (a5.south -| a5.west) rectangle (a1.north -| a1.east);
+                   <span
+    class="textcolor"
+    style="color:#008000"
+><b>\filldraw</b></span> [fill=black!20, draw=black] (b5.south -| b5.west) rectangle (b1.north -| b1.east);
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\end</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>pgfonlayer<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
 
 
-\end{tikzpicture}
+<span
+    class="textcolor"
+    style="color:#008000"
+><b>\end</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
 </pre>
+</div>
+
 </div>
 
 <p>
