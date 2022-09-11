@@ -4,7 +4,7 @@
 * main.tex: ./pages/mainpage.tex
 * fordítás: python ./build_html.py 
 * index.html: ./docs/index.html 
-* honlap: (https://a-gondolkodas-orome.github.io/latex-tutorial/index.html)
+* honlap: https://a-gondolkodas-orome.github.io/latex-tutorial/index.html
 
 ## Megjegyzések
 
