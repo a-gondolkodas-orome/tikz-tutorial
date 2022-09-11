@@ -2,20 +2,20 @@
 
 \section{Alapok}
 
-A \verb|\usepackage{tikzpicture}| kell a library implementálásához A \verb|\begin{tikzpicture}| és \verb|\end{tikzpicture}| parancsok közé kell helyezni a rajzolandó ábrát. A TikZ úgy működik, mint egy rajztábla. Egyesével kell az objektumokat rárajzolni, esetenként egy ciklusban többet is lehet egyszerre (lásd lejjebb). \textbf{Minden parancsot egy  ;-vel kell lezárni.}
+A \code{\usepackage{tikzpicture}} kell a library implementálásához A \verb|\begin{tikzpicture}| és \verb|\end{tikzpicture}| parancsok közé kell helyezni a rajzolandó ábrát. A TikZ úgy működik, mint egy rajztábla. Egyesével kell az objektumokat rárajzolni, esetenként egy ciklusban többet is lehet egyszerre (lásd lejjebb). \textbf{Minden parancsot egy  ;-vel kell lezárni.}
 
 A \verb|\begin{tikzpicture}["paraméterek"]| ebben a szögletes zárójelben kell megadni a rajztábla paramétereit. Ilyenek:
 \begin{itemize}
-    \item "\texttt{scale = 3}"  -- a képet nyújtja, kivéve a betű méretet
-    \item "\texttt{xscale = 4, yscale = 5}"  -- ugyanez, csak merőlegesen affin képet ad
+    \item "\code{scale = 3}"  -- a képet nyújtja, kivéve a betű méretet
+    \item "\code{xscale = 4, yscale = 5}"  -- ugyanez, csak merőlegesen affin képet ad
 \end{itemize}
 
 A rajzolásra két különböző, de általában mindenre elég parancs a \verb|\draw| és \verb|\filldraw| . A sima rajzolás csak körvonalat rajzol, a másik pedig automatikusan ugyanazzal a színnel kitölti az alakzatot. Mindkettő parancsnak meg kell mondani, hogy:
 
 \begin{itemize}
-    \item Hova: \texttt{(x, y)}, \texttt{(fok:hossz)}
-    \item Mit: \texttt{node}, \texttt{--} (edge), \texttt{circle}, \texttt{rectangle}, \texttt{arc}
-    \item Stílusban: \texttt{[color, ultra thin, fill]} -- ez lehet üres, ilyenkor a rajztábla stílusát használja
+    \item Hova: \code{(x, y)}, \code{(fok:hossz)}
+    \item Mit: \code{node}, \code{--} (edge), \code{circle}, \code{rectangle}, \code{arc}
+    \item Stílusban: \code{[color, ultra thin, fill]} -- ez lehet üres, ilyenkor a rajztábla stílusát használja
 \end{itemize}
 
 A node-ok kicsit trükkösebbek, róluk a gráfok részben lehet részletesebben olvasni.
@@ -44,7 +44,7 @@ A node-ok kicsit trükkösebbek, róluk a gráfok részben lehet részletesebben
 
 \subsection{Illesztés}
 
-Az első fejezetben leírtakat érdemes alkalmazni. A \texttt{\bs clip} parancsot érdemes használni. Nem csak arra jó, hogy kivágjuk a kép egy részét, de beállítja a kép keretét, ha azzal kezdjük. Erre persze lehet használni a \verb|\useasboundingbox| parancsot amivel megadhatunk például egy téglalappal határolt fix keretét a képnek. Amit ezen kívül rajzoltál nem fogja megjeleníteni.
+Az első fejezetben leírtakat érdemes alkalmazni. A \code{\bs clip} parancsot érdemes használni. Nem csak arra jó, hogy kivágjuk a kép egy részét, de beállítja a kép keretét, ha azzal kezdjük. Erre persze lehet használni a \verb|\useasboundingbox| parancsot amivel megadhatunk például egy téglalappal határolt fix keretét a képnek. Amit ezen kívül rajzoltál nem fogja megjeleníteni.
 
 \begin{tikzExample}
 \begin{tikzpicture}[scale=3]        

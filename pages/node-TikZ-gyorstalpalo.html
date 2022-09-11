@@ -120,9 +120,20 @@ Home</a>
 
 
 <p>
-A <span class="texttt">\usepackage{tikzpicture}</span> kell a library implementálásához A <span class="texttt">\begin{tikzpicture}</span> és <span class="texttt">\end{tikzpicture}</span> parancsok közé
-kell helyezni a rajzolandó ábrát. A TikZ úgy működik, mint egy rajztábla. Egyesével kell az objektumokat rárajzolni, esetenként egy ciklusban többet is lehet egyszerre (lásd lejjebb). <b>Minden parancsot egy ;-vel kell
-lezárni.</b>
+A <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+><span
+    class="textcolor"
+    style="color:#008000"
+><b>\usepackage</b></span> <span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span></span> kell a library implementálásához A <span class="texttt">\begin{tikzpicture}</span> és <span class="texttt">\end{tikzpicture}</span> parancsok közé kell helyezni a rajzolandó ábrát. A TikZ úgy
+működik, mint egy rajztábla. Egyesével kell az objektumokat rárajzolni, esetenként egy ciklusban többet is lehet egyszerre (lásd lejjebb). <b>Minden parancsot egy ;-vel kell lezárni.</b>
 </p>
 
 <p>
@@ -132,7 +143,10 @@ A <span class="texttt">\begin{tikzpicture}["paraméterek"]</span> ebben a szögl
 
 <li>
 <p>
-• ”<kbd>scale = 3</kbd>” – a képet nyújtja, kivéve a betű méretet
+• ” <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>scale = 3</span>” – a képet nyújtja, kivéve a betű méretet
 </p>
 
 
@@ -141,7 +155,10 @@ A <span class="texttt">\begin{tikzpicture}["paraméterek"]</span> ebben a szögl
 
 
 <p>
-• ”<kbd>xscale = 4, yscale = 5</kbd>” – ugyanez, csak merőlegesen affin képet ad
+• ” <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>xscale = 4, yscale = 5</span>” – ugyanez, csak merőlegesen affin képet ad
 </p>
 </li>
 </ul>
@@ -155,7 +172,13 @@ ugyanazzal a színnel kitölti az alakzatot. Mindkettő parancsnak meg kell mond
 
 <li>
 <p>
-• Hova: <kbd>(x, y)</kbd>, <kbd>(fok:hossz)</kbd>
+• Hova: <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>(x, y)</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>(fok:hossz)</span>
 </p>
 
 
@@ -164,7 +187,22 @@ ugyanazzal a színnel kitölti az alakzatot. Mindkettő parancsnak meg kell mond
 
 
 <p>
-• Mit: <kbd>node</kbd>, <kbd>--</kbd> (edge), <kbd>circle</kbd>, <kbd>rectangle</kbd>, <kbd>arc</kbd>
+• Mit: <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>node</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>--</span> (edge), <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>circle</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>rectangle</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>arc</span>
 </p>
 
 
@@ -173,7 +211,10 @@ ugyanazzal a színnel kitölti az alakzatot. Mindkettő parancsnak meg kell mond
 
 
 <p>
-• Stílusban: <kbd>[color, ultra thin, fill]</kbd> – ez lehet üres, ilyenkor a rajztábla stílusát használja
+• Stílusban: <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>[color, ultra thin, fill]</span> – ez lehet üres, ilyenkor a rajztábla stílusát használja
 </p>
 </li>
 </ul>
@@ -184,8 +225,8 @@ A node-ok kicsit trükkösebbek, róluk a gráfok részben lehet részletesebben
 
 <div class="mdframed"
 style="
-background: #DFDFDF ;
-border: 1pt solid #DFDFDF ;
+background: #CCCCCC ;
+border: 1pt solid #CCCCCC ;
 border-radius: 10pt ;
 box-shadow: none ;
 ">
@@ -293,14 +334,20 @@ box-shadow: none ;
 
 
 <p>
-Az első fejezetben leírtakat érdemes alkalmazni. A <kbd>\clip</kbd> parancsot érdemes használni. Nem csak arra jó, hogy kivágjuk a kép egy részét, de beállítja a kép keretét, ha azzal kezdjük. Erre persze lehet használni a <span
+Az első fejezetben leírtakat érdemes alkalmazni. A <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+><span
+    class="textcolor"
+    style="color:#008000"
+><b>\bs</b></span> clip</span> parancsot érdemes használni. Nem csak arra jó, hogy kivágjuk a kép egy részét, de beállítja a kép keretét, ha azzal kezdjük. Erre persze lehet használni a <span
 class="texttt">\useasboundingbox</span> parancsot amivel megadhatunk például egy téglalappal határolt fix keretét a képnek. Amit ezen kívül rajzoltál nem fogja megjeleníteni.
 </p>
 
 <div class="mdframed"
 style="
-background: #DFDFDF ;
-border: 1pt solid #DFDFDF ;
+background: #CCCCCC ;
+border: 1pt solid #CCCCCC ;
 border-radius: 10pt ;
 box-shadow: none ;
 ">
@@ -461,8 +508,8 @@ class="texttt">purple</span>, <span class="texttt">teal</span>, <span class="tex
 
 <div class="mdframed"
 style="
-background: #DFDFDF ;
-border: 1pt solid #DFDFDF ;
+background: #CCCCCC ;
+border: 1pt solid #CCCCCC ;
 border-radius: 10pt ;
 box-shadow: none ;
 ">
@@ -549,8 +596,8 @@ A képet lehet transzformálni erre pár példa: <span class="texttt">xshift</sp
 
 <div class="mdframed"
 style="
-background: #DFDFDF ;
-border: 1pt solid #DFDFDF ;
+background: #CCCCCC ;
+border: 1pt solid #CCCCCC ;
 border-radius: 10pt ;
 box-shadow: none ;
 ">
@@ -712,8 +759,8 @@ részleteire.
 
 <div class="mdframed"
 style="
-background: #DFDFDF ;
-border: 1pt solid #DFDFDF ;
+background: #CCCCCC ;
+border: 1pt solid #CCCCCC ;
 border-radius: 10pt ;
 box-shadow: none ;
 ">
@@ -1227,8 +1274,8 @@ Lehet az éleket hajlítani, kígyósítani és egyéb stilisztikai trükköket 
 
 <div class="mdframed"
 style="
-background: #DFDFDF ;
-border: 1pt solid #DFDFDF ;
+background: #CCCCCC ;
+border: 1pt solid #CCCCCC ;
 border-radius: 10pt ;
 box-shadow: none ;
 ">

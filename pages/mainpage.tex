@@ -55,10 +55,12 @@
 \usepackage{alltt}
 
 \usepackage{mdframed} 
-\definecolor{bg}{rgb}{0.95,0.95,0.95}
-\mdfdefinestyle{code}{
-    linecolor=lightgray!50,
-	backgroundcolor=lightgray!50,
+\definecolor{bgInline}{rgb}{0.9, 0.9, 0.9}
+\definecolor{bgBox}{rgb}{0.8, 0.8, 0.8}
+
+\mdfdefinestyle{box}{
+    linecolor=bgBox,
+	backgroundcolor=bgBox,
 	hidealllines=true,
 	roundcorner=10pt,
 }
@@ -68,7 +70,7 @@
 % https://tex.stackexchange.com/questions/504036/using-mdframed-with-inputminted
 \let\inputmintedorg\inputminted
 \newcommand{\mintedframe}[3][]{%
-\begin{mdframed}[style=code]
+\begin{mdframed}[style=box]
 \inputminted[#1]{#2}{#3}
 \end{mdframed}
 }
@@ -81,6 +83,8 @@
   \input{\jobname.tmp}}
 
 \newcommand{\bs}{\textbackslash}
+
+\newcommand{\code}[1]{\mintinline[bgcolor=bgInline]{latex}{#1}}
 
 \usepackage{hyperref,cleveref}  % LOAD THESE LAST!
 
