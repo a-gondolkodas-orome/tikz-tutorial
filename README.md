@@ -5,6 +5,7 @@
 * fordítás: python ./build_html.py 
 * index.html: ./docs/index.html 
 * honlap: https://a-gondolkodas-orome.github.io/latex-tutorial/index.html
+* PDF: https://a-gondolkodas-orome.github.io/latex-tutorial/mainpage.pdf
 
 ## Megjegyzések
 
