@@ -1,7 +1,16 @@
 # TikZ tutorial
 
-Latexben van írva 
+* [Github link](https://github.com/a-gondolkodas-orome/latex-tutorial)
+* main.tex: ./pages/mainpage.tex
+* fordítás: python ./build_html.py 
+* index.html: ./docs/index.html 
+* [Honlap](https://a-gondolkodas-orome.github.io/latex-tutorial/index.html)
+* [PDF](https://a-gondolkodas-orome.github.io/latex-tutorial/mainpage.pdf)
 
-Új oldal hozzáadásához nézd meg a <pages/hogyan_mukodik.tex> fájlt.
+## Megjegyzések
 
-Fordításhoz a gyökérmappában futtasd le a <build_html.py> fájlt.
+A címekben egyes ékezet helyett a  '<karakter>-t kell használni. 
+
+Egy weboldal megfelel egy \chapter-nek a mostani beállítás (FileDepth) szerint. Új fájl esetén \chapter{title_of_chapter} paranccsal kezdődjön a fájl. A ./pages/mainpage.tex fájlban szükséges az \include{name_of_file}.
+
+
