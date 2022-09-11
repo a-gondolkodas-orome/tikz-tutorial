@@ -132,12 +132,48 @@ A <span
 >{</span>tikzpicture<span
     class="textcolor"
     style="color:#008000"
->}</span></span> kell a library implementálásához A <span class="texttt">\begin{tikzpicture}</span> és <span class="texttt">\end{tikzpicture}</span> parancsok közé kell helyezni a rajzolandó ábrát. A TikZ úgy
-működik, mint egy rajztábla. Egyesével kell az objektumokat rárajzolni, esetenként egy ciklusban többet is lehet egyszerre (lásd lejjebb). <b>Minden parancsot egy ;-vel kell lezárni.</b>
+>}</span></span> kell a library implementálásához A <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+><span
+    class="textcolor"
+    style="color:#008000"
+><b>\begin</b></span> <span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span></span> és <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+><span
+    class="textcolor"
+    style="color:#008000"
+><b>\end</b></span> <span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span></span> parancsok közé kell helyezni a rajzolandó ábrát. A TikZ úgy működik, mint egy rajztábla. Egyesével kell az objektumokat rárajzolni, esetenként egy ciklusban többet is lehet egyszerre (lásd lejjebb). <b>Minden
+parancsot egy ;-vel kell lezárni.</b>
 </p>
 
 <p>
-A <span class="texttt">\begin{tikzpicture}["paraméterek"]</span> ebben a szögletes zárójelben kell megadni a rajztábla paramétereit. Ilyenek:
+A <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+><span
+    class="textcolor"
+    style="color:#008000"
+><b>\begin</b></span> <span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>["paraméterek"]</span> ebben a szögletes zárójelben kell megadni a rajztábla paramétereit. Ilyenek:
 </p>
 <ul style="list-style-type:none">
 
@@ -164,8 +200,19 @@ A <span class="texttt">\begin{tikzpicture}["paraméterek"]</span> ebben a szögl
 </ul>
 
 <p>
-A rajzolásra két különböző, de általában mindenre elég parancs a <span class="texttt">\draw</span> és <span class="texttt">\filldraw</span> . A sima rajzolás csak körvonalat rajzol, a másik pedig automatikusan
-ugyanazzal a színnel kitölti az alakzatot. Mindkettő parancsnak meg kell mondani, hogy:
+A rajzolásra két különböző, de általában mindenre elég parancs a <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+><span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span></span> és <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+><span
+    class="textcolor"
+    style="color:#008000"
+><b>\filldraw</b></span></span> . A sima rajzolás csak körvonalat rajzol, a másik pedig automatikusan ugyanazzal a színnel kitölti az alakzatot. Mindkettő parancsnak meg kell mondani, hogy:
 </p>
 
 <ul style="list-style-type:none">
@@ -340,8 +387,13 @@ Az első fejezetben leírtakat érdemes alkalmazni. A <span
 ><span
     class="textcolor"
     style="color:#008000"
-><b>\bs</b></span> clip</span> parancsot érdemes használni. Nem csak arra jó, hogy kivágjuk a kép egy részét, de beállítja a kép keretét, ha azzal kezdjük. Erre persze lehet használni a <span
-class="texttt">\useasboundingbox</span> parancsot amivel megadhatunk például egy téglalappal határolt fix keretét a képnek. Amit ezen kívül rajzoltál nem fogja megjeleníteni.
+><b>\clip</b></span></span> parancsot érdemes használni. Nem csak arra jó, hogy kivágjuk a kép egy részét, de beállítja a kép keretét, ha azzal kezdjük. Erre persze lehet használni a <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+><span
+    class="textcolor"
+    style="color:#008000"
+><b>\useasboundingbox</b></span></span> parancsot amivel megadhatunk például egy téglalappal határolt fix keretét a képnek. Amit ezen kívül rajzoltál nem fogja megjeleníteni.
 </p>
 
 <div class="mdframed"
@@ -444,7 +496,19 @@ Be lehet állítani vonalvastagságot, színt és még színátmenetes ábrát i
 
 <li>
 <p>
-• Vastagságok: {<span class="texttt">ultra</span>, <span class="texttt">very</span>, } + {<span class="texttt">thin</span>, <span class="texttt">thick</span>}
+• Vastagságok: { <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>ultra</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>very</span>, } + { <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>thin</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>thick</span>}
 </p>
 
 
@@ -453,10 +517,64 @@ Be lehet állítani vonalvastagságot, színt és még színátmenetes ábrát i
 
 
 <p>
-• Színek: { <span class="texttt">red</span>, <span class="texttt">green</span>, <span class="texttt">blue</span>, <span class="texttt">cyan</span>, <span class="texttt">magenta</span>, <span
-class="texttt">yellow</span>, <span class="texttt">black</span>, <span class="texttt">gray</span>, <span class="texttt">darkgray</span>, <span class="texttt">lightgray</span>, <span
-class="texttt">brown</span>, <span class="texttt">lime</span>, <span class="texttt">olive</span>, <span class="texttt">orange</span>, <span class="texttt">pink</span>, <span
-class="texttt">purple</span>, <span class="texttt">teal</span>, <span class="texttt">violet</span>, <span class="texttt">white</span> }
+• Színek: { <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>red</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>green</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>blue</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>cyan</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>magenta</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>yellow</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>black</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>gray</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>darkgray</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>lightgray</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>brown</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>lime</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>olive</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>orange</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>pink</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>purple</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>teal</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>violet</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>white</span> }
 </p>
 
 
@@ -465,7 +583,13 @@ class="texttt">purple</span>, <span class="texttt">teal</span>, <span class="tex
 
 
 <p>
-• Vonal típusok: {<span class="texttt">dashed</span>, <span class="texttt">dotted</span>}
+• Vonal típusok: { <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>dashed</span>, <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>dotted</span>}
 </p>
 
 
@@ -481,7 +605,16 @@ class="texttt">purple</span>, <span class="texttt">teal</span>, <span class="tex
 
 <li>
 <p>
-– <span class="texttt">line cap = {round, rect, butt}</span>
+– <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>line cap = <span
+      class="textcolor"
+      style="color:#008000"
+>{</span>round, rect, butt<span
+      class="textcolor"
+      style="color:#008000"
+>}</span></span>
 </p>
 
 
@@ -490,7 +623,10 @@ class="texttt">purple</span>, <span class="texttt">teal</span>, <span class="tex
 
 
 <p>
-– <span class="texttt">rounded corners = 5mm</span>
+– <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>rounded corners = 5mm</span>
 </p>
 
 
@@ -499,7 +635,16 @@ class="texttt">purple</span>, <span class="texttt">teal</span>, <span class="tex
 
 
 <p>
-– <span class="texttt">line join = {round, bevel, mitern}</span>
+– <span
+      class="colorbox"
+      style="background:#E5E5E5 ; padding:3pt"
+>line join = <span
+      class="textcolor"
+      style="color:#008000"
+>{</span>round, bevel, mitern<span
+      class="textcolor"
+      style="color:#008000"
+>}</span></span>
 </p>
 </li>
 </ul>
@@ -583,15 +728,44 @@ box-shadow: none ;
 <p>
 Az, hogy lehet for ciklusokat írni, nagyban segít a valamilyen szempontból szimmetrikus ábrák elkészítésében. A for ciklusok hasonlóan más nyelvekhez bevezetnek egy változót, ami végig fut adott értékeken és végrehajtja a
 megadott parancsokat egyesével (jobb ha nem számít a sorrend). Lehet egymásba ágyazott ciklusokat írni, de lehet párhuzamosan két vagy több változót egyszerre változtatni. Például <span
-class="texttt">\foreach \x in {1,2,3,4}{<commands>}</span> Ennél lehet komolyabb dolgokat is csinálni, lásd a példákat.
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+><span
+    class="textcolor"
+    style="color:#008000"
+><b>\foreach</b></span> <span
+    class="textcolor"
+    style="color:#008000"
+><b>\x</b></span> in <span
+    class="textcolor"
+    style="color:#008000"
+>{</span>1,2,3,4<span
+    class="textcolor"
+    style="color:#008000"
+>}{</span><commands><span
+    class="textcolor"
+    style="color:#008000"
+>}</span></span> Ennél lehet komolyabb dolgokat is csinálni, lásd a példákat.
 </p>
 
 <p>
-Eddig nem volt róla szó, de a hagyományos koordinátázás helyett lehet polárkoordinátákat is használni. <span class="texttt">(90:1cm)</span> – 90 fok, 1 cm messze
+Eddig nem volt róla szó, de a hagyományos koordinátázás helyett lehet polárkoordinátákat is használni. <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+>(90:1cm)</span> – 90 fok, 1 cm messze
 </p>
 
 <p>
-A képet lehet transzformálni erre pár példa: <span class="texttt">xshift</span>, <span class="texttt">yshift</span>, <span class="texttt">rotate</span>
+A képet lehet transzformálni erre pár példa: <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+>xshift</span>, <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+>yshift</span>, <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+>rotate</span>
 </p>
 
 <div class="mdframed"
@@ -743,18 +917,39 @@ box-shadow: none ;
 
 
 <p>
-A <span class="texttt">\draw grid</span> parancsot lehet négyzetrács készítésre használni a <span class="texttt">\foreach</span> helyett. Meg kell adni a lépésközt és egy téglalapot ami határolja.
+A <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+><span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> grid</span> parancsot lehet négyzetrács készítésre használni a <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+><span
+    class="textcolor"
+    style="color:#008000"
+><b>\foreach</b></span></span> helyett. Meg kell adni a lépésközt és egy téglalapot ami határolja.
 </p>
 
 <p>
 Szöveget beilleszteni úgy kell, hogy egy Node-ot töltünk fel szöveggel. Paraméterként meg lehet adni, hogy az adott pozícióhoz képest, hol helyezkedjen el a csúcs és így a szöveg, ezt az <span
-class="texttt">anchor=<direction></span> paraméterrel lehet megadni. A <span class="texttt">fill=white</span> paraméter megadásával az is elérhető, hogy a szöveg/szám alatt megszakadjanak a vonalak, így egy
-sokkal esztétikusabb végeredményt kapunk.
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+>anchor=<direction></span> paraméterrel lehet megadni. A <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+>fill=white</span> paraméter megadásával az is elérhető, hogy a szöveg/szám alatt megszakadjanak a vonalak, így egy sokkal esztétikusabb végeredményt kapunk.
 </p>
 
 <p>
-Itt különösen kiemelném a <span class="texttt">\clip</span> parancs fontosságát. Ha egy ábrát szeretnék nagyban és kicsiben is használni elég megismételni a kódot és megadunk egy keretet, ahol kíváncsiak vagyunk az ábra
-részleteire.
+Itt különösen kiemelném a <span
+     class="colorbox"
+     style="background:#E5E5E5 ; padding:3pt"
+><span
+     class="textcolor"
+     style="color:#008000"
+><b>\clip</b></span></span> parancs fontosságát. Ha egy ábrát szeretnék nagyban és kicsiben is használni elég megismételni a kódot és megadunk egy keretet, ahol kíváncsiak vagyunk az ábra részleteire.
 </p>
 
 <div class="mdframed"
@@ -1260,12 +1455,20 @@ nevet használni referenciaként, hogy egy sokkal átláthatóbb kódot kapjunk 
 </p>
 
 <p>
-Amit szintén itt mutatnék be az a dinamikus stílus kezelés. Lehet ugyanis általunk előre definiált stílusokat megadni, hogy utána csak elég legyen annyit írni, hogy <span class="texttt">[fontos]</span> vagy <span
-class="texttt">[seged]</span>. Ezzel is azt érjük el, hogy olvashatóbb és egységesen változtathatóbb lesz a kód és így az ábránk.
+Amit szintén itt mutatnék be az a dinamikus stílus kezelés. Lehet ugyanis általunk előre definiált stílusokat megadni, hogy utána csak elég legyen annyit írni, hogy <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+>[fontos]</span> vagy <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+>[seged]</span>. Ezzel is azt érjük el, hogy olvashatóbb és egységesen változtathatóbb lesz a kód és így az ábránk.
 </p>
 
 <p>
-A csúcsok és élek szövegezésére is sok lehetőséget ad a TikZ. A <span class="texttt">label=<direction>:<text></span> paraméter, akár többszöri használatával tudunk mindenféle szöveggel/névvel ellátni az ábránkat.
+A csúcsok és élek szövegezésére is sok lehetőséget ad a TikZ. A <span
+    class="colorbox"
+    style="background:#E5E5E5 ; padding:3pt"
+>label=<direction>:<text></span> paraméter, akár többszöri használatával tudunk mindenféle szöveggel/névvel ellátni az ábránkat.
 </p>
 
 <p>

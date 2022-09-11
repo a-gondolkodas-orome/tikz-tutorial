@@ -2,15 +2,15 @@
 
 \section{Alapok}
 
-A \code{\usepackage{tikzpicture}} kell a library implementálásához A \verb|\begin{tikzpicture}| és \verb|\end{tikzpicture}| parancsok közé kell helyezni a rajzolandó ábrát. A TikZ úgy működik, mint egy rajztábla. Egyesével kell az objektumokat rárajzolni, esetenként egy ciklusban többet is lehet egyszerre (lásd lejjebb). \textbf{Minden parancsot egy  ;-vel kell lezárni.}
+A \code{\usepackage{tikzpicture}} kell a library implementálásához A \code{\begin{tikzpicture}} és \code{\end{tikzpicture}} parancsok közé kell helyezni a rajzolandó ábrát. A TikZ úgy működik, mint egy rajztábla. Egyesével kell az objektumokat rárajzolni, esetenként egy ciklusban többet is lehet egyszerre (lásd lejjebb). \textbf{Minden parancsot egy  ;-vel kell lezárni.}
 
-A \verb|\begin{tikzpicture}["paraméterek"]| ebben a szögletes zárójelben kell megadni a rajztábla paramétereit. Ilyenek:
+A \code{\begin{tikzpicture}["paraméterek"]} ebben a szögletes zárójelben kell megadni a rajztábla paramétereit. Ilyenek:
 \begin{itemize}
     \item "\code{scale = 3}"  -- a képet nyújtja, kivéve a betű méretet
     \item "\code{xscale = 4, yscale = 5}"  -- ugyanez, csak merőlegesen affin képet ad
 \end{itemize}
 
-A rajzolásra két különböző, de általában mindenre elég parancs a \verb|\draw| és \verb|\filldraw| . A sima rajzolás csak körvonalat rajzol, a másik pedig automatikusan ugyanazzal a színnel kitölti az alakzatot. Mindkettő parancsnak meg kell mondani, hogy:
+A rajzolásra két különböző, de általában mindenre elég parancs a \code{\draw} és \code{\filldraw} . A sima rajzolás csak körvonalat rajzol, a másik pedig automatikusan ugyanazzal a színnel kitölti az alakzatot. Mindkettő parancsnak meg kell mondani, hogy:
 
 \begin{itemize}
     \item Hova: \code{(x, y)}, \code{(fok:hossz)}
@@ -44,7 +44,7 @@ A node-ok kicsit trükkösebbek, róluk a gráfok részben lehet részletesebben
 
 \subsection{Illesztés}
 
-Az első fejezetben leírtakat érdemes alkalmazni. A \code{\bs clip} parancsot érdemes használni. Nem csak arra jó, hogy kivágjuk a kép egy részét, de beállítja a kép keretét, ha azzal kezdjük. Erre persze lehet használni a \verb|\useasboundingbox| parancsot amivel megadhatunk például egy téglalappal határolt fix keretét a képnek. Amit ezen kívül rajzoltál nem fogja megjeleníteni.
+Az első fejezetben leírtakat érdemes alkalmazni. A \code{\clip} parancsot érdemes használni. Nem csak arra jó, hogy kivágjuk a kép egy részét, de beállítja a kép keretét, ha azzal kezdjük. Erre persze lehet használni a \code{\useasboundingbox} parancsot amivel megadhatunk például egy téglalappal határolt fix keretét a képnek. Amit ezen kívül rajzoltál nem fogja megjeleníteni.
 
 \begin{tikzExample}
 \begin{tikzpicture}[scale=3]        
@@ -64,13 +64,13 @@ Az első fejezetben leírtakat érdemes alkalmazni. A \code{\bs clip} parancsot 
 
 Be lehet állítani vonalvastagságot, színt és még színátmenetes ábrát is egyszerű csinálni.
 \begin{itemize}
-    \item Vastagságok: \{\verb|ultra|, \verb|very|, \} + \{\verb|thin|, \verb|thick|\}
-    \item Színek: \{ \verb|red|, \verb|green|, \verb|blue|, \verb|cyan|, \verb|magenta|, \verb|yellow|, \verb|black|, \verb|gray|, \verb|darkgray|, \verb|lightgray|, \verb|brown|, \verb|lime|, \verb|olive|, \verb|orange|, \verb|pink|, \verb|purple|, \verb|teal|, \verb|violet|, \verb|white| \}
-    \item Vonal típusok: \{\verb|dashed|, \verb|dotted|\}
+    \item Vastagságok: \{\code{ultra}, \code{very}, \} + \{\code{thin}, \code{thick}\}
+    \item Színek: \{ \code{red}, \code{green}, \code{blue}, \code{cyan}, \code{magenta}, \code{yellow}, \code{black}, \code{gray}, \code{darkgray}, \code{lightgray}, \code{brown}, \code{lime}, \code{olive}, \code{orange}, \code{pink}, \code{purple}, \code{teal}, \code{violet}, \code{white} \}
+    \item Vonal típusok: \{\code{dashed}, \code{dotted}\}
     \item Vonal összekötési lehetőségek (advanced): \begin{itemize}
-        \item \verb|line cap = {round, rect, butt}|
-        \item \verb|rounded corners = 5mm|
-        \item \verb|line join = {round, bevel, mitern}|
+        \item \code{line cap = {round, rect, butt}}
+        \item \code{rounded corners = 5mm}
+        \item \code{line join = {round, bevel, mitern}}
         \end{itemize}
 \end{itemize}
 
@@ -86,11 +86,11 @@ Be lehet állítani vonalvastagságot, színt és még színátmenetes ábrát i
 
 \section{Sokszögek rajzolása, for ciklusok}
 
-Az, hogy lehet for ciklusokat írni, nagyban segít a valamilyen szempontból szimmetrikus ábrák elkészítésében. A for ciklusok hasonlóan más nyelvekhez bevezetnek egy változót, ami végig fut adott értékeken és végrehajtja a megadott parancsokat egyesével (jobb ha nem számít a sorrend).  Lehet egymásba ágyazott ciklusokat írni, de lehet párhuzamosan két vagy több változót egyszerre változtatni. Például \verb|\foreach \x in {1,2,3,4}{<commands>}| Ennél lehet komolyabb dolgokat is csinálni, lásd a példákat.
+Az, hogy lehet for ciklusokat írni, nagyban segít a valamilyen szempontból szimmetrikus ábrák elkészítésében. A for ciklusok hasonlóan más nyelvekhez bevezetnek egy változót, ami végig fut adott értékeken és végrehajtja a megadott parancsokat egyesével (jobb ha nem számít a sorrend).  Lehet egymásba ágyazott ciklusokat írni, de lehet párhuzamosan két vagy több változót egyszerre változtatni. Például \code{\foreach \x in {1,2,3,4}{<commands>}} Ennél lehet komolyabb dolgokat is csinálni, lásd a példákat.
 
-Eddig nem volt róla szó, de a hagyományos koordinátázás helyett lehet polárkoordinátákat is használni. \verb|(90:1cm)| -- 90 fok, 1 cm messze
+Eddig nem volt róla szó, de a hagyományos koordinátázás helyett lehet polárkoordinátákat is használni. \code{(90:1cm)} -- 90 fok, 1 cm messze
 
-A képet lehet transzformálni erre pár példa: \verb|xshift|, \verb|yshift|, \verb|rotate|
+A képet lehet transzformálni erre pár példa: \code{xshift}, \code{yshift}, \code{rotate}
 
 \begin{tikzExample}
 \begin{tikzpicture}[scale = 2, ultra thick]
@@ -106,11 +106,11 @@ A képet lehet transzformálni erre pár példa: \verb|xshift|, \verb|yshift|, \
 
 \section{Rácsok, szöveg beillesztése}
 
-A \verb|\draw grid| parancsot lehet négyzetrács készítésre használni a \verb|\foreach| helyett. Meg kell adni a lépésközt és egy téglalapot ami határolja.
+A \code{\draw grid} parancsot lehet négyzetrács készítésre használni a \code{\foreach} helyett. Meg kell adni a lépésközt és egy téglalapot ami határolja.
 
-Szöveget beilleszteni úgy kell, hogy egy Node-ot töltünk fel szöveggel. Paraméterként meg lehet adni, hogy az adott pozícióhoz képest, hol helyezkedjen el a csúcs és így a szöveg, ezt az \verb|anchor=<direction>| paraméterrel lehet megadni. A \verb|fill=white| paraméter megadásával az is elérhető, hogy a szöveg/szám alatt megszakadjanak a vonalak, így egy sokkal esztétikusabb végeredményt kapunk. 
+Szöveget beilleszteni úgy kell, hogy egy Node-ot töltünk fel szöveggel. Paraméterként meg lehet adni, hogy az adott pozícióhoz képest, hol helyezkedjen el a csúcs és így a szöveg, ezt az \code{anchor=<direction>} paraméterrel lehet megadni. A \code{fill=white} paraméter megadásával az is elérhető, hogy a szöveg/szám alatt megszakadjanak a vonalak, így egy sokkal esztétikusabb végeredményt kapunk. 
 
-Itt különösen kiemelném a \verb|\clip| parancs fontosságát. Ha egy ábrát szeretnék nagyban és kicsiben is használni elég megismételni a kódot és megadunk egy keretet, ahol kíváncsiak vagyunk az ábra részleteire. 
+Itt különösen kiemelném a \code{\clip} parancs fontosságát. Ha egy ábrát szeretnék nagyban és kicsiben is használni elég megismételni a kódot és megadunk egy keretet, ahol kíváncsiak vagyunk az ábra részleteire. 
 
 \begin{tikzExample}
 \begin{tikzpicture}[scale = 3]
@@ -154,9 +154,9 @@ Itt különösen kiemelném a \verb|\clip| parancs fontosságát. Ha egy ábrát
 
 Lehet gráfokat úgy definiálni, hogy a csúcsokat megadjuk és utána az élek már a meglévő objektumainkat (csúcsok) kössék össze. Ez azért hasznos, mert rugalmasabb lesz az ábra. Ha esetleg változtatnánk a gráfon egy új csúcs behozásával nem kell az egész ábrát koordinátánként átírni. Elég csak a csúcsokat áthelyezni, a többit a TikZ megcsinálja nekünk. Ami még különösen hasznos, hogy tudunk a programban a csúcsoknak nevet adni és utána ezt a nevet használni referenciaként, hogy egy sokkal átláthatóbb kódot kapjunk végeredményül. Ez nem összekeverendő a csúcshoz tartozó szöveggel.
 
-Amit szintén itt mutatnék be az a dinamikus stílus kezelés. Lehet ugyanis általunk előre definiált stílusokat megadni, hogy utána csak elég legyen annyit írni, hogy \verb|[fontos]| vagy \verb|[seged]|. Ezzel is azt érjük el, hogy olvashatóbb és egységesen változtathatóbb lesz a kód és így az ábránk.
+Amit szintén itt mutatnék be az a dinamikus stílus kezelés. Lehet ugyanis általunk előre definiált stílusokat megadni, hogy utána csak elég legyen annyit írni, hogy \code{[fontos]} vagy \code{[seged]}. Ezzel is azt érjük el, hogy olvashatóbb és egységesen változtathatóbb lesz a kód és így az ábránk.
 
-A csúcsok és élek szövegezésére is sok lehetőséget ad a TikZ. A \verb|label=<direction>:<text>| paraméter, akár többszöri használatával tudunk mindenféle szöveggel/névvel ellátni az ábránkat.
+A csúcsok és élek szövegezésére is sok lehetőséget ad a TikZ. A \code{label=<direction>:<text>} paraméter, akár többszöri használatával tudunk mindenféle szöveggel/névvel ellátni az ábránkat.
 
 Lehet az éleket hajlítani, kígyósítani és egyéb stilisztikai trükköket alkalmazni. Erre azt ajánlom, hogy a dokumentációt érdemes olvasgatni. A következő részben írok a görbe vonalakról, ott érdemes erről olvasni.
 
