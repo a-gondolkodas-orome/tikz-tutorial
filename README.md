@@ -3,7 +3,7 @@
 * [Github link](https://github.com/a-gondolkodas-orome/latex-tutorial)
 * main.tex: ./pages/mainpage.tex
 * fordítás: python ./build_html.py 
-* publikus html: ./docs/index.html 
+* index.html: ./docs/index.html 
 * honlap: (https://a-gondolkodas-orome.github.io/latex-tutorial/index.html)
 
 ## Megjegyzések
