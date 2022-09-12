@@ -166,16 +166,19 @@ div.sidetoccontainer {
         "Bembo", "Janson", "TeX Gyre Pagella", "Palatino",
         "Liberation Serif", "Nimbus Roman No 9 L",  "FreeSerif", Times,
         "Times New Roman", serif;
-    /*background-image: linear-gradient(to bottom, #fffcf5, #C0C0C0);*/
+    margin: 0px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
 }
 
 div.sidetoctitle{
     color: #800000 ;
+    display: none;
 }
 
 header{
     background-color: #e0e0e0 ;
-    display: none;
+    display: flex;
+    padding: 0ex 1em 0ex 1em;
     /*background-image: linear-gradient(to top, #fffcf5, #b0b0b0);*/
     text-align:center ;
 }
@@ -183,7 +186,7 @@ header{
 footer{
     background-color: #e0e0e0 ;
     /*background-image: linear-gradient(to bottom, #fffcf5, #b0b0b0);*/
-    padding: 2ex 1em 2ex 1em ;
+    padding: 1ex 1em 1ex 1em ;
     text-align:left ;
 }
 

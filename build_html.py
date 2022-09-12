@@ -29,6 +29,7 @@ def copy_files(pn):
     sh("cp -rvt docs pages/*.html")
     sh("cp -rvt docs pages/*.css")
     sh("cp -rvt docs pages/mainpage.pdf")
+    sh("cp -rvt docs pages/logo.png")
     sh("cp -rvt docs pages/" + pn + "-images")
 
 def main():

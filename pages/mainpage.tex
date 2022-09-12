@@ -79,10 +79,10 @@
 \newcommand{\code}[1]{\mintinline[bgcolor=bgInline]{latex}{#1}}
 
 % https://tex.stackexchange.com/questions/10326/how-to-set-the-chapter-style-in-report-class
-\usepackage{titlesec}
-\titleformat{\chapter}
-  {\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
-\titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\usepackage{lwarp-titlesec}
+\titleformat{\chapter}%
+  {\normalfont\bfseries\Huge}{\thechapter.}{10pt}{}
+
 
 \usepackage{hyperref,cleveref}  % LOAD THESE LAST!
 
@@ -94,12 +94,12 @@
 \setcounter{FileDepth}{0}       % 1: Split \HTML\ files at sections ; 0: split at chapter
 \booltrue{CombineHigherDepths}  % Combine parts/chapters/sections
 \setcounter{SideTOCDepth}{1}    % Include subsections in the side\TOC
-%\HTMLTitle{Webpage Title}       % Overrides \title for the web page.
+\HTMLTitle{TikZ gyorstalpaló, példák}       % Overrides \title for the web page.
 %\HTMLAuthor{\theauthor}        % Sets the HTML meta author tag.
 \HTMLLanguage{hu-HU}            % Sets the HTML meta language.
 %\HTMLDescription{Latex tutorial}% Sets the HTML meta description.
 \HTMLFirstPageTop{\fbox{AGOA}}
-\HTMLPageTop{\fbox{AGOA}}
+\HTMLPageTop{\includegraphics[height=50px]{./logo.png}}
 \HTMLPageBottom{@A Gondolkodás Öröme Alapítvány}
 %\CSSFilename{lwarp_sagebrush.css}
 \CSSFilename{tikz.css}
