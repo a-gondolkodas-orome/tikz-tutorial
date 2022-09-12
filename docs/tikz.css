@@ -75,7 +75,7 @@ div.abstract { font-size: 100% }
   border: none ;
   border-top : 1px solid silver;
   border-bottom : 1px solid silver;
-  font-size: 90% ;
+  font-size: 100% ;
 }
 
 div.sidebartitle{
@@ -166,6 +166,7 @@ div.sidetoccontainer {
         "Bembo", "Janson", "TeX Gyre Pagella", "Palatino",
         "Liberation Serif", "Nimbus Roman No 9 L",  "FreeSerif", Times,
         "Times New Roman", serif;
+    font-size: large;
     margin: 0px 0px 0px 0px;
     border-radius: 0px 0px 0px 0px;
 }
