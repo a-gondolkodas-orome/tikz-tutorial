@@ -1,7 +1,7 @@
 
 % Save this as tutorial.tex for the lwarp package tutorial.
 
-\documentclass[12pt,a4paper]{book}
+\documentclass[12pt,a4paper]{report}
 
 \usepackage{iftex}
 
@@ -77,6 +77,12 @@
   \input{\jobname.tmp}}
 
 \newcommand{\code}[1]{\mintinline[bgcolor=bgInline]{latex}{#1}}
+
+% https://tex.stackexchange.com/questions/10326/how-to-set-the-chapter-style-in-report-class
+\usepackage{titlesec}
+\titleformat{\chapter}
+  {\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
+\titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
 
 \usepackage{hyperref,cleveref}  % LOAD THESE LAST!
 
