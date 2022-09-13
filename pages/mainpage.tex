@@ -78,11 +78,36 @@
 
 \newcommand{\code}[1]{\mintinline[bgcolor=bgInline]{latex}{#1}}
 
-% https://tex.stackexchange.com/questions/10326/how-to-set-the-chapter-style-in-report-class
-\usepackage{lwarp-titlesec}
-\titleformat{\chapter}%
-  {\normalfont\bfseries\Huge}{\thechapter.}{10pt}{}
+% 
 
+%\makeatletter
+%\patchcmd{\@makechapterhead}
+% {\printchaptername A \chapternamenum B \printchapternum}
+% {\printchapternum.\@\chapternamenum C \printchaptername}
+% {}{}
+%\makeatother
+
+% https://tex.stackexchange.com/questions/547023/chaptername-with-lwarp
+% https://ctan.ijs.si/tex-archive/macros/latex/contrib/lwarp/lwarp.pdf: \LWR@printchaptername, page 391
+\makeatletter
+% remove chaptername to include \chaptername
+\def\LWR@printchaptername#1{%
+\ifstrequal{#1}{chapter}%
+{\LWR@printchaptername#1}%
+{}%
+}
+\makeatother
+
+% https://tex.stackexchange.com/questions/547023/chaptername-with-lwarp
+% https://ctan.ijs.si/tex-archive/macros/latex/contrib/lwarp/lwarp.pdf: \LWR@printchaptername, page 391
+\makeatletter
+% redefine counter format to include \chaptername
+\def\@chapcntformat#1{%
+\ifstrequal{#1}{chapter}%
+{\thechapter. \protect \quad}%
+{\thechapter. \protect \quad}%
+}
+\makeatother
 
 \usepackage{hyperref,cleveref}  % LOAD THESE LAST!
 
