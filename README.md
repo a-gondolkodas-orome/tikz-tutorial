@@ -16,11 +16,7 @@
 
 ## Megjegyzések
 
-* Egy weboldal megfelel egy \chapter-nek a mostani beállítás (FileDepth) szerint. 
-* Új fájl esetén \chapter{title_of_chapter} paranccsal kezdődjön a fájl. 
-* Az új oldalt a ./pages/mainpage.tex fájlban kell meghívni: \include{name_of_file}.
-
+* Egy weblap megfelel egy \chapter-nek (ezt a FileDepth definiálja).
+* Új fájl esetén kötelező, hogy \chapter{title_of_chapter} paranccsal kezdődjön a fájl. 
+* Egy új oldalt a ./pages/mainpage.tex fájlban kell meghívni: \include{name_of_file}.
 * (?) A címekben egyes ékezet helyett a  '<karakter>-t kell használni.
-
-
-
