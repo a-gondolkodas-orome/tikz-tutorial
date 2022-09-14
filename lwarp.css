@@ -81,7 +81,7 @@ span.textnormal, div.textnormal {
     font-variant: normal;
     font-variant-numeric: normal ;
     font-family: "DejaVu Serif", "Bitstream Vera Serif",
-    "Lucida Bright", Georgia, serif;
+        "Lucida Bright", Georgia, serif;
 }
 
 span.textmd, div.textmd { font-weight: normal; }
