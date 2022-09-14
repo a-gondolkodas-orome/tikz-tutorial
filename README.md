@@ -8,7 +8,7 @@
 * main.tex: ./pages/mainpage.tex
 * fordítás (lokálisan): python ./build_html.py 
 * index.html: ./docs/index.html 
-** A publikus oldalt a deploy github actions csinálja a gh-pages branchen (./.github/workflows/main.yml)
+  * A publikus oldalt a deploy github actions csinálja a gh-pages branchen (./.github/workflows/main.yml)
 
 ## Dokumentációk
 * [Lwarp package](https://ctan.ijs.si/tex-archive/macros/latex/contrib/lwarp/lwarp.pdf)
