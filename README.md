@@ -6,8 +6,9 @@
 * [PDF](https://a-gondolkodas-orome.github.io/latex-tutorial/mainpage.pdf)
 * [Github link](https://github.com/a-gondolkodas-orome/latex-tutorial)
 * main.tex: ./pages/mainpage.tex
-* fordítás: python ./build_html.py 
+* fordítás (lokálisan): python ./build_html.py 
 * index.html: ./docs/index.html 
+** A publikus oldalt a deploy github actions csinálja a gh-pages branchen (./.github/workflows/main.yml)
 
 ## Dokumentációk
 * [Lwarp package](https://ctan.ijs.si/tex-archive/macros/latex/contrib/lwarp/lwarp.pdf)
