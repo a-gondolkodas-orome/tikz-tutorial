@@ -41,10 +41,7 @@
 \usepackage[a4paper]{geometry}
 
 % --- OTHER PACKAGES ARE LOADED AFTER LWARP ---
-%\usepackage{makeidx} \makeindex
 \usepackage{xindex} \makeindex
-%\usepackage{xindex} %\makeindex
-%\usepackage[abbreviations,symbols,xindy]{glossaries-extra} 
 \makeindex
 \usepackage{xcolor}             % (Demonstration purposes only.)
 
@@ -78,14 +75,6 @@
 
 \newcommand{\code}[1]{\mintinline[bgcolor=bgInline]{latex}{#1}}
 
-% 
-
-%\makeatletter
-%\patchcmd{\@makechapterhead}
-% {\printchaptername A \chapternamenum B \printchapternum}
-% {\printchapternum.\@\chapternamenum C \printchaptername}
-% {}{}
-%\makeatother
 
 % https://tex.stackexchange.com/questions/547023/chaptername-with-lwarp
 % https://ctan.ijs.si/tex-archive/macros/latex/contrib/lwarp/lwarp.pdf: \LWR@printchaptername, page 391
@@ -99,7 +88,7 @@
 \makeatother
 
 % https://tex.stackexchange.com/questions/547023/chaptername-with-lwarp
-% https://ctan.ijs.si/tex-archive/macros/latex/contrib/lwarp/lwarp.pdf: \LWR@printchaptername, page 391
+% https://ctan.ijs.si/tex-archive/macros/latex/contrib/lwarp/lwarp.pdf: \@chapcntformat
 \makeatletter
 % redefine counter format to include \chaptername
 \def\@chapcntformat#1{%
