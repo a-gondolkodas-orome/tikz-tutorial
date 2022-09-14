@@ -26,7 +26,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: python3 ./build_html.py
+        run: python2.7 ./build_html.py
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
