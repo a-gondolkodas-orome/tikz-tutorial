@@ -30,6 +30,10 @@ jobs:
       - name: Run a one-line script
         run: python3 ./build_html.py
 
+      - name: Install rsync
+        run: |
+          apt-get update && apt-get install -y rsync
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
