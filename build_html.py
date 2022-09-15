@@ -10,15 +10,16 @@ def sh(x):
     os.system(x)
 
 def compile_very(pn):
-    sh("rm -rf build")
-    sh("mkdir build")
+#    sh("rm -rf build")
+#    sh("mkdir build")
     sh("cp -rvt build src/*.tex")
     sh("cp -rvt build src/mainpage.lwarpmkconf")
     sh("cp -rvt build css/*.css")
     sh("cp -rvt build img/logo.png")
     os.chdir("build")
-    sh("lwarpmk cleanall -p " + pn) # when dobrogi took everything
-    sh("lwarpmk cleanlimages -p " + pn) # even the pictures of the geese
+#    sh("lwarpmk cleanall -p " + pn) # when dobrogi took everything
+#    sh("lwarpmk cleanlimages -p " + pn) # even the pictures of the geese
+    sh("lwarpmk again -p " + pn) # a young boy reinvented himself
     sh("lwarpmk print -p " + pn) # a young boy reinvented himself
     sh("lwarpmk html -p " + pn) # he tricked the lord and took what was his
     sh("lwarpmk html -p " + pn) # he tricked the lord and took it again
