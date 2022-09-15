@@ -113,13 +113,14 @@
 %\HTMLAuthor{\theauthor}        % Sets the HTML meta author tag.
 \HTMLLanguage{hu-HU}            % Sets the HTML meta language.
 %\HTMLDescription{Latex tutorial}% Sets the HTML meta description.
-\HTMLFirstPageTop{\href{https://www.google.com}{\includegraphics[height=50px]{./logo.png}}}
+\HTMLFirstPageTop{\href{./}{\includegraphics[height=50px]{./logo.png}}}
 \HTMLPageTop{\includegraphics[height=50px]{./logo.png}}
 \HTMLPageBottom{©Bertalan Dávid, Alexy Marcell - A Gondolkodás Öröme Alapítvány}
 %\CSSFilename{lwarp_sagebrush.css}
 \CSSFilename{tikz.css}
-\renewcommand{\contentsname}{Tartalom}
 
+% https://ctan.ijs.si/tex-archive/macros/latex/contrib/lwarp/lwarp.pdf: (7.6 Customizing the HTML output, page 108)
+\renewcommand{\linkhomename}{Tartalom}
 \begin{document}
 	
 	\maketitle                      % Or titlepage/titlingpage environment.
@@ -129,10 +130,10 @@
 	\tableofcontents                % MUST BE BEFORE THE FIRST SECTION BREAK!
 	%\listoffigures
 
-	\include{tikz_fejezet}
+	\include{tikz_tutorial}
 	
 	%\appendix
-	\include{hogyan_mukodik}
+	\include{linkek}
 	
 %	\ForceHTMLPage      % HTML index will be on its own page.
 %	\ForceHTMLTOC       % HTML index will have its own toc entry.

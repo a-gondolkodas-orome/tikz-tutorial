@@ -180,6 +180,8 @@ header{
     background-color: #e0e0e0 ;
     display: flex;
     padding: 0ex 1em 0ex 1em;
+/*    margin: -1em 0em 0ex 0em;
+    width: 900px;*/
     /*background-image: linear-gradient(to top, #fffcf5, #b0b0b0);*/
     text-align:center ;
 }
