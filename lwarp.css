@@ -1,6 +1,6 @@
 /*
   CSS stylesheet for the LaTeX Lwarp package
-  Copyright 2016-2022 Brian Dunn — BD Tech Concepts LLC
+  Copyright 2016-2021 Brian Dunn — BD Tech Concepts LLC
 */
 
 /* a fix for older browsers: */
@@ -74,15 +74,6 @@ span.strong, span.textbf, div.strong, div.textbf, table td.tdbfseries { font-wei
 span.textit, div.textit, table td.tditshape { font-style: italic; }
 
 table td.tdbfit { font-weight: bold ; font-style:italic }
-
-span.textnormal, div.textnormal {
-    font-weight: normal;
-    font-style: normal;
-    font-variant: normal;
-    font-variant-numeric: normal ;
-    font-family: "DejaVu Serif", "Bitstream Vera Serif",
-        "Lucida Bright", Georgia, serif;
-}
 
 span.textmd, div.textmd { font-weight: normal; }
 
@@ -497,7 +488,7 @@ div.bodywithoutsidetoc main.bodycontainer {
 }
 
 section.textbody div.footnotes{
-    margin: 1ex 2em 2ex 2em ;
+    margin: 3ex 2em .5ex 2em ;
     border-bottom: 2px solid silver ;
 }
 
@@ -531,8 +522,6 @@ body dir, body menu {
 }
 
 li { margin: 0ex 0em 1ex 0em; }
-
-li.p { display: inline ; }
 
 html {
   margin: 0;
@@ -700,7 +689,7 @@ div.wpminipage { border: 1px solid green ; margin: .5ex ; padding: .5ex ;}
 .fcolorbox .minipage, .fcolorboxBlock .minipage
     {border: none ; background: none;}
 
-.fbox, .fboxBlock { border: 1px solid black ; padding: 4pt }
+.fbox, .fboxBlock { border: 1px solid black ; }
 
 .fbox, .fboxBlock, .fcolorbox, .fcolorboxBlock, .colorbox, .colorboxBlock,
 .fminipage, .fcolorminipage
@@ -847,15 +836,6 @@ div.artdecoframe {
 
 div.generalframe {
     border: 6px groove black ;
-}
-
-/* For beamerarticle: */
-div.beamerframe {
-    margin: 3ex 1em 3ex 1em ;
-   border: 1px solid gray;
-     border-radius: 0px ;
-    padding: .3ex 1em 0ex 1em ;
-  display: block ;
 }
 
 dl {
@@ -1233,7 +1213,6 @@ div.subtitle p { margin: 1ex ; }
 
 div.author
 {
-    text-align: center ;
     font-variant: normal ;
     font-style: normal ;
     font-size: 1em ;
@@ -1389,7 +1368,7 @@ div.alg2enoline{
 
 span.alg2elinenumber{
     margin-right: .5em ;
-    font-size: 60% ;
+    font-size: 50% ;
     color: red ;
 }
 
