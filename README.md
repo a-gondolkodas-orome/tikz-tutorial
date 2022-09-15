@@ -5,12 +5,12 @@
 * [Honlap](https://a-gondolkodas-orome.github.io/latex-tutorial/index.html)
 * [PDF](https://a-gondolkodas-orome.github.io/latex-tutorial/mainpage.pdf)
 * [Github link](https://github.com/a-gondolkodas-orome/latex-tutorial)
-* main.tex: ./src/mainpage.tex
-* css: ./css/tikz.css
-* logo: ./img/logo.png
-* fordítás (lokálisan): python ./build_html.py 
-* index.html: ./docs/index.html 
-  * A publikus oldalt a deploy github actions csinálja a gh-pages branchen (./.github/workflows/main.yml)
+* main.tex: `./src/mainpage.tex`
+* css: `./css/tikz.css`
+* logo: `./img/logo.png`
+* fordítás (lokálisan): `python ./build_html.py`
+* index.html: `./docs/index.html`
+  * A publikus oldalt a deploy github actions csinálja a `gh-pages` branchen (`./.github/workflows/main.yml`)
 
 ## Dokumentációk
 * [Lwarp package](https://ctan.ijs.si/tex-archive/macros/latex/contrib/lwarp/lwarp.pdf)
@@ -19,7 +19,7 @@
 
 ## Megjegyzések
 
-* Egy weblap megfelel egy \chapter-nek (ezt a FileDepth definiálja).
-* Új fájl esetén kötelező, hogy \chapter{title_of_chapter} paranccsal kezdődjön a fájl. 
-* Egy új oldalt a ./pages/mainpage.tex fájlban kell meghívni: \include{name_of_file}.
+* Egy weblap megfelel egy `\chapter`-nek (ezt a FileDepth definiálja).
+* Új fájl esetén kötelező, hogy `\chapter{title_of_chapter}` paranccsal kezdődjön a fájl. 
+* Egy új oldalt a `./src/mainpage.tex` fájlban kell meghívni: `\include{name_of_file}`.
 * (?) A címekben egyes ékezet helyett a  '<karakter>-t kell használni.
