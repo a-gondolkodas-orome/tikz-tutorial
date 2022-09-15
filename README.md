@@ -7,7 +7,7 @@
 * [Github link](https://github.com/a-gondolkodas-orome/latex-tutorial)
 * main.tex: ./src/mainpage.tex
 * css: ./css/tikz.css
-* logo: img/logo.png
+* logo: ./img/logo.png
 * fordítás (lokálisan): python ./build_html.py 
 * index.html: ./docs/index.html 
   * A publikus oldalt a deploy github actions csinálja a gh-pages branchen (./.github/workflows/main.yml)
