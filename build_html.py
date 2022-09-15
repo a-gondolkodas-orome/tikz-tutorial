@@ -11,7 +11,7 @@ def sh(x):
 
 def compile_very(pn):
 #    sh("rm -rf build")
-#    sh("mkdir build")
+    sh("mkdir -p build")
     sh("cp -rvt build src/*.tex")
     sh("cp -rvt build src/mainpage.lwarpmkconf")
     sh("cp -rvt build css/*.css")
