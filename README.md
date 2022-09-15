@@ -5,7 +5,9 @@
 * [Honlap](https://a-gondolkodas-orome.github.io/latex-tutorial/index.html)
 * [PDF](https://a-gondolkodas-orome.github.io/latex-tutorial/mainpage.pdf)
 * [Github link](https://github.com/a-gondolkodas-orome/latex-tutorial)
-* main.tex: ./pages/mainpage.tex
+* main.tex: ./src/mainpage.tex
+* css: ./css/tikz.css
+* logo: img/logo.png
 * fordítás (lokálisan): python ./build_html.py 
 * index.html: ./docs/index.html 
   * A publikus oldalt a deploy github actions csinálja a gh-pages branchen (./.github/workflows/main.yml)
