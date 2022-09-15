@@ -1,6 +1,7 @@
 pages/_minted-mainpage/*
 pages/_minted-mainpage_html/*
 docs/*
+build/*
 pages/index.html
 pages/Linkek.html
 pages/lwarp_formal.css

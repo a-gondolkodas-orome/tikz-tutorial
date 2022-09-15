@@ -10,7 +10,13 @@ def sh(x):
     os.system(x)
 
 def compile_very(pn):
-    os.chdir("pages")
+    sh("rm -rf build")
+    sh("mkdir build")
+    sh("cp -rvt build src/*.tex")
+    sh("cp -rvt build src/mainpage.lwarpmkconf")
+    sh("cp -rvt build css/*.css")
+    sh("cp -rvt build img/logo.png")
+    os.chdir("build")
     sh("lwarpmk cleanall -p " + pn) # when dobrogi took everything
     sh("lwarpmk cleanlimages -p " + pn) # even the pictures of the geese
     sh("lwarpmk print -p " + pn) # a young boy reinvented himself
@@ -26,11 +32,11 @@ def copy_files(pn):
     time.sleep(3)
     sh("rm -rf docs")
     sh("mkdir docs")
-    sh("cp -rvt docs pages/*.html")
-    sh("cp -rvt docs pages/*.css")
-    sh("cp -rvt docs pages/mainpage.pdf")
-    sh("cp -rvt docs pages/logo.png")
-    sh("cp -rvt docs pages/" + pn + "-images")
+    sh("cp -rvt docs build/*.html")
+    sh("cp -rvt docs build/*.css")
+    sh("cp -rvt docs build/mainpage.pdf")
+    sh("cp -rvt docs build/logo.png")
+    sh("cp -rvt docs build/" + pn + "-images")
 
 def main():
     pn = "mainpage"
