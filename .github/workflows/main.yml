@@ -23,19 +23,19 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout
+      - name: Checkout from master branch
         uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
 
-      - name: Compile
+      - name: Compile latex
         run: python3 ./build_html.py
 
-      - name: Install rsync
-        run: |
-          apt-get update && apt-get install -y rsync
+#      - name: Install rsync
+#        run: |
+#          apt-get update && apt-get install -y rsync
 
-      - name: Deploy
+      - name: deploy to gh-pages branch
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
