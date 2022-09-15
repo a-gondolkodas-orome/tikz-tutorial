@@ -1,6 +1,0 @@
-pdfseparate -f %1 -l %1 %4_html.pdf mainpage-images/lateximagetemp-%%d.pdf
-pdfcrop --hires mainpage-images/lateximagetemp-%1.pdf mainpage-images/%3.pdf
-pdftocairo -svg -noshrink mainpage-images/%3.pdf mainpage-images/%3.svg
-del mainpage-images/%3.pdf
-del mainpage-images/lateximagetemp-%1.pdf
-exit
