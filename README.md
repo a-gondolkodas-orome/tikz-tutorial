@@ -5,12 +5,12 @@
 * [Honlap](https://a-gondolkodas-orome.github.io/latex-tutorial/index.html)
 * [PDF](https://a-gondolkodas-orome.github.io/latex-tutorial/mainpage.pdf)
 * [Github link](https://github.com/a-gondolkodas-orome/latex-tutorial)
-* main.tex: `[./src/mainpage.tex](https://github.com/a-gondolkodas-orome/latex-tutorial/blob/main/src/mainpage.tex)`
-* css: `[./css/tikz.css](https://github.com/a-gondolkodas-orome/latex-tutorial/blob/main/css/tikz.css)`
-* logo: `[./img/logo.png](https://github.com/a-gondolkodas-orome/latex-tutorial/blob/main/img/logo.png)`
-* fordítás (lokálisan): `python [./build_html.py](https://github.com/a-gondolkodas-orome/latex-tutorial/blob/main/build_html.py)`
-* index.html: `[./docs/index.html](https://github.com/a-gondolkodas-orome/latex-tutorial/blob/main/docs/index.html)`
-  * A publikus oldalt egy github action hozza létre a `gh-pages` branchen (`[./.github/workflows/main.yml](https://github.com/a-gondolkodas-orome/latex-tutorial/blob/main/.github/workflows/main.yml)`)
+* main.tex: [`./src/mainpage.tex`](https://github.com/a-gondolkodas-orome/latex-tutorial/blob/main/src/mainpage.tex)
+* css: [`./css/tikz.css`](https://github.com/a-gondolkodas-orome/latex-tutorial/blob/main/css/tikz.css)
+* logo: [`./img/logo.png`](https://github.com/a-gondolkodas-orome/latex-tutorial/blob/main/img/logo.png)
+* fordítás (lokálisan): `python3 ./build_html.py`
+* index.html: [`./docs/index.html`](https://github.com/a-gondolkodas-orome/latex-tutorial/blob/main/docs/index.html)
+  * A publikus oldalt egy github action hozza létre a `gh-pages` branchen ([`./.github/workflows/main.yml`](https://github.com/a-gondolkodas-orome/latex-tutorial/blob/main/.github/workflows/main.yml))
 
 ## Dokumentációk
 * [Lwarp package](https://ctan.ijs.si/tex-archive/macros/latex/contrib/lwarp/lwarp.pdf)
