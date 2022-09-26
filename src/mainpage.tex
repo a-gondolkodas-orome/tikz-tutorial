@@ -36,7 +36,10 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{pgf}
 \usepackage{tikz}
+\usepackage{tkz-graph}
+\usetikzlibrary{shapes,backgrounds,arrows, patterns}
 \usepackage{skak} %Ez kell a sakkbábukhoz
 \usepackage{fancyvrb-ex}
 \usepackage[a4paper]{geometry}
@@ -101,10 +104,17 @@
 
 \usepackage{hyperref,cleveref}  % LOAD THESE LAST!
 
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    pdfpagemode=FullScreen,
+}
 
 % --- LATEX AND HTML CUSTOMIZATION ---
 \title{TikZ gyorstalpaló, példák}
-\author{Bertalan Dávid, Alexy Marcell (technikai megvalósítás)}
+\author{}
 \setcounter{tocdepth}{1}        % Include subsections in the \TOC.
 \setcounter{secnumdepth}{2}     % Number down to subsections.
 \setcounter{FileDepth}{0}       % 1: Split \HTML\ files at sections ; 0: split at chapter
@@ -116,7 +126,7 @@
 %\HTMLDescription{Latex tutorial}% Sets the HTML meta description.
 \HTMLFirstPageTop{\href{./}{\includegraphics[height=50px]{./logo.png}}}
 \HTMLPageTop{\includegraphics[height=50px]{./logo.png}}
-\HTMLPageBottom{©Bertalan Dávid, Alexy Marcell - A Gondolkodás Öröme Alapítvány}
+\HTMLPageBottom{©Alexy Marcell, Bertalan Dávid, Hujter Bálint, Szűcs Gábor -- A Gondolkodás Öröme Alapítvány}
 %\CSSFilename{lwarp_sagebrush.css}
 \CSSFilename{tikz.css}
 
