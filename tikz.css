@@ -10,7 +10,7 @@ body {
         "Bembo", "Janson", "TeX Gyre Pagella", "Palatino",
         "Liberation Serif", "Nimbus Roman No 9 L",  "FreeSerif", Times,
         "Times New Roman", serif;
-    background: #fffcf5;
+    background: #fdfcf8;
 }
 
 section.textbody {
@@ -41,7 +41,7 @@ div.book, h1, h2, h3, h4, h5, h6, span.paragraph, span.subparagraph
 }
 
 h1, h2 {
-    background-color: #fffcf5 ;
+    background-color: #fdfcf8 ;
     background-image: none ;
     border-bottom: 1px solid #808080;
 /*    border-top: 2px solid #808080; */
