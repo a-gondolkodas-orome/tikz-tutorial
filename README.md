@@ -2,7 +2,7 @@
 
 ## Projekt infók
 
-* [Honlap](https://a-gondolkodas-orome.github.io/latex-tutorial/index.html)
+* [Honlap](https://tikz.agondolkodasorome.hu)
 * [PDF](https://a-gondolkodas-orome.github.io/latex-tutorial/mainpage.pdf)
 * [Github link](https://github.com/a-gondolkodas-orome/latex-tutorial)
 * main.tex: [`./src/mainpage.tex`](https://github.com/a-gondolkodas-orome/latex-tutorial/blob/main/src/mainpage.tex)
