@@ -250,9 +250,42 @@
     \end{minipage}
 \end{tikzExample}
 
-\section{}
+\section{Trigonometrikus függvények}
 \begin{tikzExample}
-
+    \begin{center}
+        \definecolor{dgreen}{rgb}{0,0.4,0}
+        \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+        \draw [color=gray,dash pattern=on 2pt off 2pt, xstep=1.5707963267948966cm,ystep=1.0cm] (-3.89,-2.97) grid (9.33,2.94);
+        \draw[->,color=black] (-3.89,0) -- (9.33,0);
+        \draw[shift={(-3.14,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $-\pi$};
+        \draw[shift={(-1.57,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\scriptsize $-\pi/2$};
+        \draw[shift={(1.57,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\frac{\pi}{2}$};
+        \draw[shift={(pi,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\pi$};
+        \draw[shift={(4.71,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\frac32 \pi$};
+        \draw[shift={(6.28,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $2\pi$};
+        \draw[shift={(7.85,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\frac52 \pi$};
+        
+        \draw[->,color=black] (0,-2.97) -- (0,2.94);
+        \foreach \y in {-2,-1,1,2}
+        \draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+        \draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+        \clip(-3.89,-2.97) rectangle (9.33,2.94);
+        \draw[line width=1.5pt,dash pattern=on 2pt off 2pt,color=blue, smooth,samples=100,domain=-3.8859126567579696:9.331288233648893] plot(\x,{sin(((\x))*180/pi)});
+        \draw[line width=1.5pt,dash pattern=on 1pt off 2pt on 5pt off 4pt,color=red, smooth,samples=100,domain=-3.8859126567579696:9.331288233648893] plot(\x,{cos(((\x))*180/pi)});
+        \draw[line width=1.2pt, color=dgreen, smooth,samples=100,domain=-1.56-pi:1.56-pi] plot (\x,{sin(((\x))*180/pi)/cos(((\x))*180/pi)});
+        \draw[line width=1.2pt, color=dgreen, smooth,samples=100,domain=-1.56:1.56] plot (\x,{sin(((\x))*180/pi)/cos(((\x))*180/pi)});
+        \draw[line width=1.2pt, color=dgreen, smooth,samples=100,domain=-1.56+pi:1.56+pi] plot (\x,{sin(((\x))*180/pi)/cos(((\x))*180/pi)});
+        \draw[line width=1.2pt, color=dgreen, smooth,samples=100,domain=-1.56+pi+pi:1.56+pi+pi] plot (\x,{sin(((\x))*180/pi)/cos(((\x))*180/pi)});
+        \draw[line width=1.2pt, color=dgreen, smooth,samples=100,domain=-1.56+pi+pi+pi:1.56+pi+pi+pi] plot (\x,{sin(((\x))*180/pi)/cos(((\x))*180/pi)});
+        \begin{scriptsize}
+        \end{scriptsize}
+        \end{tikzpicture}
+        \[
+            \color{blue}{f(x) = \sin x} \hspace{2 cm}
+            \color{red}{g(x) = \cos x } \hspace{2 cm}
+            \color{dgreen}{h(x) = \mathrm{tg}x}
+        \]
+        \end{center}
 \end{tikzExample}
 
 
@@ -261,3 +294,8 @@
 
 \end{tikzExample}
 
+
+\section{}
+\begin{tikzExample}
+
+\end{tikzExample}
