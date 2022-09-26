@@ -289,9 +289,46 @@
 \end{tikzExample}
 
 
-\section{}
+\section{Nyolcszög, lyukkal}
 \begin{tikzExample}
+    \usetikzlibrary[patterns]
 
+    \begin{center}
+    \newcommand*\sqtwo{1.414142135}
+    \begin{tikzpicture}[scale=2, line cap=round]
+    
+    \fill[gray, pattern = horizontal lines] (-1,-1)--(0,-\sqtwo)--(1,-1)--(\sqtwo,0)--(1,1)--(0,\sqtwo)--(-1,1)--(-\sqtwo,0)--cycle;
+    \fill[white] (-1,-1)--(0,-2+\sqtwo)--(1,-1)--(2-\sqtwo,0)--(1,1)--(0,2-\sqtwo)--(-1,1)--(-2+\sqtwo,0)--cycle;
+    \fill[gray, pattern = vertical lines ] (-1,-1)--(0,-2+\sqtwo)--(1,-1)--(2-\sqtwo,0)--(1,1)--(0,2-\sqtwo)--(-1,1)--(-2+\sqtwo,0)--cycle;
+    \fill[white] (0,2-\sqtwo)--(2-\sqtwo,0)--(0,\sqtwo-2)--(\sqtwo-2,0)--cycle;
+    
+    \draw[line width=2, black] (-1,-1)--(0,-\sqtwo)--(1,-1)--(\sqtwo,0)--(1,1)--(0,\sqtwo)--(-1,1)--(-\sqtwo,0)--cycle;
+    \draw[line width=2, black] (-1,-1)--(0,-2+\sqtwo)--(1,-1)--(2-\sqtwo,0)--(1,1)--(0,2-\sqtwo)--(-1,1)--(-2+\sqtwo,0)--cycle;
+    
+    \draw[line width=1.5, dashed] (0,2-\sqtwo)--(2-\sqtwo,0)--(0,\sqtwo-2)--(\sqtwo-2,0)--cycle;
+    \draw[line width=1.5, dashed] (0,2-\sqtwo) -- (0,\sqtwo);
+    \draw[line width=1.5, dashed] (2-\sqtwo,0) -- (\sqtwo,0);
+    \draw[line width=1.5, dashed] (0,-2+\sqtwo) -- (0,-\sqtwo);
+    \draw[line width=1.5, dashed] (-2+\sqtwo,0) -- (-\sqtwo,0);
+    \end{tikzpicture}
+    \hspace{2 cm}
+    \begin{tikzpicture}[scale=2]
+    
+    \fill[pattern = north west lines] (-1, 1)--(0,\sqtwo)--(1,1)-- cycle;
+    
+    \fill[pattern = dots] (-1, 1)--(-\sqtwo,0)--(-1,-1)--(-2+\sqtwo,0)-- cycle;
+    
+    \draw[line width=2] (-1,-1)--(0,-\sqtwo)--(1,-1)--(\sqtwo,0)--(1,1)--(0,\sqtwo)--(-1,1)--(-\sqtwo,0)--cycle;
+    \draw[line width=1.5, dashed] (-1,-1)--(0,-2+\sqtwo)--(1,-1)--(2-\sqtwo,0)--(1,1)--(0,2-\sqtwo)--(-1,1)--(-2+\sqtwo,0)--cycle;
+    
+    \draw[line width=1.5] (-1,-1)--(-1,1)--(1,1)--(1,-1)--cycle;
+    \draw[line width=2] (0,2-\sqtwo)--(2-\sqtwo,0)--(0,\sqtwo-2)--(\sqtwo-2,0)--cycle;
+    \draw[line width=2] (0,2-\sqtwo)--(2-\sqtwo,0)--(0,\sqtwo-2)--(\sqtwo-2,0)--cycle;
+    
+    \draw[line width=1.5, dashed] (-2+\sqtwo,0) -- (-\sqtwo,0);
+    \end{tikzpicture}
+    
+    \end{center}
 \end{tikzExample}
 
 
@@ -299,3 +336,9 @@
 \begin{tikzExample}
 
 \end{tikzExample}
+
+\section{}
+\begin{tikzExample}
+
+\end{tikzExample}
+
