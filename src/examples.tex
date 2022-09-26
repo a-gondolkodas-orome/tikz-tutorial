@@ -252,7 +252,6 @@
 
 \section{Trigonometrikus függvények}
 \begin{tikzExample}
-    \begin{center}
         \definecolor{dgreen}{rgb}{0,0.4,0}
         \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
         \draw [color=gray,dash pattern=on 2pt off 2pt, xstep=1.5707963267948966cm,ystep=1.0cm] (-3.89,-2.97) grid (9.33,2.94);
@@ -285,15 +284,12 @@
             \color{red}{g(x) = \cos x } \hspace{2 cm}
             \color{dgreen}{h(x) = \mathrm{tg}x}
         \]
-        \end{center}
 \end{tikzExample}
 
 
 \section{Nyolcszög, lyukkal}
 \begin{tikzExample}
     \usetikzlibrary[patterns]
-
-    \begin{center}
     \newcommand*\sqtwo{1.414142135}
     \begin{tikzpicture}[scale=2, line cap=round]
     
@@ -328,13 +324,42 @@
     \draw[line width=1.5, dashed] (-2+\sqtwo,0) -- (-\sqtwo,0);
     \end{tikzpicture}
     
-    \end{center}
 \end{tikzExample}
 
 
-\section{}
+\section{KöMaL B.5131.}
 \begin{tikzExample}
+    \begin{center}
 
+        \begin{tikzpicture}[yscale=1.732,scale=0.7]
+        
+        \draw[dashed] (-5,0) -- (3.2,0);
+        \draw[dashed] (2.2,2.2) -- (-2.5,-2.5);
+        \draw[dashed] (-2.2,2.2) -- (2.5,-2.5);
+        
+        \draw (-2,0)--(2,0); \draw (-1,1)--(1,1);
+        \draw (-1,-1)--(1,1); \draw (1,-1)--(2,0);
+        \draw (1,-1)--(-1,1); \draw (-1,-1)--(-2,0);
+        
+        \fill[opacity=0.2] (-5,-1)--(5,-1)--(5,1)--(-5,1)--cycle;
+        \fill[opacity=0.2] (-1,3)--(-5,3)--(0.5,-2.5)--(4.5,-2.5)--cycle;
+        \fill[opacity=0.2] (1,3)--(5,3)--(-0.5,-2.5)--(-4.5,-2.5)--cycle;
+        
+        \filldraw[red, fill opacity=0.4] (-1,-1)--(1,-1)--(2,0)--(1,1)--(-1,1)--(-2,0)--cycle;
+        
+        \draw[line width=2] (-3,-1)--(3,-1)--(0,2)--cycle;
+        \draw (0,2) node [above] {$A_1$};
+        \draw (-3,-1) node [below left] {$A_2$};
+        \draw (3,-1) node [below right] {$A_3$};
+        
+        \draw (4,0) node {$|x_1| < \frac{m}3$};
+        \draw (2.5,2.5) node {$|x_3| < \frac{m}3$};
+        \draw (-2.5,2.5) node {$|x_2| < \frac{m}3$};
+        
+        \end{tikzpicture}
+        
+        \end{center}
+        
 \end{tikzExample}
 
 \section{}
