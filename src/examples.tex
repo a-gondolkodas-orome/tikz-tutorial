@@ -147,6 +147,41 @@
         \end{center}
 \end{tikzExample}
 
+\section{Dijkstra-algoritmus, gráfok}
+\begin{tikzExample}
+    \begin{center}
+        \begin{tikzpicture}[scale=1.6]
+        \begin{small}
+          \GraphInit[vstyle=Dijkstra]
+            \Vertex[x=0,y=0,L=$\mathbf{s}$]{A}    
+            \Vertex[x=3,y=0,L=$v_1$]{B}    
+            \Vertex[x=4,y=1.5,L=$v_2$]{C}
+            \Vertex[x=3,y=3,L=$v_3$]{D}
+            \Vertex[x=0,y=3,L=$v_4$]{E}
+            \Vertex[x=1,y=2,L=$v_5$]{F}    
+            \Vertex[x=1,y=1,L=$v_6$]{G}
+            \Vertex[x=2.5,y=1,L=$v_7$]{H}
+            \Vertex[x=2.5,y=2,L=$\mathbf{t}$]{I}
+          %\Vertex[x=7,y=0,L=$t$]{F}
+         \tikzset{EdgeStyle/.style={line width=1.2,-}}
+            \Edge[label=6](A)(B)
+            \Edge[label=5](B)(C)
+            \Edge[label=7](B)(G)
+            \Edge[label=5](C)(D)
+            \Edge[label=4](C)(H)
+            \Edge[label=6](D)(F)
+            \Edge[label=3](D)(I)
+         \tikzset{EdgeStyle/.style={line width=1.6,blue,-}}
+             \Edge[label=5](A)(E)	
+            \Edge[label=4](E)(F)
+            \Edge[label=2](F)(G)
+            \Edge[label=3](G)(H)
+            \Edge[label=2](H)(I)
+        \end{small}	
+        \end{tikzpicture}
+        \end{center}
+\end{tikzExample}
+
 \section{}
 \begin{tikzExample}
 
