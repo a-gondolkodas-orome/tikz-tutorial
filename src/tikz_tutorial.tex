@@ -94,12 +94,13 @@ A képet lehet transzformálni erre pár példa: \code{xshift}, \code{yshift}, \
 
 \begin{tikzExample}
 \begin{tikzpicture}[scale = 2, ultra thick]
-    \foreach \n in {3, ..., 8}{    \draw (\n-3,0) \foreach \d in {1, ..., \n}{ %MAGIC DANGER        
+    \foreach \n in {3, ..., 8} {    
+		\draw (\n-3,0) \foreach \d in {1, ..., \n}{ %MAGIC DANGER        
             +(\d*360/\n:0.3cm) -- +(\d*360/\n + 360/\n:0.3cm)    }; 
             %Az, hogy ilyet lehet csinálni szerintem egyszerre undorító és hasznos
             %Ez kell ahhoz, hogy a szín mögé lehessen írni változót (nem igazán lehet képletet)
-            \pgfmathsetmacro\i{\n*15-30} 
-            \filldraw [xshift = \n-3, color = green!\i] (\n-3,-1) circle (0.3cm);
+        \pgfmathsetmacro\i{\n*15-30} 
+        \filldraw [xshift = \n-3, color = green!\i] (\n-3,-1) circle (0.3cm);
     }
 \end{tikzpicture}
 \end{tikzExample}
