@@ -45,7 +45,7 @@ Tartalom</a></nav>
 <div class="sidetoctitle">
 
 <p>
-<span class="sidetocthetitle">TikZ gyorstalpaló, példák</span>
+<span class="sidetocthetitle">Ti<em>k</em>Z gyorstalpaló, példák</span>
 </p>
 
 <p>
@@ -63,7 +63,7 @@ Tartalom</a>
 
 <p>
 <a href="TikZ-gyorstalpaló.html#autosec-6" class="tocchapter" >
-1.TikZ gyorstalpaló</a>
+1.Ti<em>k</em>Z gyorstalpaló</a>
 </p>
 
 
@@ -104,35 +104,35 @@ Tartalom</a>
 <p>
 <a href="Példák.html#autosec-34" class="tocsection" >
 2.1.
- Sok körzőzés</a>
+ Sakktábla</a>
 </p>
 
 
 <p>
 <a href="Példák.html#autosec-38" class="tocsection" >
 2.2.
- Sakktábla</a>
+ Óxisz szigete</a>
 </p>
 
 
 <p>
 <a href="Példák.html#autosec-42" class="tocsection" >
 2.3.
- Óxisz szigete</a>
+ Simson-egyenes</a>
 </p>
 
 
 <p>
 <a href="Példák.html#autosec-46" class="tocsection" >
 2.4.
- Simson-egyenes</a>
+ Komplex egységgyökök</a>
 </p>
 
 
 <p>
-<a href="Példák.html#autosec-50" class="tocsection" >
+<a href="Példák.html#autosec-55" class="tocsection" >
 2.5.
- Komplex egységgyökök</a>
+ Sok körzőzés</a>
 </p>
 
 
@@ -196,325 +196,13 @@ Tartalom</a>
 
 <section class="textbody">
 
-<h1>TikZ gyorstalpaló, példák</h1>
+<h1>Ti<em>k</em>Z gyorstalpaló, példák</h1>
 
 <h3 id="autosec-33"><span class="sectionnumber">2. &#x2003;</span>Példák</h3>
 <a id="mainpage-autopage-33"></a>
 <a id="mainpage-autofile-2"></a>
-<h4 id="autosec-34"><span class="sectionnumber">2.1.&#x2002;</span>Sok körzőzés</h4>
+<h4 id="autosec-34"><span class="sectionnumber">2.1.&#x2002;</span>Sakktábla</h4>
 <a id="mainpage-autopage-34"></a>
-
-
-<div class="mdframed"
-style="
-background: #E5E5E5 ;
-border: 1pt solid #E5E5E5 ;
-border-radius: 10pt ;
-box-shadow: none ;
-">
-<div
-    class="fancyvrb"
-    style=""
->
-<pre class="verbatim">
-    <span
-    class="textcolor"
-    style="color:#008000"
-><b>\begin</b></span><span
-    class="textcolor"
-    style="color:#008000"
->{</span>tikzpicture<span
-    class="textcolor"
-    style="color:#008000"
->}</span>[scale=0.8]
-         <span
-    class="textcolor"
-    style="color:#008000"
-><b>\foreach</b></span> <span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span> in <span
-    class="textcolor"
-    style="color:#008000"
->{</span>0,...,12<span
-    class="textcolor"
-    style="color:#008000"
->}</span>
-             <span
-    class="textcolor"
-    style="color:#008000"
->{</span>
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0,0) circle (1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5,-0.866) arc (0:120:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+1.5,-0.866) arc (0:240:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+-1,-0) arc (60:-60:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0,-1.732) arc (0:120:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+-1.5,-0.866) arc (-120:120:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+-1,-0) arc (-60:60:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+-1.5,0.866) arc (-120:0:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0,1.732) arc (120:360:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5,0.866) arc (0:-120:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5,0.866) arc (-60:-180:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5,0.866) arc (120:240:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5,0.866) arc (180:300:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5,-0.866) arc (180:60:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+-1,-1.732) arc (180:60:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+1.5,0.866) arc (120:240:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5, 0.866) arc (0:60:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5, 0.866) arc (240:180:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5, 0.866) arc (240:300:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5, 0.866) arc (120:60:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5, 0.866) arc (180:120:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5, 0.866) arc (300:360:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+-1,-0) arc (0:60:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+-1,-0) arc (240:180:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+-1,-0) arc (60:120:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+-1,-0) arc (300:240:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+-1,-0) arc (120:180:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+-1,-0) arc (360:300:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5, -0.866) arc (180:240:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5, -0.866) arc (60:0:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5, -0.866) arc (120:60:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5, -0.866) arc (240:300:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5, -0.866) arc (120:180:1);
-                 <span
-    class="textcolor"
-    style="color:#008000"
-><b>\draw</b></span> (<span
-    class="textcolor"
-    style="color:#008000"
-><b>\i</b></span>+0.5, -0.866) arc (360:300:1);
-             <span
-    class="textcolor"
-    style="color:#008000"
->}</span>
-    <span
-    class="textcolor"
-    style="color:#008000"
-><b>\end</b></span><span
-    class="textcolor"
-    style="color:#008000"
->{</span>tikzpicture<span
-    class="textcolor"
-    style="color:#008000"
->}</span>
-</pre>
-</div>
-
-</div>
-
-<p>
-<span
-    id="lateximage-mainpage-7"
-    class="lateximagesource"
-><!--
---> <img
-    src="mainpage-images/image-7.svg"
-    alt="(-tikz-&nbsp;diagram)"
-    style=""
-    class="lateximage"
-></span>
-</p>
-<h4 id="autosec-38"><span class="sectionnumber">2.2.&#x2002;</span>Sakktábla</h4>
-<a id="mainpage-autopage-38"></a>
 
 
 <div class="mdframed"
@@ -830,7 +518,7 @@ box-shadow: none ;
 
 <p>
 <span
-    id="lateximage-mainpage-8"
+    id="lateximage-mainpage-7"
     class="lateximagesource"
 ><!--
                 B B
@@ -842,14 +530,14 @@ box-shadow: none ;
     R
 R
 --> <img
-    src="mainpage-images/image-8.svg"
+    src="mainpage-images/image-7.svg"
     alt="(-tikz-&nbsp;diagram)"
     style=""
     class="lateximage"
 ></span>
 </p>
-<h4 id="autosec-42"><span class="sectionnumber">2.3.&#x2002;</span>Óxisz szigete</h4>
-<a id="mainpage-autopage-42"></a>
+<h4 id="autosec-38"><span class="sectionnumber">2.2.&#x2002;</span>Óxisz szigete</h4>
+<a id="mainpage-autopage-38"></a>
 
 
 <div class="mdframed"
@@ -1339,7 +1027,7 @@ box-shadow: none ;
 
 <p>
 <span
-    id="lateximage-mainpage-9"
+    id="lateximage-mainpage-8"
     class="lateximagesource"
 ><!--
             B
@@ -1359,14 +1047,14 @@ A                                   H
                                 N
             K
 --> <img
-    src="mainpage-images/image-9.svg"
+    src="mainpage-images/image-8.svg"
     alt="(-tikz-&nbsp;diagram)"
     style=""
     class="lateximage"
 ></span>
 </p>
-<h4 id="autosec-46"><span class="sectionnumber">2.4.&#x2002;</span>Simson-egyenes</h4>
-<a id="mainpage-autopage-46"></a>
+<h4 id="autosec-42"><span class="sectionnumber">2.3.&#x2002;</span>Simson-egyenes</h4>
+<a id="mainpage-autopage-42"></a>
 
 
 <div class="mdframed"
@@ -1706,7 +1394,7 @@ box-shadow: none ;
 
 <p>
 <span
-    id="lateximage-mainpage-10"
+    id="lateximage-mainpage-9"
     class="lateximagesource"
 ><!--
          C
@@ -1724,16 +1412,16 @@ box-shadow: none ;
 
 A                 B   TC
 --> <img
-    src="mainpage-images/image-10.svg"
+    src="mainpage-images/image-9.svg"
     alt="(-tikz-&nbsp;diagram)"
     style=""
     class="lateximage"
 ></span>
 </p>
-<h4 id="autosec-50"><span class="sectionnumber">2.5.&#x2002;</span>Komplex egységgyökök</h4>
-<a id="mainpage-autopage-50"></a>
-<h5 id="autosec-51"><span class="sectionnumber">2.5.1.&#x2002;</span>Harmadik egységgyökök</h5>
-<a id="mainpage-autopage-51"></a>
+<h4 id="autosec-46"><span class="sectionnumber">2.4.&#x2002;</span>Komplex egységgyökök</h4>
+<a id="mainpage-autopage-46"></a>
+<h5 id="autosec-47"><span class="sectionnumber">2.4.1.&#x2002;</span>Harmadik egységgyökök</h5>
+<a id="mainpage-autopage-47"></a>
 
 
 <div class="mdframed"
@@ -1949,7 +1637,7 @@ box-shadow: none ;
 
 <p>
 <span
-    id="lateximage-mainpage-11"
+    id="lateximage-mainpage-10"
     class="lateximagesource"
 ><!--
       Im
@@ -1962,14 +1650,14 @@ box-shadow: none ;
 
 ε23
 --> <img
-    src="mainpage-images/image-11.svg"
+    src="mainpage-images/image-10.svg"
     alt="(-tikz-&nbsp;diagram)"
     style=""
     class="lateximage"
 ></span>
 </p>
-<h5 id="autosec-55"><span class="sectionnumber">2.5.2.&#x2002;</span>Hetedik egységgyökök</h5>
-<a id="mainpage-autopage-55"></a>
+<h5 id="autosec-51"><span class="sectionnumber">2.4.2.&#x2002;</span>Hetedik egységgyökök</h5>
+<a id="mainpage-autopage-51"></a>
 
 
 <div class="mdframed"
@@ -2198,7 +1886,7 @@ box-shadow: none ;
 
 <p>
 <span
-    id="lateximage-mainpage-12"
+    id="lateximage-mainpage-11"
     class="lateximagesource"
 ><!--
             Im
@@ -2211,6 +1899,318 @@ box-shadow: none ;
 ε47
                     ε67
       ε57
+--> <img
+    src="mainpage-images/image-11.svg"
+    alt="(-tikz-&nbsp;diagram)"
+    style=""
+    class="lateximage"
+></span>
+</p>
+<h4 id="autosec-55"><span class="sectionnumber">2.5.&#x2002;</span>Sok körzőzés</h4>
+<a id="mainpage-autopage-55"></a>
+
+
+<div class="mdframed"
+style="
+background: #E5E5E5 ;
+border: 1pt solid #E5E5E5 ;
+border-radius: 10pt ;
+box-shadow: none ;
+">
+<div
+    class="fancyvrb"
+    style=""
+>
+<pre class="verbatim">
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\begin</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>[scale=0.8]
+         <span
+    class="textcolor"
+    style="color:#008000"
+><b>\foreach</b></span> <span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span> in <span
+    class="textcolor"
+    style="color:#008000"
+>{</span>0,...,12<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
+             <span
+    class="textcolor"
+    style="color:#008000"
+>{</span>
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0,0) circle (1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5,-0.866) arc (0:120:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+1.5,-0.866) arc (0:240:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+-1,-0) arc (60:-60:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0,-1.732) arc (0:120:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+-1.5,-0.866) arc (-120:120:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+-1,-0) arc (-60:60:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+-1.5,0.866) arc (-120:0:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0,1.732) arc (120:360:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5,0.866) arc (0:-120:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5,0.866) arc (-60:-180:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5,0.866) arc (120:240:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5,0.866) arc (180:300:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5,-0.866) arc (180:60:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+-1,-1.732) arc (180:60:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+1.5,0.866) arc (120:240:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5, 0.866) arc (0:60:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5, 0.866) arc (240:180:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5, 0.866) arc (240:300:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5, 0.866) arc (120:60:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5, 0.866) arc (180:120:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5, 0.866) arc (300:360:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+-1,-0) arc (0:60:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+-1,-0) arc (240:180:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+-1,-0) arc (60:120:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+-1,-0) arc (300:240:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+-1,-0) arc (120:180:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+-1,-0) arc (360:300:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5, -0.866) arc (180:240:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5, -0.866) arc (60:0:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5, -0.866) arc (120:60:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5, -0.866) arc (240:300:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5, -0.866) arc (120:180:1);
+                 <span
+    class="textcolor"
+    style="color:#008000"
+><b>\draw</b></span> (<span
+    class="textcolor"
+    style="color:#008000"
+><b>\i</b></span>+0.5, -0.866) arc (360:300:1);
+             <span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
+    <span
+    class="textcolor"
+    style="color:#008000"
+><b>\end</b></span><span
+    class="textcolor"
+    style="color:#008000"
+>{</span>tikzpicture<span
+    class="textcolor"
+    style="color:#008000"
+>}</span>
+</pre>
+</div>
+
+</div>
+
+<p>
+<span
+    id="lateximage-mainpage-12"
+    class="lateximagesource"
+><!--
 --> <img
     src="mainpage-images/image-12.svg"
     alt="(-tikz-&nbsp;diagram)"
