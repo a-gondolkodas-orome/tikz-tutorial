@@ -1,8 +1,8 @@
-\chapter{\tikzname\ gyorstalpaló}
+\chapter{~\tikzname\ gyorstalpaló}
 
 \section{Alapok}
 
-A \code{\usepackage{tikzpicture}} kell a library implementálásához A \code{\begin{tikzpicture}} és \code{\end{tikzpicture}} parancsok közé kell helyezni a rajzolandó ábrát. A TikZ úgy működik, mint egy rajztábla. Egyesével kell az objektumokat rárajzolni, esetenként egy ciklusban többet is lehet egyszerre (lásd lejjebb). \textbf{Minden parancsot egy  ;-vel kell lezárni.}
+A \code{\usepackage{tikzpicture}} kell a library implementálásához A \code{\begin{tikzpicture}} és \code{\end{tikzpicture}} parancsok közé kell helyezni a rajzolandó ábrát. A \tikzname\ úgy működik, mint egy rajztábla. Egyesével kell az objektumokat rárajzolni, esetenként egy ciklusban többet is lehet egyszerre (lásd lejjebb). \textbf{Minden parancsot egy  ;-vel kell lezárni.}
 
 A \code{\begin{tikzpicture}["paraméterek"]} ebben a szögletes zárójelben kell megadni a rajztábla paramétereit. Ilyenek:
 \begin{itemize}
@@ -153,7 +153,7 @@ Itt különösen kiemelném a \code{\clip} parancs fontosságát. Ha egy ábrát
 
 \section{Gráfok}
 
-Lehet gráfokat úgy definiálni, hogy a csúcsokat megadjuk és utána az élek már a meglévő objektumainkat (csúcsok) kössék össze. Ez azért hasznos, mert rugalmasabb lesz az ábra. Ha esetleg változtatnánk a gráfon egy új csúcs behozásával nem kell az egész ábrát koordinátánként átírni. Elég csak a csúcsokat áthelyezni, a többit a TikZ megcsinálja nekünk. Ami még különösen hasznos, hogy tudunk a programban a csúcsoknak nevet adni és utána ezt a nevet használni referenciaként, hogy egy sokkal átláthatóbb kódot kapjunk végeredményül. Ez nem összekeverendő a csúcshoz tartozó szöveggel.
+Lehet gráfokat úgy definiálni, hogy a csúcsokat megadjuk és utána az élek már a meglévő objektumainkat (csúcsok) kössék össze. Ez azért hasznos, mert rugalmasabb lesz az ábra. Ha esetleg változtatnánk a gráfon egy új csúcs behozásával nem kell az egész ábrát koordinátánként átírni. Elég csak a csúcsokat áthelyezni, a többit a \tikzname\ megcsinálja nekünk. Ami még különösen hasznos, hogy tudunk a programban a csúcsoknak nevet adni és utána ezt a nevet használni referenciaként, hogy egy sokkal átláthatóbb kódot kapjunk végeredményül. Ez nem összekeverendő a csúcshoz tartozó szöveggel.
 
 Amit szintén itt mutatnék be az a dinamikus stílus kezelés. Lehet ugyanis általunk előre definiált stílusokat megadni, hogy utána csak elég legyen annyit írni, hogy \code{[fontos]} vagy \code{[seged]}. Ezzel is azt érjük el, hogy olvashatóbb és egységesen változtathatóbb lesz a kód és így az ábránk.
 

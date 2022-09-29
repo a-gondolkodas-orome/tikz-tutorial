@@ -1,3 +1,5 @@
+@import url("style.css") ;
+
 @import url("lwarp.css") ;
 
 A:link {color:#802020 ; text-decoration:none; }
@@ -10,7 +12,7 @@ body {
         "Bembo", "Janson", "TeX Gyre Pagella", "Palatino",
         "Liberation Serif", "Nimbus Roman No 9 L",  "FreeSerif", Times,
         "Times New Roman", serif;
-    background: #fdfcf8;
+    background: #faf7f4;
 }
 
 section.textbody {
@@ -68,14 +70,14 @@ span.abstractrunintitle {
 div.abstract { font-size: 100% }
 
 .sidebar {
-    background: #fffcf5;
+/*    background: #fffcf5;
     background-image: none ;
   margin: 2em 5% 2em 5%;
   padding: 0.5em 1em;
   border: none ;
   border-top : 1px solid silver;
   border-bottom : 1px solid silver;
-  font-size: 100% ;
+  font-size: 100% ;*/
 }
 
 div.sidebartitle{
@@ -83,9 +85,9 @@ div.sidebartitle{
         "Bembo", "Janson", "TeX Gyre Pagella", "Palatino",
         "Liberation Serif", "Nimbus Roman No 9 L",  "FreeSerif", Times,
         "Times New Roman", serif;
-    color: #800000 ;
+/*    color: #800000 ;
     text-shadow: none ;
-    border: none ;
+    border: none ;*/
 }
 
 .example {
