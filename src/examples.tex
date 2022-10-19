@@ -60,6 +60,22 @@
     \end{tikzpicture}
 \end{tikzExample}
 
+\section{Ötszög}
+
+\begin{tikzExample}
+    \begin{tikzpicture}[scale=.5,minimum size=5mm,inner sep=0pt]
+        \foreach \name/\color/\theta in
+            {A/red/18,B/green/90,C/blue!80/162,D/yellow/234,E/orange/306}
+          \node[circle,draw,fill=\color] (\name) at (\theta:3) {};
+        \node[circle,draw,fill=gray] (O) at (0,0) {};
+        \foreach \name in {A,B,C,D,E}
+          \draw (O) -- (\name);
+        \foreach \i/\j in {A/B,B/C,D/E}
+          \draw (\i) -- (\j);
+        \draw (B) .. controls (-5,1) .. (D);
+    \end{tikzpicture}
+\end{tikzExample}
+    
 \section{Simson-egyenes}
 \begin{tikzExample}
     \begin{tikzpicture}[line cap=round,line join=round,>=triangle
