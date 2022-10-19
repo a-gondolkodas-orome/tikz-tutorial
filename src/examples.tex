@@ -434,10 +434,76 @@ $\color{blue}{f(x) = \sin x} \hspace{2 cm} \color{red}{g(x) = \cos x } \hspace{2
 \end{tikzExample}
 
 
-\section{}
+\section{Függvények}
 
-
-
+\begin{tikzExample}
+    \newcommand*{\vertexcolor}[2] {\fill[shift only,#2] (#1) circle (1.5pt)}
+    \newcommand*{\vertex}[1] {\fill[shift only] (#1) circle (1.5pt)}
+    \begin{tikzpicture}[scale=1]
+        \draw[very thin,step=10mm] (-4,-4) grid (4,4);
+        \draw[thick] (-4,0) -- (4,0);
+        \draw[thick] (0,-4) -- (0,4);
+        \foreach \x in {-3,...,4}
+          \node at (\x-.2,-.2) {\x};
+        \foreach \y in {-3,...,-1}
+          \node at (+.2,\y-.3) {\y};
+        \foreach \y in {1,...,4}
+          \node at (+.2,\y-.3) {\y};
+        
+        \draw[very thick,domain=.936:3.306,samples=200] plot (\x,{
+        (
+          (6*\x-\x*\x)+
+          sqrt(
+           (\x*\x-6*\x)^2 -
+           4*\x*6
+          )
+        )/
+        (2*\x)
+        });
+        
+        \draw[very thick,domain=.936:3.306,samples=100] plot (\x,{
+        (
+          (6*\x-\x*\x)-
+          sqrt(
+           (\x*\x-6*\x)^2 -
+           4*\x*6
+          )
+        )/
+        (2*\x)
+        });
+        
+        \draw[very thick,domain=-2.5:-.25,samples=100] plot (\x,{
+        (
+          (6*\x-\x*\x)+
+          sqrt(
+           (\x*\x-6*\x)^2 -
+           4*\x*6
+          )
+        )/
+        (2*\x)
+        });
+        
+        \coordinate (A) at (2,3);
+        \coordinate (B) at (1,2);
+        \coordinate (C) at (-1.5,-0.5);
+        \coordinate (D) at (3,2);
+        \coordinate (E) at (1.5,1.2);
+        
+        \draw[very thick,dashed,red]  ($(C)!-.4!(A)$) -- ($(C)!1.2!(A)$);
+        \draw[very thick,dashed,blue] ($(C)!-.4!(D)$) -- ($(C)!1.2!(D)$);
+        
+        \node[right,xshift=9pt,yshift=-5pt]  at (A)  {$A=(2,3)$};
+        \node[above left,xshift=-4pt]        at (B)  {$B=(1,2)$};
+        \node[right,xshift=23pt,yshift=-4]   at (C)  {$C=(-1.5,-0.5)$};
+        \node[right,xshift=8pt,yshift=-6pt]  at (D)  {$D=(3,2)$};
+        \node[below,xshift=15pt,yshift=-12pt] at (E) {$E=(1.5,1.2)$};
+        \vertexcolor{A}{red};
+        \vertexcolor{B}{red};
+        \vertexcolor{C}{purple};
+        \vertexcolor{D}{blue};
+        \vertexcolor{E}{blue!50!red};
+    \end{tikzpicture}    
+\end{tikzExample}
 
 \section{Nyolcszög, lyukkal}
 \begin{tikzExample}
