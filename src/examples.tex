@@ -60,7 +60,7 @@
     \end{tikzpicture}
 \end{tikzExample}
 
-\section{Ötszög}
+\section{Gráf öt csúccsal}
 
 \begin{tikzExample}
     \begin{tikzpicture}[scale=.5,minimum size=5mm,inner sep=0pt]
@@ -76,6 +76,76 @@
     \end{tikzpicture}
 \end{tikzExample}
     
+\section{Gráf sok csúccsal}
+
+\begin{tikzExample}
+    \begin{tikzpicture}[scale=.48,minimum size=5mm,inner sep=0pt]
+        \foreach \name/\color/\theta in
+            {A/red/18,B/orange/90,C/blue!80/162,D/yellow/234,E/orange/306}
+          \node[circle,draw,fill=\color] (\name) at (\theta:3) {};
+        \node[circle,draw,fill=green] (O) at (0,0) {};
+        \node[above right] at (O) {$v$};
+        
+        \node[right,xshift=8pt] at (A) {$v_3$};
+        \node[right,xshift=8pt] at (B) {$v_2$};
+        \node[left,,xshift=-8pt] at (C) {$v_1$};
+        \node[left,,xshift=-8pt] at (D) {$v_5$};
+        \node[right,xshift=8pt] at (E) {$v_4$};
+        
+        \foreach \name in {A,B,C,D,E}
+          \draw (O) -- (\name);
+          
+        \node[circle,draw,fill=red]  (X1) at (126:5) {};
+        \node[circle,draw,fill=blue!80] (X2) at (90:7)  {};
+        \node[circle,draw,fill=red]  (X3) at (36:10) {};
+        \node[circle,draw,fill=blue!80] (X4) at (18:12) {};
+        \node[circle,draw,fill=red]  (X5) at (0:10) {};
+        \node[circle,draw,fill=blue!80] (X6) at (-18:8) {};
+        
+        \draw[thick,double distance=2pt] (C)  -- (X1);
+        \draw[thick,double distance=2pt] (X1) -- (X2);
+        \draw[thick,double distance=2pt] (X2) -- (X3);
+        \draw[thick,double distance=2pt] (X3) -- (X4);
+        \draw[thick,double distance=2pt] (X4) -- (X5);
+        \draw[thick,double distance=2pt] (X5) -- (X6);
+        \draw[thick,double distance=2pt] (X6) -- (A);
+        \draw[thick,double distance=2pt] (A) -- (O) -- (C);
+        
+        \node[circle,draw,fill=green]  (Y1)  at (80:5) {};
+        \node[circle,draw,fill=orange]   (Y2)  at (50:7)  {};
+        \node[circle,draw,fill=green]  (Y3A) at (20:8) {};
+        \node[circle,draw,fill=green]  (Y3B) at (30:5) {};
+        \node[circle,draw,fill=orange]   (Y4A) at (10:6) {};
+        \node[circle,draw,fill=yellow]   (Y4B) at (10:8) {};
+        \node[circle,draw,fill=orange]   (Y4C) at (15:10) {};
+        \node[circle,draw,fill=green]   (Y5)  at (-35:7) {};
+        \node[circle,draw,fill=yellow]  (Y6A) at (-20:12) {};
+        \node[circle,draw,fill=orange]  (Y6B) at (-20:4) {};
+        
+        \draw[thick,dashed,double distance=2pt] (B)  -- (O) -- (E);
+        \draw[thick,dashed,double distance=2pt] (B)  -- (Y1);
+        \draw[thick,dashed,double distance=2pt] (Y1) -- (Y2);
+        \draw[thick,dashed,double distance=2pt] (Y2) -- (Y3A);
+        \draw[thick,dashed,double distance=2pt] (Y2) -- (Y3B);
+        \draw[thick,dashed,double distance=2pt] (Y3A) -- (Y4A);
+        \draw[thick,dashed,double distance=2pt] (Y3A) -- (Y4B);
+        \draw[thick,dashed,double distance=2pt] (Y3A) -- (Y4C);
+        \draw[thick,dashed,double distance=2pt] (E)  -- (Y5);
+        \draw[thick,dashed,double distance=2pt] (Y5) -- (Y6B);
+        
+        
+        \draw (Y5) -- (Y6A);
+        \draw (A) -- (Y1);
+        \draw (X2) -- (Y1);
+        \draw (X1) -- (Y1);
+        \draw (D) -- (E);
+        \draw (D) -- (C);
+        \node[right,xshift=8pt] at (X3) {$v_6$};
+        \node[right,xshift=8pt] at (X4) {$v_7$};
+    \end{tikzpicture}        
+\end{tikzExample}
+
+
 \section{Simson-egyenes}
 \begin{tikzExample}
     \begin{tikzpicture}[line cap=round,line join=round,>=triangle
@@ -115,6 +185,75 @@
             \fill (4.66,-4) circle (1.5pt);
             \draw (4.5,-4.5) node {$T_C$};
         \end{small}
+    \end{tikzpicture}
+\end{tikzExample}
+
+\section{Háromszög beírt köre}
+
+\begin{tikzExample}
+    \newcommand*{\vertexcolor}[2] {\fill[shift only,#2] (#1) circle (1.5pt)}
+    \newcommand*{\vertex}[1] {\fill[shift only] (#1) circle (1.5pt)}
+    \begin{tikzpicture}[scale=1.8]
+        % Draw base and path two lines at known angles
+        \draw (0,0) coordinate (a) node[xshift=-6pt] {$A$} -- (0:6) coordinate (b) node[xshift=6pt] {$B$};
+        \path[name path=ac] (a) -- +(50:4);
+        \path[name path=bc] (b) -- +(150:5);
+        % Get their intersection and draw lines between vertices
+        \path[name intersections={of=ac and bc,by=c}];
+        \node[above] at (c) {$C$};
+        \draw (a) -- (c) -- (b) -- (a);
+        % Label angles with tick marks
+        \draw (a) ++(0:4mm) arc (0:50:4mm);
+        \draw (a) ++(10:3.5mm) -- +(10:1mm);
+        \draw (a) ++(15:3.5mm) -- +(15:1mm);
+        \draw (a) ++(35:3.5mm) -- +(35:1mm);
+        \draw (a) ++(40:3.5mm) -- +(45:1mm);
+        \draw (b) ++(150:5mm) arc (150:180:5mm);
+        \draw (b) ++(157.5:4.5mm) -- +(157.5:1mm);
+        \draw (b) ++(172.5:4.5mm) -- +(172.5:1mm);
+        \draw (c) ++(230:3mm) arc (230:330:3mm);
+        \draw (c) ++(250:2.4mm) -- +(250:.9mm);
+        \draw (c) ++(255:2.4mm) -- +(255:.9mm);
+        \draw (c) ++(260:2.4mm) -- +(260:.9mm);
+        \draw (c) ++(300:2.4mm) -- +(300:.9mm);
+        \draw (c) ++(305:2.4mm) -- +(305:.9mm);
+        \draw (c) ++(310:2.4mm) -- +(310:.9mm);
+        % Path bisectors of two lines
+        \path[name path=bia] (a) -- +(25:3.5);
+        \path[name path=bib] (b) -- +(165:5);
+        % Intersection of angle bisectors
+        \path [name intersections={of=bia and bib,by=center}];
+        % Draw angle bisectors to center
+        \draw (a) -- (center);
+        \draw (c) -- (center);
+        \draw (b) -- (center);
+        % Draw radii
+        \draw (center) -- node[left] {$r$} ($(a)!(center)!(b)$) node[below,yshift=-2pt] {$C'$} coordinate (ap);
+        \draw (center) -- node[left,yshift=-4pt] {$r$} ($(a)!(center)!(c)$) node[above left] {$B'$} coordinate (bp);
+        \draw (center) -- node[right] {$r$} ($(b)!(center)!(c)$) node[above right] {$A'$} coordinate (cp);
+        % Draw dots
+        \vertex{center};
+        \node[above,xshift=3pt,yshift=7pt] at (center) {$O$};
+        % Draw right angle squares
+        \draw (ap) -- ++(90:4pt) -- ++(0:4pt) -- ++(-90:4pt);
+        \draw (bp) -- ++(-40:4pt) -- ++(-130:4pt) -- ++(-220:4pt);
+        \draw (cp) -- ++(-30:4pt) -- ++(-120:4pt) -- ++(-210:4pt);
+        % Labels of line segments (names of points are weird...)
+        \path (a) -- node[below,yshift=-2pt] {$u$} (ap);
+        \path (a) -- node[left, xshift=-2pt] {$u$} (bp);
+        \path (b) -- node[above,yshift=2pt]  {$v$} (cp);
+        \path (b) -- node[below,xshift=-2pt] {$v$} (ap);
+        \path (c) -- node[above,xshift=-2pt] {$w$} (bp);
+        \path (c) -- node[above,xshift=2pt]  {$w$} (cp);
+        % Labels of sides
+        \draw[<->] ($(a)+(0,-10pt)$) -- node[fill=white] {$c$} 
+                   ($(b)+(0,-10pt)$);
+        \draw[<->] ($(a)+(-10pt,8pt)$) -- node[fill=white] {$b$}
+                   ($(c)+(-10pt,8pt)$);
+        \draw[<->] ($(b)+(6pt,10pt)$) -- node[fill=white] {$a$}
+                   ($(c)+(6pt,10pt)$);
+        % Inscribed circle
+        \node[very thick,dotted,draw,circle through=(ap)] at (center) {};
     \end{tikzpicture}
 \end{tikzExample}
 
@@ -293,6 +432,12 @@
 \\
 $\color{blue}{f(x) = \sin x} \hspace{2 cm} \color{red}{g(x) = \cos x } \hspace{2 cm} \color{dgreen}{h(x) = \mathrm{tg}x} $
 \end{tikzExample}
+
+
+\section{}
+
+
+
 
 \section{Nyolcszög, lyukkal}
 \begin{tikzExample}
