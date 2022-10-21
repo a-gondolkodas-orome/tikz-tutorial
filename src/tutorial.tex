@@ -2,7 +2,7 @@
 
 \section{Alapok}
 
-A \code{\usepackage{tikzpicture}} kell a library implementálásához A \code{\begin{tikzpicture}} és \code{\end{tikzpicture}} parancsok közé kell helyezni a rajzolandó ábrát. A \tikzname\ úgy működik, mint egy rajztábla. Egyesével kell az objektumokat rárajzolni, esetenként egy ciklusban többet is lehet egyszerre (lásd lejjebb). \textbf{Minden parancsot egy  ;-vel kell lezárni.}
+A \code{\usepackage{tikzpicture}} kell a library implementálásához A \code{\begin{tikzpicture}} és \code{\end{tikzpicture}} parancsok közé kell helyezni a rajzolandó ábrát. A \tikzname\ úgy működik, mint egy rajztábla. Egyesével kell az objektumokat rárajzolni, esetenként egy ciklusban többet is lehet egyszerre (lásd lejjebb). Minden parancsot \code{;}-vel kell lezárni.
 
 A \code{\begin{tikzpicture}["paraméterek"]} ebben a szögletes zárójelben kell megadni a rajztábla paramétereit. Ilyenek:
 \begin{itemize}
@@ -10,7 +10,7 @@ A \code{\begin{tikzpicture}["paraméterek"]} ebben a szögletes zárójelben kel
     \item \code{xscale = 4, yscale = 5}  -- ugyanez, csak merőlegesen affin képet ad
 \end{itemize}
 
-A rajzolásra két különböző, de általában mindenre elég parancs a \code{\draw} és \code{\filldraw} . A sima rajzolás csak körvonalat rajzol, a másik pedig automatikusan ugyanazzal a színnel kitölti az alakzatot. Mindkettő parancsnak meg kell mondani, hogy:
+A rajzolásra két különböző, de általában mindenre elég parancs a \code{\draw} és \code{\filldraw}. A sima rajzolás csak körvonalat rajzol, a másik pedig automatikusan ugyanazzal a színnel kitölti az alakzatot. Mindkettő parancsnak meg kell mondani, hogy:
 
 \begin{itemize}
     \item Hova: \code{(x, y)}, \code{(fok:hossz)}
@@ -66,7 +66,7 @@ Be lehet állítani vonalvastagságot, színt és még színátmenetes ábrát i
 \begin{itemize}
     \item Vastagságok: \{\code{ultra}, \code{very}, \} + \{\code{thin}, \code{thick}\}
     \item Színek: \{ \code{red}, \code{green}, \code{blue}, \code{cyan}, \code{magenta}, \code{yellow}, \code{black}, \code{gray}, \code{darkgray}, \code{lightgray}, \code{brown}, \code{lime}, \code{olive}, \code{orange}, \code{pink}, \code{purple}, \code{teal}, \code{violet}, \code{white} \}
-    \item Vonal típusok: \{\code{dashed}, \code{dotted}\}
+    \item Vonaltípusok: \{\code{dashed}, \code{dotted}\}
     \item Vonal összekötési lehetőségek (advanced): \begin{itemize}
         \item \code{line cap = {round, rect, butt}}
         \item \code{rounded corners = 5mm}
@@ -164,7 +164,7 @@ Lehet az éleket hajlítani, kígyósítani és egyéb stilisztikai trükköket 
 \begin{tikzExample}
 \usetikzlibrary{positioning,backgrounds}
 \begin{tikzpicture}[auto, node distance = 1cm and 2cm]
-	\tikzstyle{StartEnd}=[rectangle,draw=blue!50, fill=blue!20,thick, 			inner sep=0pt,minimum size=6mm]
+	\tikzstyle{StartEnd}=[rectangle,draw=blue!50, fill=blue!20,thick, inner sep=0pt,minimum size=6mm]
 	\tikzstyle{alayer}=[circle,draw=red!80,fill=red!20,thick, inner sep=0pt,minimum size=6mm]
 	\tikzstyle{blayer}=[circle,draw=red!80,fill=red!40,thick, inner sep=0pt,minimum size=6mm]
 	\tikzstyle{se-edge}=[->,very thick, color=blue!30]
