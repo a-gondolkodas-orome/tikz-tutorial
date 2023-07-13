@@ -227,9 +227,15 @@ Tartalom</a>
 
 <h1>Ti<em>k</em>Z gyorstalpaló, példák</h1>
 
+<!--
+...... chapter -TikZ gyorstalpaló ......
+-->
 <h3 id="autosec-6"><span class="sectionnumber">1. &#x2003;</span>&nbsp;Ti<em>k</em>Z gyorstalpaló</h3>
 <a id="mainpage-autopage-6"></a>
 <a id="mainpage-autofile-1"></a>
+<!--
+...... section Alapok ......
+-->
 <h4 id="autosec-7"><span class="sectionnumber">1.1.&#x2002;</span>Alapok</h4>
 <a id="mainpage-autopage-7"></a>
 
@@ -241,10 +247,10 @@ A <span
 ><span
     class="textcolor"
     style="color:#008000"
-><b>\usepackage</b></span> <span
+><b>\usepackage</b></span><span
     class="textcolor"
     style="color:#008000"
->{</span>tikzpicture<span
+>{</span>tikz<span
     class="textcolor"
     style="color:#008000"
 >}</span></span> kell a library implementálásához A <span
@@ -253,7 +259,7 @@ A <span
 ><span
     class="textcolor"
     style="color:#008000"
-><b>\begin</b></span> <span
+><b>\begin</b></span><span
     class="textcolor"
     style="color:#008000"
 >{</span>tikzpicture<span
@@ -265,7 +271,7 @@ A <span
 ><span
     class="textcolor"
     style="color:#008000"
-><b>\end</b></span> <span
+><b>\end</b></span><span
     class="textcolor"
     style="color:#008000"
 >{</span>tikzpicture<span
@@ -285,7 +291,7 @@ A <span
 ><span
     class="textcolor"
     style="color:#008000"
-><b>\begin</b></span> <span
+><b>\begin</b></span><span
     class="textcolor"
     style="color:#008000"
 >{</span>tikzpicture<span
@@ -306,6 +312,8 @@ A <span
 
 </li>
 <li>
+
+
 <p>
 • <span
       class="colorbox"
@@ -335,7 +343,7 @@ A rajzolásra két különböző, de általában mindenre elég parancs a <span
 
 <li>
 <p>
-• Hova: <span
+• Hova:    <span
       class="colorbox"
       style="background:#E5E5E5 ; padding:3pt"
 >(x, y)</span>, <span
@@ -347,8 +355,10 @@ A rajzolásra két különböző, de általában mindenre elég parancs a <span
 
 </li>
 <li>
+
+
 <p>
-• Mit: <span
+• Mit:    <span
       class="colorbox"
       style="background:#E5E5E5 ; padding:3pt"
 >node</span>, <span
@@ -369,8 +379,10 @@ A rajzolásra két különböző, de általában mindenre elég parancs a <span
 
 </li>
 <li>
+
+
 <p>
-• Stílusban: <span
+• Stílusban:   <span
       class="colorbox"
       style="background:#E5E5E5 ; padding:3pt"
 >[color, ultra thin, fill]</span> – ez lehet üres, ilyenkor a rajztábla stílusát használja
@@ -406,7 +418,7 @@ box-shadow: none ;
 >}</span>[scale=3]
     <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%a köröknek a kp.-át és sugarát kell megadni</i></span>
     <span
     class="textcolor"
@@ -420,7 +432,7 @@ box-shadow: none ;
 
     <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%a téglalapoknak a balalsó és jobbfelső csúcsait kell megadni</i></span>
     <span
     class="textcolor"
@@ -430,7 +442,7 @@ box-shadow: none ;
 
     <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%a törött vonalakat csúcsról csúcsra kell megadni</i></span>
     <span
     class="textcolor"
@@ -440,25 +452,25 @@ box-shadow: none ;
 
     <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%ami sokkal menőbb, például egy rácsbejáráshoz az íveltvonalak</i></span>
     <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[thick,rounded corners=8pt, color=pink!200]</span> (4-0.3, -0.3) -- (4-0.3, 0.4)
     -- (4+0.4, -0.4) -- (4+0.4, 0.4);
 
 
     <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%Ha a törött vonalat lezárnád érdemes a --cycle befejezést írni a kezdő csúcs</i></span>
     <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%megismétlése helyett.</i></span>
 <span
     class="textcolor"
@@ -480,13 +492,16 @@ box-shadow: none ;
     id="lateximage-mainpage-1"
     class="lateximagesource"
 ><!--
---> <img
+--><img
     src="mainpage-images/image-1.svg"
     alt="(-tikz-&nbsp;diagram)"
     style=""
     class="lateximage"
 ></span>
 </p>
+<!--
+...... subsection Illesztés ......
+-->
 <h5 id="autosec-11"><span class="sectionnumber">1.1.1.&#x2002;</span>Illesztés</h5>
 <a id="mainpage-autopage-11"></a>
 
@@ -535,7 +550,7 @@ box-shadow: none ;
 ><b>\draw</b></span> (0,0) circle (0.4 cm) [color = blue!90];
     <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%Itt vágunk ami azt okozza, hogy az előző kör nem sérült</i></span>
     <span
     class="textcolor"
@@ -551,11 +566,11 @@ box-shadow: none ;
 ><b>\draw</b></span> (2-0.4, -.4) rectangle (2+0.4, .4) [ultra thick, fill=black!20];
     <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%Lehet relatív megadni a távolságokat, hogy ne kelljen mindent papíron kiszámolni</i></span>
     <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%Ha csak sima +-t használsz, akkor a kezdő csúcstól viszonyít</i></span>
     <span
     class="textcolor"
@@ -566,7 +581,7 @@ box-shadow: none ;
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[thick,rounded corners=8pt, color=pink!200]</span>       (4-0.3, -0.3) -- (4-0.3, 0.4) -- (4+0.4, -0.4) -- (4+0.4, 0.4);
 <span
     class="textcolor"
@@ -588,13 +603,16 @@ box-shadow: none ;
     id="lateximage-mainpage-2"
     class="lateximagesource"
 ><!--
---> <img
+--><img
     src="mainpage-images/image-2.svg"
     alt="(-tikz-&nbsp;diagram)"
     style=""
     class="lateximage"
 ></span>
 </p>
+<!--
+...... subsection Színek, egyebek ......
+-->
 <h5 id="autosec-15"><span class="sectionnumber">1.1.2.&#x2002;</span>Színek, egyebek</h5>
 <a id="mainpage-autopage-15"></a>
 
@@ -624,6 +642,8 @@ Be lehet állítani vonalvastagságot, színt és még színátmenetes ábrát i
 
 </li>
 <li>
+
+
 <p>
 • Színek: { <span
       class="colorbox"
@@ -688,6 +708,8 @@ Be lehet állítani vonalvastagságot, színt és még színátmenetes ábrát i
 
 </li>
 <li>
+
+
 <p>
 • Vonaltípusok: { <span
       class="colorbox"
@@ -701,6 +723,8 @@ Be lehet állítani vonalvastagságot, színt és még színátmenetes ábrát i
 
 </li>
 <li>
+
+
 <p>
 • Vonal összekötési lehetőségek (advanced):
 </p>
@@ -709,7 +733,7 @@ Be lehet állítani vonalvastagságot, színt és még színátmenetes ábrát i
 
 <li>
 <p>
-– <span
+–     <span
       class="colorbox"
       style="background:#E5E5E5 ; padding:3pt"
 >line cap = <span
@@ -724,8 +748,10 @@ Be lehet állítani vonalvastagságot, színt és még színátmenetes ábrát i
 
 </li>
 <li>
+
+
 <p>
-– <span
+–     <span
       class="colorbox"
       style="background:#E5E5E5 ; padding:3pt"
 >rounded corners = 5mm</span>
@@ -734,8 +760,10 @@ Be lehet állítani vonalvastagságot, színt és még színátmenetes ábrát i
 
 </li>
 <li>
+
+
 <p>
-– <span
+–     <span
       class="colorbox"
       style="background:#E5E5E5 ; padding:3pt"
 >line join = <span
@@ -813,13 +841,16 @@ box-shadow: none ;
     id="lateximage-mainpage-3"
     class="lateximagesource"
 ><!--
---> <img
+--><img
     src="mainpage-images/image-3.svg"
     alt="(-tikz-&nbsp;diagram)"
     style=""
     class="lateximage"
 ></span>
 </p>
+<!--
+...... section Sokszögek rajzolása, for ciklusok ......
+-->
 <h4 id="autosec-19"><span class="sectionnumber">1.2.&#x2002;</span>Sokszögek rajzolása, for ciklusok</h4>
 <a id="mainpage-autopage-19"></a>
 
@@ -832,10 +863,7 @@ megadott parancsokat egyesével (jobb ha nem számít a sorrend). Lehet egymásb
 ><span
     class="textcolor"
     style="color:#008000"
-><b>\foreach</b></span> <span
-    class="textcolor"
-    style="color:#008000"
-><b>\x</b></span> in <span
+><b>\foreach\x</b></span> in <span
     class="textcolor"
     style="color:#008000"
 >{</span>1,2,3,4<span
@@ -848,22 +876,22 @@ megadott parancsokat egyesével (jobb ha nem számít a sorrend). Lehet egymásb
 </p>
 
 <p>
-Eddig nem volt róla szó, de a hagyományos koordinátázás helyett lehet polárkoordinátákat is használni. <span
+Eddig nem volt róla szó, de a hagyományos koordinátázás helyett lehet polárkoordinátákat is használni.   <span
     class="colorbox"
     style="background:#E5E5E5 ; padding:3pt"
 >(90:1cm)</span> – 90 fok, 1 cm messze
 </p>
 
 <p>
-A képet lehet transzformálni erre pár   példa: <span
+A képet lehet transzformálni erre pár példa: <span
     class="colorbox"
-    style="background:#E5E5E5 ;         padding:3pt"
+    style="background:#E5E5E5 ; padding:3pt"
 >xshift</span>, <span
     class="colorbox"
-    style="background:#E5E5E5 ;         padding:3pt"
+    style="background:#E5E5E5 ; padding:3pt"
 >yshift</span>, <span
     class="colorbox"
-    style="background:#E5E5E5 ;         padding:3pt"
+    style="background:#E5E5E5 ; padding:3pt"
 >rotate</span>
 </p>
 
@@ -928,7 +956,7 @@ box-shadow: none ;
     style="color:#008000"
 >}{</span> <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%MAGIC DANGER</i></span>
              +(<span
     class="textcolor"
@@ -951,11 +979,11 @@ box-shadow: none ;
 >}</span>;
              <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%Az, hogy ilyet lehet csinálni szerintem egyszerre undorító és hasznos</i></span>
              <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%Ez kell ahhoz, hogy a szín mögé lehessen írni változót (nem igazán lehet képletet)</i></span>
          <span
     class="textcolor"
@@ -1007,13 +1035,16 @@ box-shadow: none ;
     id="lateximage-mainpage-4"
     class="lateximagesource"
 ><!--
---> <img
+--><img
     src="mainpage-images/image-4.svg"
     alt="(-tikz-&nbsp;diagram)"
     style=""
     class="lateximage"
 ></span>
 </p>
+<!--
+...... section Rácsok, szöveg beillesztése ......
+-->
 <h4 id="autosec-23"><span class="sectionnumber">1.3.&#x2002;</span>Rácsok, szöveg beillesztése</h4>
 <a id="mainpage-autopage-23"></a>
 
@@ -1081,40 +1112,40 @@ box-shadow: none ;
     style="color:#008000"
 ><b>\clip</b></span> (-1.2, -0.8) rectangle (4.2,2.2); <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%Ez csak azért, hogy jobban ráférjen a honlapra</i></span>
          <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%grid</i></span>
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[step = 0.5, color=gray]</span> (-2.1,-2.1) grid (2.1,2.1);
          <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%axes</i></span>
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[->, ultra thick]</span> (0,-2.2) -- (0,2.2);
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[->, ultra thick]</span> (-2.2,0) -- (2.2,0);
          <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%texts</i></span>
          <span
     class="textcolor"
@@ -1142,7 +1173,7 @@ box-shadow: none ;
 
          <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%y-tengely</i></span>
          <span
     class="textcolor"
@@ -1250,7 +1281,7 @@ box-shadow: none ;
 
          <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%x-tengely                  </i></span>
          <span
     class="textcolor"
@@ -1358,7 +1389,7 @@ box-shadow: none ;
 
          <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%ábra</i></span>
          <span
     class="textcolor"
@@ -1421,7 +1452,7 @@ box-shadow: none ;
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[xshift=2.1cm, yshift=1cm]</span> node[right,text width=5cm]
          <span
     class="textcolor"
@@ -1538,13 +1569,16 @@ box-shadow: none ;
 
 
                     −4
---> <img
+--><img
     src="mainpage-images/image-5.svg"
     alt="(-tikz-&nbsp;diagram)"
     style=""
     class="lateximage"
 ></span>
 </p>
+<!--
+...... section Gráfok ......
+-->
 <h4 id="autosec-27"><span class="sectionnumber">1.4.&#x2002;</span>Gráfok</h4>
 <a id="mainpage-autopage-27"></a>
 
@@ -1662,14 +1696,14 @@ box-shadow: none ;
 
          <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%Nodes</i></span>
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\node</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[StartEnd]</span> (Start) [label = 135:<span
     class="textcolor"
     style="color:#008000"
@@ -1702,7 +1736,7 @@ box-shadow: none ;
     style="color:#008000"
 ><b>\node</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[alayer]</span> (a3) [right = of Start, label=above:<span
     class="textcolor"
     style="color:#BA2121"
@@ -1724,7 +1758,7 @@ box-shadow: none ;
     style="color:#008000"
 ><b>\node</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[alayer]</span> (a2) [above = of a3, label=above:<span
     class="textcolor"
     style="color:#BA2121"
@@ -1746,7 +1780,7 @@ box-shadow: none ;
     style="color:#008000"
 ><b>\node</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[alayer]</span> (a1) [above = of a2, label=above:<span
     class="textcolor"
     style="color:#BA2121"
@@ -1768,7 +1802,7 @@ box-shadow: none ;
     style="color:#008000"
 ><b>\node</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[alayer]</span> (a4) [below = of a3, label=above:<span
     class="textcolor"
     style="color:#BA2121"
@@ -1790,7 +1824,7 @@ box-shadow: none ;
     style="color:#008000"
 ><b>\node</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[alayer]</span> (a5) [below = of a4, label=above:<span
     class="textcolor"
     style="color:#BA2121"
@@ -1814,7 +1848,7 @@ box-shadow: none ;
     style="color:#008000"
 ><b>\node</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[blayer]</span> (b3) [right = of a3, label=above:<span
     class="textcolor"
     style="color:#BA2121"
@@ -1836,7 +1870,7 @@ box-shadow: none ;
     style="color:#008000"
 ><b>\node</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[blayer]</span> (b2) [above = of b3, label=above:<span
     class="textcolor"
     style="color:#BA2121"
@@ -1858,7 +1892,7 @@ box-shadow: none ;
     style="color:#008000"
 ><b>\node</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[blayer]</span> (b1) [above = of b2, label=above:<span
     class="textcolor"
     style="color:#BA2121"
@@ -1880,7 +1914,7 @@ box-shadow: none ;
     style="color:#008000"
 ><b>\node</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[blayer]</span> (b4) [below = of b3, label=above:<span
     class="textcolor"
     style="color:#BA2121"
@@ -1902,7 +1936,7 @@ box-shadow: none ;
     style="color:#008000"
 ><b>\node</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[blayer]</span> (b5) [below = of b4, label=above:<span
     class="textcolor"
     style="color:#BA2121"
@@ -1926,7 +1960,7 @@ box-shadow: none ;
     style="color:#008000"
 ><b>\node</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[StartEnd]</span> (End)[right = of b3,label=45:<span
     class="textcolor"
     style="color:#008000"
@@ -1956,42 +1990,42 @@ box-shadow: none ;
 
          <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%Edges</i></span>
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[se-edge]</span> (Start) to [out=45, in=180] (a1);
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[se-edge]</span> (Start) to [out=22.5, in=180] (a2);
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[se-edge]</span> (Start) to [out=0, in=180] (a3);
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[se-edge]</span> (Start) to [out=360-22.5, in=180] (a4);
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[se-edge]</span> (Start) to [out=360-45, in=180] (a5);
 
 
@@ -2000,35 +2034,35 @@ box-shadow: none ;
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[se-edge]</span> (b1) to [out=0, in=180-45] (End);
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[se-edge]</span> (b2) to [out=0, in=180-22.5] (End);
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[se-edge]</span> (b3) to [out=0, in=180] (End);
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[se-edge]</span> (b4) to [out=0, in=180+22.5] (End);
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[se-edge]</span> (b5) to [out=0, in=180+45] (End);
 
 
@@ -2037,55 +2071,55 @@ box-shadow: none ;
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[in-edge]</span> (a1) to (b2);
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[in-edge]</span> (a2) to (b1);
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[in-edge]</span> (a2) to (b5);
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[in-edge]</span> (a3) to (b5);
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[in-edge]</span> (a4) to (b1);
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[in-edge]</span> (a5) to (b3);
          <span
     class="textcolor"
     style="color:#008000"
 ><b>\draw</b></span><span
     class="textcolor"
-    style="color:#7D8F29"
+    style="color:#697821"
 >[in-edge]</span> (a5) to (b5);
 
 
          <span
     class="textcolor"
-    style="color:#408080"
+    style="color:#3D7A7A"
 ><i>%Layers</i></span>
          <span
     class="textcolor"
@@ -2152,7 +2186,7 @@ S   a3   b3   C
 
 
     a5   b5
---> <img
+--><img
     src="mainpage-images/image-6.svg"
     alt="(-tikz-&nbsp;diagram)"
     style=""
