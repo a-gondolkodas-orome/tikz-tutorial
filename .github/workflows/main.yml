@@ -36,7 +36,8 @@ jobs:
 #          apt-get update && apt-get install -y rsync
 
       - name: deploy to gh-pages branch
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+        uses: JamesIves/github-pages-deploy-action@v4
+#        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
           folder: docs
